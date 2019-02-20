@@ -1,0 +1,2 @@
+webpackJsonp([20],{mVZr:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  销账管理\n")])},staticRenderFns:[]};var r=t("VU/8")({name:"xiaozhangguanli"},a,!1,function(e){t("vqCo")},"data-v-6a55bc74",null);n.default=r.exports},vqCo:function(e,n){}});
+//# sourceMappingURL=20.a51b802d9777bf281523.js.map

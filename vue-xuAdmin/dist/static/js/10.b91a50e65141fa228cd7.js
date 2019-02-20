@@ -1,0 +1,2 @@
+webpackJsonp([10],{"3FSi":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var c={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  协议配置\n")])},staticRenderFns:[]};var r=n("VU/8")({name:"agreementSetting"},c,!1,function(e){n("Ipc0")},"data-v-bc63fafc",null);t.default=r.exports},Ipc0:function(e,t){}});
+//# sourceMappingURL=10.b91a50e65141fa228cd7.js.map

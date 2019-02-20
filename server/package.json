@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
+    "egg-jwt": "^3.1.5",
     "egg-scripts": "^2.5.0",
     "egg-sequelize": "^4.3.1",
     "mysql2": "^1.6.4"
@@ -14,7 +15,7 @@
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
     "chalk": "^2.4.2",
-    "egg-bin": "^4.3.5",
+    "egg-bin": "^4.11.0",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
     "eslint": "^4.11.0",

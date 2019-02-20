@@ -1,0 +1,2 @@
+webpackJsonp([13],{Hk4t:function(e,t){},mIX2:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  系统公告配置\n")])},staticRenderFns:[]};var r=n("VU/8")({name:"noticeSetting"},i,!1,function(e){n("Hk4t")},"data-v-90a870c2",null);t.default=r.exports}});
+//# sourceMappingURL=13.70796dcf3cdb465a3dd6.js.map

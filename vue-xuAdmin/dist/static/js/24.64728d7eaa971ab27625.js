@@ -1,0 +1,2 @@
+webpackJsonp([24],{V8gj:function(e,n){},ipe8:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var i={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  富友退票查询\n")])},staticRenderFns:[]};var u=t("VU/8")({name:"fuyoutuipiaochaxun"},i,!1,function(e){t("V8gj")},"data-v-51229d42",null);n.default=u.exports}});
+//# sourceMappingURL=24.64728d7eaa971ab27625.js.map

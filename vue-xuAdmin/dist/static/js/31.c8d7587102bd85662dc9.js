@@ -1,0 +1,2 @@
+webpackJsonp([31],{ReC2:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  轮播图配置\n")])},staticRenderFns:[]};var a=n("VU/8")({name:"bannerSetting"},r,!1,function(e){n("tGXO")},"data-v-3852d42c",null);t.default=a.exports},tGXO:function(e,t){}});
+//# sourceMappingURL=31.c8d7587102bd85662dc9.js.map

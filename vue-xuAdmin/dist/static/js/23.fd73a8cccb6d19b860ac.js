@@ -1,0 +1,2 @@
+webpackJsonp([23],{PwtV:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  内部机构派单\n")])},staticRenderFns:[]};var i=t("VU/8")({name:"neibujigoupaidan"},a,!1,function(e){t("y+a6")},"data-v-5b7744ca",null);n.default=i.exports},"y+a6":function(e,n){}});
+//# sourceMappingURL=23.fd73a8cccb6d19b860ac.js.map
