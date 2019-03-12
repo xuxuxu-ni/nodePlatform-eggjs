@@ -9,7 +9,11 @@ module.exports = appInfo => {
     csrf: false
   };
   // add your config here
-  config.middleware = ['verifyToken'];
+  config.middleware = [];
+
+  // config.verifyToken={
+  //   aaa: "aaa"
+  // }
 
   return config;
 };

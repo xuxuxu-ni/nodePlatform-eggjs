@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b4a1f39-bb58-46b8-b2f2-7aaf60b3ff95" name="Default Changelist" comment="实现登录验证,通过jwt的生成校验token,分别生成2小时和7天的token">
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/.gitignore" afterDir="false" />
+    <list default="true" id="2b4a1f39-bb58-46b8-b2f2-7aaf60b3ff95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/app/controller/getShareInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/app/model/WxUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controller/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controller/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/extend/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/extend/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/middleware/verifyToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/middleware/verifyToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/service/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/config.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,97 +27,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/components/Table/departmentTable.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/model/Token.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+            <state relative-caret-position="501">
+              <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="338" selection-end-column="8" />
               <folding>
-                <element signature="e#91#116#0" expanded="true" />
+                <element signature="e#5067#9996#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/.gitignore">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="360">
+              <caret line="282" column="45" lean-forward="true" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/middleware/verifyToken.js">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/systemManage/personnelManage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="138">
+              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/config/dev.env.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="52" column="102" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="102" />
+            <state relative-caret-position="138">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/config/prod.env.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1587">
-              <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+            <state relative-caret-position="69">
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue">
+        <entry file="file://$PROJECT_DIR$/server/app/controller/getShareInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2369">
-              <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
-              <folding>
-                <element signature="n#style#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="460">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app.js">
+        <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="667">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/model/WxUser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -131,6 +121,15 @@
       <find>verifyToken</find>
       <find>localtoken</find>
       <find>servicetoken</find>
+      <find>egg</find>
+      <find>crypto</find>
+      <find>Paging</find>
+      <find>search</find>
+      <find>search-form-inline</find>
+      <find>ID</find>
+      <find>position</find>
+      <find>sex</find>
+      <find>filterTag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,12 +146,9 @@
         <option value="$PROJECT_DIR$/server/app/db.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/server/app/model/User.js" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/config/index.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/api/index.js" />
         <option value="$PROJECT_DIR$/server/config/plugin.js" />
         <option value="$PROJECT_DIR$/server/app/core/base_controller.js" />
-        <option value="$PROJECT_DIR$/server/config/config.default.js" />
-        <option value="$PROJECT_DIR$/server/app/router.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role 2.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js" />
         <option value="$PROJECT_DIR$/server/app/util/crypto.md5-1.js" />
@@ -164,17 +160,26 @@
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/main.js" />
         <option value="$PROJECT_DIR$/server/app.js" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue" />
-        <option value="$PROJECT_DIR$/server/app/middleware/verifyToken.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue" />
         <option value="$PROJECT_DIR$/server/app/model/Token.js" />
-        <option value="$PROJECT_DIR$/server/app/service/login.js" />
-        <option value="$PROJECT_DIR$/server/app/extend/helper.js" />
-        <option value="$PROJECT_DIR$/server/app/controller/login.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/api/api.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/router/index.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/.gitignore" />
+        <option value="$PROJECT_DIR$/server/app/model/orders.js" />
+        <option value="$PROJECT_DIR$/server/config/config.default.js" />
+        <option value="$PROJECT_DIR$/server/app/middleware/verifyToken.js" />
+        <option value="$PROJECT_DIR$/server/app/controller/decryptData.js" />
+        <option value="$PROJECT_DIR$/server/app/router.js" />
+        <option value="$PROJECT_DIR$/server/app/model/wxUser.js" />
+        <option value="$PROJECT_DIR$/server/app/extend/helper.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/config/prod.env.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/config/index.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue" />
+        <option value="$PROJECT_DIR$/server/app/model/WxUser.js" />
+        <option value="$PROJECT_DIR$/server/app/controller/login.js" />
+        <option value="$PROJECT_DIR$/server/app/service/login.js" />
+        <option value="$PROJECT_DIR$/server/app/controller/getShareInfo.js" />
       </list>
     </option>
   </component>
@@ -190,8 +195,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -199,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,10 +217,24 @@
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,11 +253,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="consents" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/app/model" />
       <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views" />
       <recent name="$PROJECT_DIR$/vue-xuAdmin" />
       <recent name="$PROJECT_DIR$/vue-xuAdmin/src" />
@@ -307,7 +327,30 @@
       <workItem from="1549722822849" duration="2971000" />
       <workItem from="1550021157849" duration="37860000" />
       <workItem from="1550538839867" duration="27219000" />
-      <workItem from="1550649092553" duration="1102000" />
+      <workItem from="1550649092553" duration="5785000" />
+      <workItem from="1550760137490" duration="1320000" />
+      <workItem from="1550761992832" duration="5060000" />
+      <workItem from="1550844039780" duration="291000" />
+      <workItem from="1550899827103" duration="3861000" />
+      <workItem from="1551059949836" duration="1824000" />
+      <workItem from="1551144502114" duration="2579000" />
+      <workItem from="1551230083619" duration="1423000" />
+      <workItem from="1551403980400" duration="75000" />
+      <workItem from="1551410681335" duration="12356000" />
+      <workItem from="1551526515126" duration="8686000" />
+      <workItem from="1551667584828" duration="5110000" />
+      <workItem from="1551703364710" duration="209000" />
+      <workItem from="1551748077774" duration="157000" />
+      <workItem from="1551842052397" duration="655000" />
+      <workItem from="1551850935592" duration="1061000" />
+      <workItem from="1551879418830" duration="2257000" />
+      <workItem from="1551921082394" duration="264000" />
+      <workItem from="1552009593148" duration="1182000" />
+      <workItem from="1552035427185" duration="1347000" />
+      <workItem from="1552127757842" duration="785000" />
+      <workItem from="1552129014219" duration="680000" />
+      <workItem from="1552131610107" duration="1203000" />
+      <workItem from="1552209587911" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目,增加 vue-xuAdmin">
       <created>1548212328103</created>
@@ -337,33 +380,41 @@
       <option name="project" value="LOCAL" />
       <updated>1548838427827</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="过滤.DS_Store">
+      <created>1550650944399</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550650944400</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163532000" />
+    <option name="totallyTimeSpent" value="221309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18669528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923833" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3992629" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.502457" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923833" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837838" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25429976" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32923833" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -421,74 +472,36 @@
     <MESSAGE value="初始化项目,增加 vue-xuAdmin" />
     <MESSAGE value="添加超级管理员" />
     <MESSAGE value="实现登录验证,通过jwt的生成校验token,分别生成2小时和7天的token" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现登录验证,通过jwt的生成校验token,分别生成2小时和7天的token" />
+    <MESSAGE value="过滤.DS_Store" />
+    <option name="LAST_COMMIT_MESSAGE" value="过滤.DS_Store" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/app/service/login.js</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/app/extend/helper.js</url>
+          <line>106</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/app/controller/login.js</url>
+          <line>59</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/app/controller/getShareInfo.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app/core/base_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/appveyor.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/node_modules/vuex/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/layout.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header 2.vue" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/duoji/erji2.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/duoji/erji2 2.vue" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData 2.js" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9690">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/index 2.js" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/layout/index 2.js" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role 2.js" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/components/lang/langSelect.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-536">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/components/lang/langSelect 2.vue" />
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/layout/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/btnPermission.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index 2.vue" />
     <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/transfer/transfer.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -512,29 +525,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/config.local.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/config.prod.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/config.default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/model/LocalToken.js" />
     <entry file="file://$PROJECT_DIR$/server/app/db.js">
@@ -544,62 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#140#173#0" expanded="true" />
-            <element signature="e#271#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/node_modules/@types/koa-router/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="268" column="4" selection-start-line="268" selection-start-column="4" selection-end-line="268" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/egg/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -610,48 +550,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/middleware/verifyToken.js">
+    <entry file="file://$PROJECT_DIR$/server/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="207">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="52" column="102" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="102" />
+        <state relative-caret-position="258">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue">
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/tabNav.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/Token.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        <state relative-caret-position="345">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue">
+    <entry file="file://$PROJECT_DIR$/server/app/model/orders.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2369">
-          <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="301">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/qrcodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -662,41 +616,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/Token.js">
+    <entry file="file://$PROJECT_DIR$/server/app/middleware/verifyToken.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="184">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/api/api.js">
+    <entry file="file://$PROJECT_DIR$/server/app/controller/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="161">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="29" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+        <state relative-caret-position="403">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
             <element signature="e#91#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="384">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/.gitignore">
+    <entry file="file://$PROJECT_DIR$/server/config/config.default.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="115">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/config.local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/egg/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="92" column="71" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
+          <folding>
+            <element signature="e#520#2434#0" />
+            <element signature="e#2745#2839#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/node_modules/vuex/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/node_modules/vuex/dist/vuex.esm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="78" column="38" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="38" />
+          <folding>
+            <element signature="e#1342#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#140#173#0" expanded="true" />
+            <element signature="e#271#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/table/maintable.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="66" column="2" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/components/Table/manageTable.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/systemManage/personnelManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/config/dev.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/config/prod.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/getShareInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/WxUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/index/mainIndex.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/components/Table/departmentTable.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="336" column="6" selection-start-line="336" selection-start-column="6" selection-end-line="338" selection-end-column="8" />
+          <folding>
+            <element signature="e#5067#9996#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="282" column="45" lean-forward="true" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="45" />
         </state>
       </provider>
     </entry>

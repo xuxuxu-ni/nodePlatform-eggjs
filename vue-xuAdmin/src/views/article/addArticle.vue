@@ -68,8 +68,18 @@ export default {
       console.log(item)
     },
     submitArticle () {
-      this.$axios.post('/register', {
-        data: this.article
+      this.$axios.post('/pay/createOrderAndOutPutQr', {
+        // data: this.article
+
+          "callBackUri":"http://47.99.184.57:8080/pay/testCallBack",
+          "orderUserUid": "1",
+          "OrderAmount": "0.1",
+          "RetailPrice": 0.1,
+          "OrderParameters":{
+            "B014_ZhiFuMoShiXinXi_SNID":1,
+            "DingDanShangPin": [{"RID":"1","Code":"1","Name":"1","Price":"0.1","Qty":"1"}]
+          }
+
       })
         .then(function (response) {
           console.log(response);

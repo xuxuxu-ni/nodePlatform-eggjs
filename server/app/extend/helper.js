@@ -20,7 +20,8 @@ exports.getAccessToken = ctx => {
 };
 
 // 校验 Token
-exports.verifyToken = async (ctx, app) => {
+exports.verifyToken = async ctx => {
+    let app = ctx.app
     let backResult = false;
     let token = this.getAccessToken(ctx, app);
     let verify = await function(token, app){
@@ -86,3 +87,32 @@ exports.error = (ctx, code, message) => {
     };
     ctx.status = code;
 };
+
+
+//  微信小程序 开放数据校验与解密
+exports.WXBizDataCrypt = async (appId, sessionKey, encryptedData, iv) => {
+        // base64 decode
+        var sessionKey = new Buffer(sessionKey, 'base64')
+        encryptedData = new Buffer(encryptedData, 'base64')
+        iv = new Buffer(iv, 'base64')
+
+        try {
+            // 解密
+            var decipher = crypto.createDecipheriv('aes-128-cbc', sessionKey, iv)
+            // 设置自动 padding 为 true，删除填充补位
+            decipher.setAutoPadding(true)
+            var decoded = decipher.update(encryptedData, 'binary', 'utf8')
+            decoded += decipher.final('utf8')
+
+            decoded = JSON.parse(decoded)
+
+        } catch (err) {
+            throw new Error('Illegal Buffer')
+        }
+
+        if (decoded.watermark.appid !== appId) {
+            throw new Error('Illegal Buffer')
+        }
+
+        return decoded
+}

@@ -46,6 +46,19 @@ class LoginController extends Controller {
 
         }
     }
+
+
+    async wxLogin(){
+        let {code, appID, secret} = this.ctx.request.body
+        console.log(code, appID, secret);
+        const result = await this.ctx.curl(`https://api.weixin.qq.com/sns/jscode2session?appid=${appID}&secret=${secret}&js_code=${code}&grant_type=authorization_code`,{
+            dataType: 'json',
+        });
+        console.log(result.data.session_key);
+        await this.ctx.service.login.saveWXdata(result.data)
+        // console.log(reqdata);
+        this.ctx.body = result.data.openid
+    }
 }
 
 module.exports = LoginController;

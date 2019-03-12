@@ -24,6 +24,20 @@ class UserService extends Service {
         })
     }
 
+    // 生成 微信数据 保存数据库
+    async saveWXdata(data) {
+        console.log(this.app);
+        let {session_key,openid} = data
+        await this.app.model.WxUser.upsert({
+            session_key,
+            openid,
+        }).then(res => {
+            console.log('res: '+ JSON.stringify(res))
+        }).catch(err => {
+            console.log('err: '+ JSON.stringify(err))
+        })
+    }
+
     // 查找 token 信息
     async findToken(access_token){
         let tokenInfo = await this.app.model.Token.findOne({

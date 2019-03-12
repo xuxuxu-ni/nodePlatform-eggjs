@@ -4,16 +4,11 @@
  * Date: 2019-02-08
  * Description: 文件描述
  */
-module.exports = ( options, app) => {
+module.exports = () => {
     return async function (ctx, next) {
-        if (ctx.request.url !== "/login"){
-            let ver = await ctx.helper.verifyToken(ctx, app);
-            if (ver){
-                await next();
-            }
-        } else {
+        let ver = await ctx.helper.verifyToken(ctx);
+        if (ver) {
             await next();
         }
-
     }
 }
