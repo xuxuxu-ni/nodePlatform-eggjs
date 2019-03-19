@@ -19,6 +19,8 @@ export default {
     change () {
       console.log(arguments)
     }
+  },
+  mounted() {
   }
 }
 </script>

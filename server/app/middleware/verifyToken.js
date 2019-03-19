@@ -6,7 +6,7 @@
  */
 module.exports = () => {
     return async function (ctx, next) {
-        let ver = await ctx.helper.verifyToken(ctx);
+        let ver = await ctx.helper.verifyToken();
         if (ver) {
             await next();
         }

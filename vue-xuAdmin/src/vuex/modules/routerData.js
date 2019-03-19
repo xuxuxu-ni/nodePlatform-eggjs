@@ -221,6 +221,13 @@ const routerData = {
               name: 'publishArticle',
               component: () => import('@/views/article/addArticle'),
               children: []
+            },
+            {
+              path: '/addArticleEditor',
+              iconCls: 'el-icon-edit-outline', // 图标样式class
+              name: 'publishArticleEditor',
+              component: () => import('@/views/article/addArticleEditor'),
+              children: []
             }
           ]
         },
@@ -407,7 +414,14 @@ const routerData = {
               path: '/markdown',
               iconCls: 'fa fa-file-code-o', // 图标样式class
               name: 'markdown',
-              component: () => import('@/views/markdown/markdownView'),
+              component: () => import('@/views/editor/markdownView'),
+              children: []
+            },
+            {
+              path: '/wangeditor',
+              iconCls: 'fa fa-file-code-o', // 图标样式class
+              name: 'wangeditor',
+              component: () => import('@/views/editor/wangeditorView'),
               children: []
             }
           ]

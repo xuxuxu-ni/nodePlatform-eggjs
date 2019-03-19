@@ -70,8 +70,8 @@
       return {
         smdl: true,
         loginForm: {
-          username: '',
-          password: ''
+          username: 'admin',
+          password: 'admin'
         }
       }
     },
@@ -97,7 +97,7 @@
           //   })
           // })
 
-          this.$axios.post('/login',{
+          this.$axios.post('/user/login',{
             username: that.loginForm.username,
             password: that.loginForm.password,
           }).then((res)=>{

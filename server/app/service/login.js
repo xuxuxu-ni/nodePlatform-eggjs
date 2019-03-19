@@ -15,13 +15,18 @@ class UserService extends Service {
         return user;
     }
 
-    // 生成 token 保存数据库
-    async saveToken(uid, access_token, refresh_token) {
-        await this.app.model.Token.upsert({
-            uid,
-            access_token,
-            refresh_token,
+    // 查询用户信息
+    async getUserInfor(info) {
+        let userInfo = await this.app.model.User.findOne({
+            where: {id: info.message.id}
         })
+
+        return userInfo
+    }
+
+    // 生成 token 保存数据库
+    async saveToken(data) {
+        await this.app.model.Token.upsert(data)
     }
 
     // 生成 微信数据 保存数据库

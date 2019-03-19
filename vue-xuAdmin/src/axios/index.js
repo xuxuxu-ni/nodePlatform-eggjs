@@ -31,16 +31,22 @@ axios.interceptors.request.use(config => {
 axios.interceptors.response.use(
   response => {
     if (response.data.code === 11000) {
-      Message({
-        message: '长时间未操作,请重新登录',
-        type: 'warning'
-      });
-      Cookies.remove('access_token');
+      // Message({
+      //   message: '长时间未操作,请重新登录',
+      //   type: 'warning'
+      // });
+      debugger
+      Cookies.set('access_token', response.data.message ,{ expires: 7 });
+      // Cookies.remove('access_token');
       setTimeout(() => {
         location.reload()
-      }, 3000)
+      }, 500)
       return Promise.reject()
     }else if(response.data.code === 10000){
+      Message({
+        message: response.data.message,
+        type: 'warning'
+      });
       return Promise.reject(response)
     }else {
       return Promise.resolve(response);

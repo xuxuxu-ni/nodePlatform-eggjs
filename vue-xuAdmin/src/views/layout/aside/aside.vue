@@ -2,8 +2,8 @@
   <div>
     <el-aside id="asideNav">
       <div class="logo-name">
-        <p v-if="$store.getters.logoShow">manager</p>
-        <p v-else>vue-manager</p>
+        <p v-if="$store.getters.logoShow">XU</p>
+        <p v-else>vue-xuAdmin</p>
       </div>
       <el-menu :default-active="$route.path" class="el-menu-vertical"
                @select="selectmenu"

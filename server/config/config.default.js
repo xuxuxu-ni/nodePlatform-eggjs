@@ -11,14 +11,17 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
-  // config.verifyToken={
-  //   aaa: "aaa"
-  // }
+  config.view = {
+    mapping: {
+      '.nj': 'nunjucks',
+    },
+  }
+
+  config.jwt = {
+    secret: "595485548",
+    enable: false,
+  }
 
   return config;
-};
-exports.jwt = {
-  enable: false,
-  secret: "595485548"
 };
 

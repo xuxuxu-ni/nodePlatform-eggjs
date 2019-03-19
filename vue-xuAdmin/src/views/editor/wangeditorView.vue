@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <div ref="editor" style="text-align:left"></div>
+    <button v-on:click="getContent">查看内容</button>
+  </div>
+</template>
+
+
+<script>
+  import E from 'wangeditor'
+  export default {
+    name: "wangeditor",
+    methods: {
+      getContent: function () {
+        alert(this.editorContent)
+      }
+    },
+    mounted() {
+      let id = this.$route.query.articleId
+      var editor = new E(this.$refs.editor)
+      editor.customConfig.onchange = (html) => {
+        this.editorContent = html
+      }
+      editor.create()
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>

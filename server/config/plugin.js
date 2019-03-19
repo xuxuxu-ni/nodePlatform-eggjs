@@ -6,8 +6,14 @@ exports.mysql = {
     enabled: true,
     package: 'egg-sequelize'
 }
+
 exports.jwt = {
     enable: true,
     package: "egg-jwt"
 };
+
+exports.nunjucks = {
+    enable: true,
+    package: 'egg-view-nunjucks'
+}
 

@@ -29,12 +29,26 @@ router.beforeEach((to, from, next) => {
     } else {
       if (!store.getters.info) {
         !async function getAddRouters () {
-          await store.dispatch('getInfo', store.getters.token)
-          await store.dispatch('newRoutes', store.getters.token)
-          // await store.dispatch('newRoutes', permission)
-          console.log(store.getters.addRouters)
-          await router.addRoutes(store.getters.addRouters)
-          next({path: '/index'})
+
+          // await store.dispatch('getInfo', store.getters.token)
+          // await store.dispatch('newRoutes', store.getters.token)
+          // // await store.dispatch('newRoutes', permission)
+          // console.log(store.getters.addRouters)
+          // await router.addRoutes(store.getters.addRouters)
+          // next({path: '/index'})
+
+          axios.get('/user/getUserInfor').then(async function (response) {
+            console.log(response);
+            // debugger
+            await store.dispatch('getInfo', response.data)
+            await store.dispatch('newRoutes', store.getters.token)
+            console.log(store.getters.addRouters)
+            await router.addRoutes(store.getters.addRouters)
+            next({path: '/index'})
+          }).catch(function (error) {
+            console.log(error);
+          });
+
         }()
       } else {
         let is404 = to.matched.some(record => {

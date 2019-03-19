@@ -4,7 +4,7 @@
  * Date: 2019-01-25
  * Description: 文件描述
  */
-const db = require("../db");
+const db = require("../database/db");
 
 module.exports = app => {
     const { STRING, INTEGER, DATE, BOOLEAN } = app.Sequelize;
