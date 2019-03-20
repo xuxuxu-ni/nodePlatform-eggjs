@@ -9,7 +9,8 @@ export default {
       state.info = {
         role: data.role,
         name: data.name,
-        avatar: data.avatar
+        avatar: data.avatar,
+        uid: data.id
       }
       sessionStorage.setItem('info', JSON.stringify(store.getters.info))
     },

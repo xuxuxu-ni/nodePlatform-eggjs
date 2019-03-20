@@ -45,7 +45,7 @@ class LoginController extends Controller {
         this.ctx.body =  results
     }
 
-    // 获取用户信息
+    // 登录查询个人信息
     async getUserInfor() {
         let token = await this.ctx.helper.getAccessToken()
 
@@ -74,8 +74,18 @@ class LoginController extends Controller {
         this.ctx.body = {
             name: userInfo.name,
             role,
-            avatar: userInfo.avatar
+            avatar: userInfo.avatar,
+            id: userInfo.id
         }
+
+    }
+
+    // 获取用户信息
+    async getUserInforId() {
+        let {id} = this.ctx.request.body
+        let userInfo = await this.ctx.service.login.getUserInforId(id)
+
+        this.ctx.body = userInfo
 
     }
 

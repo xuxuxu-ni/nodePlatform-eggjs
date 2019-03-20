@@ -15,12 +15,17 @@ class UserService extends Service {
         return user;
     }
 
-    // 查询用户信息
+    // 登录查询个人信息
     async getUserInfor(info) {
         let userInfo = await this.app.model.User.findOne({
             where: {id: info.message.id}
         })
+        return userInfo
+    }
 
+    // 查询用户信息
+    async getUserInforId(uid) {
+        let userInfo = await this.app.model.User.findById(uid)
         return userInfo
     }
 

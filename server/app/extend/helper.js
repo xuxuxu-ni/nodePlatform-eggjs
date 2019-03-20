@@ -55,8 +55,8 @@ module.exports = {
                     await this.error(401, 200, "token身份认证失效,请重新登录");
                 } else {
                     // 2小时的 token 验证失败了,但是能查到对应的 refresh_token 并且在有效期内就重新生成新的 token
-                    let refresh_token = await this.helper.createToken({id: tokenInfo.uid}, "7", "days");
-                    let access_token = await this.helper.createToken({id: tokenInfo.uid}, "2", "hours");
+                    let refresh_token = await this.createToken({id: tokenInfo.uid}, "7", "days");
+                    let access_token = await this.createToken({id: tokenInfo.uid}, "2", "hours");
                     let {id, uid} = {id: tokenInfo.id, uid: tokenInfo.uid}
                     await this.ctx.service.login.saveToken({id, uid, access_token, refresh_token})
 

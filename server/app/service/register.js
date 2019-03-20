@@ -17,22 +17,24 @@ class RegisterService extends Service {
                 username//查询条件
             }
         }).then(async result=> {
-            // console.log(result);
             if (!result) {
-                const newPassword = await cryptoMd5(password, keys)
-                await this.ctx.model.User.create({
-                    username,
-                    password: newPassword,
-                    roleId: 0,
-                    status: 1,
-                }).then(ok => {
-                    results = '注册成功'
+                options.password = await cryptoMd5(password, keys)
+                await this.ctx.model.User.create(options).then(ok => {
+                    results = {
+                        code: 200,
+                        message: '注册成功'
+                    }
                 }).catch(err => {
-                    results = err
-                    console.log(chalk.red(err))
+                    results = {
+                        code: 10000,
+                        message: err
+                    }
                 });
             } else {
-                results = '该账号已存在'
+                results = {
+                    code: 10000,
+                    message: '该账号已存在'
+                }
             }
         })
 

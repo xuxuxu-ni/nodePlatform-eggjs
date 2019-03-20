@@ -13,7 +13,7 @@ class AppBootHook {
 
     async willReady() {
         let keys = this.app.config.keys;
-        await this.app.model.sync({ force: false}).then((res) => {
+        await this.app.model.sync({ force: true}).then((res) => {
             res.User.findOne({
                 where: {
                     username: "admin"//查询条件
@@ -27,7 +27,7 @@ class AppBootHook {
                         username: "admin",
                         password: password,
                         name: "超级管理员",
-                        roleId: 1
+                        roleId: "1"
                     }).then( ok => {
                         console.log(chalk.green("系统默认生成超级管理员:用户名 [")+ chalk.blue("admin") + chalk.green("]  密码[")+ chalk.blue("admin")+chalk.green("]"))
                     }).catch( err => {

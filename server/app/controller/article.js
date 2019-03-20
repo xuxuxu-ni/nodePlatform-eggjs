@@ -29,11 +29,33 @@ class ArticleController extends Controller {
         this.ctx.body = result
     }
 
+    // 富文本上传图片
     async uploadImg() {
         let imgurl = await this.ctx.helper.uploadImg()
-        console.log(this.ctx.request.header.host);
-
         this.ctx.body = {errno: 0, data: [imgurl]}
+    }
+
+    // 查询文章列表
+    async articleList() {
+        let getListData = this.ctx.request.body
+        let list = await this.ctx.service.article.articleList(getListData)
+
+        this.ctx.body = list
+    }
+
+    // 文章回显
+    async getArticle() {
+        let id = this.ctx.request.body.id
+        let result = await this.ctx.service.article.getArticle(id)
+
+        this.ctx.body = result
+    }
+
+    // 删除文章
+    async delArticle() {
+        let id = this.ctx.request.body.id
+        let result = await this.ctx.service.article.delArticle(id)
+        this.ctx.body = result
     }
 
 }

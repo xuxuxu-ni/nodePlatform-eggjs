@@ -17,7 +17,7 @@
                     {{this.$store.getters.info.name}}<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item command="a">{{ $t('userDropdownMenu.basicInfor') }}</el-dropdown-item>
+              <el-dropdown-item command="info">{{ $t('userDropdownMenu.basicInfor') }}</el-dropdown-item>
               <el-dropdown-item command="b">{{ $t('userDropdownMenu.changePassword') }}</el-dropdown-item>
               <el-dropdown-item command="logout" divided>{{ $t('userDropdownMenu.logout') }}</el-dropdown-item>
             </el-dropdown-menu>
@@ -75,7 +75,9 @@
         }
       },
       handleCommand (command) {
-        if (command === 'logout') {
+        if (command === 'info') {
+          this.$router.push({path: '/editUser?userId=' + this.$store.getters.info.uid});
+        } else if (command === 'logout') {
           Cookies.remove('access_token');
           location.reload()
         }

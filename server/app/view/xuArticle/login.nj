@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/public/xuArticle/bootstarp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/xuArticle/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/xuArticle/css/common.css">
+    <link rel="stylesheet" href="/public/xuArticle/css/login.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Title</title>
+</head>
+<body>
+<div class="cotn_principal">
+    <div class="cont_centrar">
+        <div class="cont_login">
+            <div class="cont_info_log_sign_up">
+                <div class="col_md_login">
+                    <div class="cont_ba_opcitiy">
+                        <h2>登录</h2>
+                        <p>已有账号,点此登录</p>
+                        <button class="btn_login" onclick="cambiar_login()">登录</button>
+                    </div>
+                </div>
+                <div class="col_md_sign_up">
+                    <div class="cont_ba_opcitiy">
+                        <h2>注册</h2>
+                        <p>还没账号,点此注册</p>
+                        <button class="btn_sign_up" onclick="cambiar_sign_up()">注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_back_info">
+                <div class="cont_img_back_grey"> <img src="/public/xuArticle/images/bg26.jpg" alt="" /> </div>
+            </div>
+            <div class="cont_forms" >
+                <div class="cont_img_back_"> <img src="/public/xuArticle/images/bg26.jpg" alt="" /> </div>
+                <div class="cont_form_login"> <a href="#" onclick="ocultar_login_sign_up()" ><i class="glyphicon glyphicon-remove"></i></a>
+                    <h3>登录</h3>
+                    <input type="text" placeholder="User/Email" />
+                    <input type="password" placeholder="Password" />
+                    <button class="btn_login subBtn" onclick="cambiar_login()">登录</button>
+                </div>
+                <div class="cont_form_sign_up"> <a href="#" onclick="ocultar_login_sign_up()"><i class="glyphicon glyphicon-remove"></i></a>
+                    <h3>注册</h3>
+                    <input type="text" placeholder="账号" />
+                    <input type="password" placeholder="密码" />
+                    <input type="password" placeholder="重复密码" />
+                    <button class="btn_sign_up regBtn" onclick="cambiar_sign_up()">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/public/xuArticle/js/jquery-2.2.0.min.js"></script>
+<script src="/public/xuArticle/js/common.js"></script>
+<script src="/public/xuArticle/js/login.js"></script>
+
+</body>
+</html>

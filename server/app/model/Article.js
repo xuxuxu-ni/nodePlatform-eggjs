@@ -33,6 +33,8 @@ module.exports = app => {
             type: INTEGER,
             defaultValue: 0
         }, //  点赞数
+        thumbnail: STRING,
+        banner: STRING
     });
 
     return Article;

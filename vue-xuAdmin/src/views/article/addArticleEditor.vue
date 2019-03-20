@@ -16,8 +16,32 @@
       <el-form-item label="是否置顶">
         <el-switch v-model="article.top"></el-switch>
       </el-form-item>
+
       <el-form-item>
         <el-button class="subBtn" type="primary" @click="submitArticle">发布</el-button>
+      </el-form-item>
+      <br />
+      <el-form-item label="缩略图上传" label-width="95px">
+        <el-upload
+          class="avatar-uploader"
+          action="/api/editor/uploadImg"
+          :show-file-list="false"
+          :on-success="handlethumbnailSuccess"
+          :before-upload="beforethumbnailUpload">
+          <img v-if="article.thumbnail" :src="article.thumbnail" class="avatar">
+          <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+        </el-upload>
+      </el-form-item>
+      <el-form-item label="banner图上传" label-width="110px">
+        <el-upload
+          class="avatar-uploader"
+          action="/api/editor/uploadImg"
+          :show-file-list="false"
+          :on-success="handleBannerSuccess"
+          :before-upload="beforeBannerUpload">
+          <img v-if="article.banner" :src="article.banner" class="avatar">
+          <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+        </el-upload>
       </el-form-item>
     </el-form>
     <div ref="editor" style="text-align:left"></div>
@@ -36,12 +60,46 @@
           sort: '',
           top: true,
           contentHtml: '',
+          thumbnail: '',
+          banner: ''
         },
         initData: "",
         restaurants: [],
       }
     },
     methods: {
+      handlethumbnailSuccess(res, file) {
+        this.article.thumbnail = res.data[0];
+      },
+      beforethumbnailUpload(file) {
+        const isJPG = file.type === 'image/jpeg';
+        const isPNG = file.type === 'image/png';
+        const isLt2M = file.size / 1024 / 1024 < 2;
+
+        if (!(isJPG || isPNG)) {
+          this.$message.error('上传文章缩略图只能是 JPG/PNG 格式!');
+        }
+        if (!isLt2M) {
+          this.$message.error('上传文章缩略图大小不能超过 2MB!');
+        }
+        return  isLt2M && isJPG || isPNG;
+      },
+      handleBannerSuccess(res, file) {
+        this.article.banner = res.data[0];
+      },
+      beforeBannerUpload(file) {
+        const isJPG = file.type === 'image/jpeg';
+        const isPNG = file.type === 'image/png';
+        const isLt5M = file.size / 1024 / 1024 < 5;
+
+        if (!(isJPG || isPNG)) {
+          this.$message.error('上传banner只能是 JPG/PNG 格式!');
+        }
+        if (!isLt5M) {
+          this.$message.error('上传banner图片大小不能超过 5MB!');
+        }
+        return  isLt5M && isJPG || isPNG;
+      },
       querySearch(queryString, cb) {
         var restaurants = this.restaurants
         var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
@@ -68,14 +126,14 @@
       },
       submitArticle() {
         let that = this
-        this.$axios.post('/article/addArticle', this.article ).then( response => {
-            console.log(response);
-            that.$message({
-              showClose: true,
-              message: response.data.message,
-              type: 'success'
-            })
+        this.$axios.post('/article/addArticle', this.article).then(response => {
+          console.log(response);
+          that.$message({
+            showClose: true,
+            message: response.data.message,
+            type: 'success'
           })
+        })
           .catch(function (error) {
             console.log(error);
           });
@@ -112,18 +170,14 @@
 
 
       let id = this.$route.query.articleId
-      debugger
 
       if (!id) return false
-      this.article.id = id
-      this.$axios.get('/article/addArticle' + id)
+      this.$axios.post('/article/getArticle', {id})
         .then(function (response) {
-          if (response.status === 200) {
-            console.log(response)
-            that.article = response.data
-            that.initData = response.data.content.markdown
-            return false
-          }
+          console.log(response)
+          that.article = response.data
+          editor.txt.html(response.data.contentHtml)
+          return false
         })
         .catch(function (error) {
           console.log(error)
