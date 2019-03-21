@@ -1,0 +1,190 @@
+html,body,p{max-height:999999px;min-height:1px;max-width:999999px;min-width:1px}
+.content_show,.renjian_article_wrap{min-width:1200px;position:relative}
+.content_show b,.renjian_article_wrap b{font-weight:normal}
+.content_show .banner,.renjian_article_wrap .banner{width:100%;position:relative}
+.content_show .banner img,.renjian_article_wrap .banner img{width:100%;display:block}
+.content_show .banner .filter,.renjian_article_wrap .banner .filter{position:absolute;left:0;right:0;bottom:0;top:0;background:rgba(0,0,0,0.7);background:url(images/bg7_0.png) 0 100% repeat-x}
+.content_show .author,.renjian_article_wrap .author{overflow:hidden;position:relative;height:90px;padding-bottom:18px;background:#f9f9f9}
+.content_show .author_img,.renjian_article_wrap .author_img{float:left;width:45px;height:45px;position:absolute;left:50%;margin-left:-235px;top:30px}
+.content_show .author_img img,.renjian_article_wrap .author_img img{width:45px;height:45px}
+.content_show .author_img .filter,.renjian_article_wrap .author_img .filter{position:absolute;left:0;top:0;width:45px;height:45px;background:url(images/filter_gray.png) no-repeat}
+.content_show .author_txt,.renjian_article_wrap .author_txt{float:left;position:absolute;left:50%;margin-left:-175px;top:30px}
+.content_show .author_txt p,.renjian_article_wrap .author_txt p{margin-top:4px;font:14px/18px "Sim sun";color:#888}
+.content_show .author_txt .auth,.renjian_article_wrap .author_txt .auth{display:inline-block;padding:1px 7px;font:12px/14px "Sim sun";color:#e75f44;vertical-align:middle;background:url(images/author.png) no-repeat}
+.content_show .author_txt .name,.renjian_article_wrap .author_txt .name{display:inline-block;font:14px/14px "Sim sun";color:#000;font-weight:bold;vertical-align:middle;padding-left:14px}
+.content_show .bannertext,.renjian_article_wrap .bannertext{position:absolute;top:230px;left:50%;margin-left:-235px}
+.content_show h1,.renjian_article_wrap h1{margin-top:40px;width:760px;font:42px/54px "Sim sun";color:#444;font-weight:bold;color:#fff}
+.content_show .sub_title,.renjian_article_wrap .sub_title{margin-top:15px;overflow:hidden;font:14px/1.5 "Sim sun";color:#aeaeae}
+.content_show .pub_time,.renjian_article_wrap .pub_time,.content_show .pub_tie,.renjian_article_wrap .pub_tie{float:left;padding-right:26px}
+.content_show .pub_tie,.renjian_article_wrap .pub_tie{color:#aeaeae;background:url(images/tie.png) 100% 1px no-repeat}
+.content_show .banner_tip,.renjian_article_wrap .banner_tip{position:absolute;color:#fff;top:10px;left:0;font:16px/16px "Sim sun"}
+.content_show .daxie_ctr,.renjian_article_wrap .daxie_ctr{display:none}
+.rj_hd{height:55px;width:100%;min-width:1200px}
+.rj_hd .rj_hd_inner{height:55px;background:#393a44}
+.rj_hd .logo{float:left;overflow:hidden;text-indent:-999em;width:110px;height:55px;background:url(images/sprite2.png) no-repeat 7px -8px}
+.rj_hd .nav{float:left;padding:20px 0 0 20px;font:14px/16px "Sim sun"}
+.rj_hd .nav a{float:left;color:#fff}
+.rj_hd .nav span{padding:0 10px;float:left;color:#676873}
+.rj_hd .search{float:right;width:217px;padding:0 0 0 20px;height:55px;border-left:1px solid #676873}
+.rj_hd .search .search_ipt{float:left;padding-top:20px;border:0;background:0;height:16px;width:150px;font:14px/16px "Sim sun";color:#878890}
+.rj_hd .search .search_sbm{float:right;width:62px;height:55px;border:0;background:url(images/sprite2.png) no-repeat -92px -7px;text-indent:-999px;overflow:hidden;cursor:pointer}
+.rj_hd .func{float:right;padding:20px 33px 0 0;font:14px/16px "Sim sun"}
+.rj_hd .func a{float:left;color:#fff}
+.rj_hd .func span{padding:0 10px;float:left;color:#676873}
+.rj_bd{width:auto;min-width:800px;margin-left:310px;border-left:1px solid #ddd;padding-bottom:1px}
+.rj_main{width:800px;padding-top:55px;margin:0 auto}
+.rj_main .author{overflow:hidden;padding-bottom:18px;border-bottom:1px solid #ddd}
+.rj_main .author_img{float:left;width:45px;height:45px;position:relative}
+.rj_main .author_img img{width:45px;height:45px}
+.rj_main .author_img .filter{position:absolute;left:0;top:0;width:45px;height:45px;background:url(images/filter.png) no-repeat}
+.rj_main .author_txt{float:left;margin-left:12px}
+.rj_main .author_txt p{margin-top:4px;font:14px/18px "Sim sun";color:#888}
+.rj_main .author_txt .auth{display:inline-block;padding:0 7px;border:1px solid #ff4800;border-radius:7px;font:12px/14px "Sim sun";color:#e75f44;vertical-align:middle}
+.rj_main .author_txt .name{display:inline-block;font:14px/14px "Sim sun";color:#000;font-weight:bold;vertical-align:middle;padding-left:14px}
+.rj_main h1{margin-top:40px;width:760px;font:42px/54px "Sim sun";color:#444;font-weight:bold}
+.rj_main .sub_title{margin-top:15px;overflow:hidden;font:14px/1.5 "Sim sun";color:#aeaeae}
+.rj_main .pub_time,.rj_main .pub_tie{float:left;padding-right:26px}
+.rj_main .pub_tie{color:#aeaeae;background:url(images/tie.png) 100% 1px no-repeat}
+.rj_main .banner{margin-top:28px}
+.rj_main .banner img{width:100%}
+.rj_main .endText{width:750px;text-align:center}
+.rj_main .endText del{display:none}
+.rj_main .endText p{margin-bottom:36px;font:18px/32px "Microsoft Yahei";color:#444;text-align:left;vertical-align:bottom}
+.rj_main .endText .title_line{text-align:center;text-indent:0;background:url(images/line.png) center center no-repeat;font-size:26px;font-weight:bold;font-family:"Microsoft Yahei";margin-bottom:36px}
+.rj_main .endText .desc{text-indent:0;vertical-align:baseline}
+.rj_main .endText .desc:first-letter {font-size:2em;font-weight:bold;text-indent:0}
+.rj_main .endText .line{width:100px;height:1px;margin:50px auto 60px;overflow:hidden;border-bottom:1px solid #ccc}
+.rj_main .endText .title{margin-bottom:20px;font:26px/36px "Microsoft Yahei";font-weight:bold;text-indent:0}
+.rj_main .endText img{margin:5px 0 45px;max-width:750px}
+.rj_main .endText a{color:#888}
+.rj_main .endText .intro{border-bottom:1px dashed #888;padding-bottom:10px;overflow:hidden;margin-bottom:40px;text-indent:0}
+.rj_main .endText .intro i{float:left;width:20px;padding:0 5px;border:2px solid #f1f1f1;font-style:normal;text-align:center;background:url(images/intro.png) repeat-y center 28px;font:14px/29px "Sim sun";color:#666}
+.rj_main .endText .intro span{float:right;width:645px;font:16px/28px "Microsoft Yahei";position:relative;top:-4px;color:#666;margin-bottom:30px}
+.rj_main .endText .end{font-size:14px;line-height:24px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:13px 0 13px 20px;background:url(images/e_dot.png) no-repeat 5px 22px;color:#888}
+.rj_main .tie_wrap{margin-top:30px;width:750px;margin-bottom:30px;border-top:1px solid #ddd}
+.rj_main .qrcode_wrap{margin-top:36px;width:750px}
+.rj_main .qrcode_wrap .qrcode{width:136px;padding:7px;margin:0 auto;border:1px solid #ddd}
+.rj_main .qrcode_wrap h6{padding:10px;color:#888;font:12px/20px "Sim sun";text-align:center}
+.rj_side{position:absolute;left:0;top:55px;width:310px;padding-top:55px}
+.rj_side .recomment{width:210px;margin:0 auto}
+.rj_side .recomment h2{font:24px/26px "Sim sun";color:#000;font-weight:bold;vertical-align:middle;padding-left:15px;background:url(images/r_dot.png) no-repeat 3px 3px}
+.rj_side .recomment ul{margin-top:40px;border-bottom:1px dotted #ddd}
+.rj_side .recomment li{width:210px}
+.rj_side .recomment h3{padding-top:10px;border-top:1px dotted #ddd}
+.rj_side .recomment h3 a{font:16px/26px "Microsoft Yahei";color:#888}
+.rj_side .recomment h3 a:hover{color:#444;text-decoration:none}
+.rj_side .recomment p{padding-bottom:4px;font:12px/26px "Sim sun";color:#bfbfbf}
+#tieArea{border-top:0}
+.comment_tips{font:16px/20px "\5fae\8f6f\96c5\9ed1" bold;margin-top:20px;font-weight:bold}
+body .share_component{margin-left:610px}
+body .ep-pages{width:750px}
+.narrow .rj_main .endText{width:600px}
+.narrow .rj_main .endText .intro span{width:525px}
+.narrow .rj_main .qrcode_wrap{width:600px}
+.narrow .rj_main .tie_wrap{width:600px}
+body.narrow .share_component{margin-left:506px}
+.narrow .others .inner{width:960px}
+.narrow .others .inner li{width:225px;margin-right:20px}
+.narrow .others .inner li img{width:225px;height:150px}
+.narrow .others .inner li h5{font-size:15px}
+.endText p.tu span{display:inline-block;vertical-align:bottom;font:14px/2 "Microsoft Yahei";padding:5px 10px;min-width:180px}
+.endText p.tu img{position:relative;bottom:-1px;vertical-align:bottom;margin:0}
+.endText p.tu{font-size:0;border-bottom:1px solid #ccc}
+.ep-pages{text-align:center;width:600px;margin:55px 0 70px}
+.ep-pages .ep-pages-ctrl{border-radius:0;-moz-border-radius:0;-o-border-radius:0;-webkit-border-radius:0;width:60px;height:28px;overflow:hidden;line-height:1000px;background:url(http://img1.cache.netease.com/f2e/news/renjianlist/images/page.jpg) no-repeat;vertical-align:middle;display:inline-block;margin:0 5px}
+.ep-pages .ep-pages-ctrl{border-radius:0;-moz-border-radius:0;-o-border-radius:0;-webkit-border-radius:0;width:60px;height:28px;overflow:hidden;line-height:1000px;background:url(http://img1.cache.netease.com/f2e/news/renjianlist/images/page.jpg) no-repeat;vertical-align:middle;display:inline-block;margin:0 5px}
+.ep-pages .ep-pages-next{background-position:0 -31px}
+.ep-pages a{display:inline-block;width:22px;height:22px;line-height:22px;color:#888;border-radius:22px;-moz-border-radius:22px;-o-border-radius:22px;-webkit-border-radius:22px;text-align:center;margin:0 5px}
+.ep-pages a.current{color:#fff;background:#393a44}
+@media screen and (max-width:767px){.content_show .banner .filter,.renjian_article_wrap .banner .filter{background:url(images/filter_m.png) repeat-x;background-size:contain;opacity:.4;bottom:20%}
+.rj_hd{display:none}
+.content_show,.renjian_article_wrap{min-width:750px}
+.narrow .rj_main .endText{width:660px}
+.content_show .bannertext,.renjian_article_wrap .bannertext{position:static;margin-left:0}
+.content_show h1,.renjian_article_wrap h1{width:660px;color:#252525;font:bold 64px/80px "Microsoft Yahei";margin:50px auto 0}
+.rj_bd{min-width:660px;margin:0 auto;border-left:0}
+.share_component{position:static}
+body.narrow .share_component{margin-left:0;position:static}
+body .share_component{margin-left:0;position:static}
+.N-nav-bottom{display:none}
+.rj_main{width:750px}
+.content_show .banner_tip,.renjian_article_wrap .banner_tip{display:none}
+.rj_side{display:none}
+.content_show .sub_title,.renjian_article_wrap .sub_title{display:none}
+.content_show .pub_time,.renjian_article_wrap .pub_time{display:none}
+.content_show .pub_time_mobile,.renjian_article_wrap .pub_time_mobile{height:33px;line-height:33px;font-size:24px;color:#888;float:none;background:url(images/clock.png) no-repeat;padding-left:46px;margin-left:45px;margin-top:50px}
+.content_show .daxie_time,.renjian_article_wrap .daxie_time{float:right;height:33px;line-height:33px;font-size:24px;color:#888;background:url(images/clock.png) no-repeat;padding-left:46px;margin-right:45px;margin-top:-50px}
+.content_show .bannertext h1,.renjian_article_wrap .bannertext h1{margin-top:30px}
+.content_show .bannertext .psg_logo,.renjian_article_wrap .bannertext .psg_logo{width:660px;height:43px;background:url(images/psg_logo.png) no-repeat;margin-left:45px;margin-top:35px;padding-bottom:25px;margin-bottom:-30px}
+.content_show .bannertext .psg_logo_daxie,.renjian_article_wrap .bannertext .psg_logo_daxie{width:660px;height:43px;background:url(images/psg_logo.png) no-repeat;margin-left:45px;margin-top:35px;padding-bottom:25px;border-bottom:1px solid #ddd;margin-bottom:30px}
+.content_show .daxie_sub_title,.renjian_article_wrap .daxie_sub_title{font-size:32px;margin-left:45px;color:#222}
+.content_show .daxie_ctr,.renjian_article_wrap .daxie_ctr{display:block;margin:78px 0 87px -45px;padding:44px 45px 51px 45px;width:660px;height:145px;background:#f9f9f9}
+.content_show .daxie_ctr div,.renjian_article_wrap .daxie_ctr div{height:145px;float:left;width:330px}
+.content_show .daxie_ctr div i,.renjian_article_wrap .daxie_ctr div i{float:right;width:40px;height:40px;border-radius:40px;background:url(images/daxie_right_ctr.png) no-repeat center center;background-color:#eb5f40;margin-left:10px}
+.content_show .daxie_ctr div span,.renjian_article_wrap .daxie_ctr div span{float:right;font-size:24px;line-height:40px;color:#666}
+.content_show .daxie_ctr div p,.renjian_article_wrap .daxie_ctr div p{font-size:32px;color:#222;font-weight:bold;margin-top:60px;text-align:left;margin-left:55px;line-height:43px;height:86px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.content_show .daxie_ctr .left_ctr,.renjian_article_wrap .daxie_ctr .left_ctr{border-right:1px solid #ddd;width:329px}
+.content_show .daxie_ctr .left_ctr i,.renjian_article_wrap .daxie_ctr .left_ctr i{margin-right:10px;margin-left:0;float:left;background-image:url(images/daxie_left_ctr.png)}
+.content_show .daxie_ctr .left_ctr span,.renjian_article_wrap .daxie_ctr .left_ctr span{float:left}
+.content_show .daxie_ctr .left_ctr p,.renjian_article_wrap .daxie_ctr .left_ctr p{margin-right:55px;margin-left:0}
+.content_show .qrcode_wrap,.renjian_article_wrap .qrcode_wrap{margin-bottom:80px}
+.content_show .author,.renjian_article_wrap .author{background:inherit;font:24px/1 "Microsoft Yahei";color:#252525;border-bottom:1px solid #ddd;width:660px;margin:55px auto 0;height:25px}
+.content_show .author_img,.renjian_article_wrap .author_img{display:none}
+.text_bd{width:660px;margin:0 auto}
+.rj_main .endText .intro i{width:32px;padding:0 24px;border:1px solid #f1f1f1;font:32px/64px "Microsoft Yahei";background:url(images/line_m.png) repeat-y center 0;color:#666}
+.rj_main .endText .intro span{font:32px/58px "Microsoft Yahei"}
+.rj_main .endText .desc:first-letter {font-size:1em;font-weight:normal}
+.rj_main .endText .desc{text-indent:72px}
+.rj_main .endText p{font:36px/66px "Microsoft Yahei";margin-bottom:72px}
+.rj_main .endText .intro{border-bottom:1px solid #ddd}
+.rj_main .endText .title_line{font-size:56px}
+.rj_main .endText .title{font:bold 48px/64px "Microsoft Yahei";margin-bottom:40px}
+.rj_main .endText img{max-width:660px}
+.rj_main .endText .line{width:200px}
+.rj_main .endText .end{font:24px/36px "Microsoft Yahei";padding:25px 0 25px 30px;background:url(images/dot_m.png) no-repeat 0 35px}
+.rj_main .share_btn{height:62px;width:358px;border:1px solid #eb5f40;border-radius:10px;margin:60px auto 60px;line-height:64px;font-size:24px;color:#eb5f40;text-align:center}
+.m_author{text-align:center}
+.m_author .m_author_img{width:40px;height:40px;border-radius:50%;display:inline-block;vertical-align:middle}
+.m_author h3{font:32px/40px "Microsoft Yahei";display:inline-block;vertical-align:middle;margin-left:10px}
+.m_author .m_desc{font:24px/36px "Microsoft Yahei";color:#666;margin-top:20px}
+.narrow .rj_main .qrcode_wrap{width:660px}
+.rj_main .qrcode_wrap h6.m_qrdesc{font:22px/36px "Microsoft Yahei";color:#666;margin-top:20px;display:inline-block;background:url(images/qr_m.png) no-repeat center;letter-spacing:30px;padding:0 0 0 30px}
+.qrcode_wrap{text-align:center}
+.narrow .rj_main .tie_wrap{width:660px}
+.share_component{display:none}
+.endText p.tu{border-bottom:0;position:relative}
+.endText p.tu img{position:static}
+.endText p.tu span{position:absolute;bottom:0;left:0;right:0;color:#fff;padding:50px 24px 20px;font:24px/30px "Microsoft Yahei";background:url(images/bg7_0.png) 0 100% repeat-x;background-size:contain}
+body .others{position:relative;background:#fff;height:auto}
+.others:before{position:absolute;content:"";display:block;background:#eee;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;width:100%;height:28px}
+body .others .inner h4{position:relative;margin:20px auto;overflow:visible;text-indent:-999px}
+body .others .inner h4:before{content:"";width:64px;height:1px;background:#252525;position:absolute;left:-85px;top:60px;display:block}
+body .others .inner h4:after{content:"";width:64px;height:1px;background:#252525;position:absolute;right:-70px;top:60px;display:block}
+.narrow .others .inner{width:660px;margin:0 auto}
+body .others .inner{width:auto;overflow:hidden}
+body .others .inner ul{width:680px}
+.narrow .others .inner li,.others .inner li{width:660px}
+.narrow .others .inner li img,.others .inner li img{width:100%;height:auto}
+.narrow .others .inner li h5,.others .inner li h5{font:32px/48px "Microsoft Yahei";text-align:center}
+.narrow .others .inner li .auth,.others .inner li .auth{padding:0;background:0;float:none;font:24px/30px "Microsoft Yahei";text-align:center;margin:0 0 40px}
+.footer_m{text-align:center;margin-top:20px;border-top:1px solid #ddd;padding-top:30px}
+.footer_m .pclink{font:26px/40px "Microsoft Yahei";color:#aaa}
+.footer_m .copyright{font:22px/40px "Microsoft Yahei";color:#aaa}
+.footer_m .ft{background:#393a44;height:88px;margin-top:30px}
+.footer_m .ft a,.footer_m .ft span{font:24px/88px "Microsoft Yahei";color:#fff;display:inline-block;text-align:center;vertical-align:middle}
+.footer_m .ft span{width:30px}
+body .ep-pages{width:660px}
+.ep-pages .ep-pages-ctrl{width:42px;height:42px;font:24px/44px "";margin:0 10px;vertical-align:middle;background:0;color:#555}
+.ep-pages-disabled{color:#aaa}
+.ep-pages a{width:44px;height:44px;font:24px/44px Arial;margin:0 5px;vertical-align:middle}
+.nav_m{top:0;left:0;right:0;height:90px;position:fixed;-webkit-transition:all .2s linear;overflow:hidden;z-index:50}
+.nav_m .home_m{float:left;width:140px;height:64px;margin:8px;background:url(images/sprite.png) 12px 2px}
+.nav_m .return_m{float:left;width:62px;height:70px;background:url(images/sprite.png) no-repeat -130px 26px}
+.nav_m #header_fold{float:right;width:52px;background:url(images/sprite.png) -274px 8px}
+.nav_m .fold_img_close{height:52px;margin:23px 21px 0 8px}
+.nav_m .fold_img_open{height:0;margin:36px 21px 0 8px}
+.nav_m #daxie_fold{float:right;height:52px;background:url(images/sprite.png) -206px 9px;display:none}
+.nav_m .daxie_img_close{width:52px;margin:23px 16px 0 0}
+.nav_m .daxie_img_open{width:0;margin:23px 32px 0 16px}
+}
+

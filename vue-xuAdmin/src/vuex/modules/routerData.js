@@ -200,6 +200,13 @@ const routerData = {
               name: 'articleList',
               component: () => import('@/views/article/articleList'),
               children: []
+            },
+            {
+              path: '/commentList',
+              iconCls: 'el-icon-edit-outline', // 图标样式class
+              name: 'commentList',
+              component: () => import('@/views/article/commentList'),
+              children: []
             }
           ]
         },
@@ -229,6 +236,13 @@ const routerData = {
               iconCls: 'el-icon-edit-outline', // 图标样式class
               name: 'userList',
               component: () => import('@/views/user/userList'),
+              children: []
+            },
+            {
+              path: '/editPassworld',
+                iconCls: 'el-icon-edit-outline', // 图标样式class
+              name: 'editPassworld',
+              component: () => import('@/views/user/editPassworld'),
               children: []
             },
 

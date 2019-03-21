@@ -66,7 +66,7 @@ export default {
   data () {
     return {
       total: 0,
-      currentPage: 0,
+      currentPage: 1,
       sort: null,
       articletData: []
     }
@@ -111,6 +111,7 @@ export default {
       let that = this
       this.$axios.post('/article/articleList', postdata)
         .then(function (response) {
+          debugger
           for (let i = 0; i < response.data.rows.length; i++) {
             let d = new Date(response.data.rows[i].createdAt)
             let moth = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1)
@@ -119,6 +120,10 @@ export default {
             let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
             let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
+
+            if ( response.data.rows[i].title.length> 22) {
+              response.data.rows[i].title = response.data.rows[i].title.substring(0, 22)+'...'
+            }
           }
           console.log(response)
           that.total = response.data.count

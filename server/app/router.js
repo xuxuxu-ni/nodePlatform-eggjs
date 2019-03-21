@@ -22,9 +22,10 @@ module.exports = app => {
   router.post('/user/userList', isLogin, controller.user.userList)
   // 修改用户信息
   router.post('/user/editUserInfo', isLogin, controller.user.editUserInfo)
+  // 修改用户密码
+  router.post('/user/editPassworld', isLogin, controller.user.editPassworld)
   // 删除用户
   router.post('/user/delUser', isLogin, controller.user.delUser)
-
   // 发表文章
   router.post('/article/addArticle', isLogin, controller.article.addArticle)
   // 文章列表
@@ -39,6 +40,10 @@ module.exports = app => {
   router.post('/comment/addComment', isLogin, controller.comment.addComment)
   // 回复评论
   router.post('/comment/replyComment', isLogin, controller.comment.replyComment)
+  // 评论列表
+  router.post('/comment/commentList', isLogin, controller.comment.commentList)
+  // 删除评论
+  router.post('/comment/delComment', isLogin, controller.comment.delComment)
 
 
 

@@ -35,7 +35,6 @@ axios.interceptors.response.use(
       //   message: '长时间未操作,请重新登录',
       //   type: 'warning'
       // });
-      debugger
       Cookies.set('access_token', response.data.message ,{ expires: 7 });
       // Cookies.remove('access_token');
       setTimeout(() => {

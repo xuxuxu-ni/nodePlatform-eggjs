@@ -9,6 +9,7 @@ const {cryptoMd5} = require('../extend/helper');
 
 class RegisterService extends Service {
     async userRegister(options){
+        let {ctx} = this
         let {username, password} = options
         let keys = this.config.keys;
         let results = ''
@@ -19,7 +20,7 @@ class RegisterService extends Service {
         }).then(async result=> {
             if (!result) {
                 options.password = await cryptoMd5(password, keys)
-                await this.ctx.model.User.create(options).then(ok => {
+                await ctx.model.User.create(options).then(ok => {
                     results = {
                         code: 200,
                         message: '注册成功'

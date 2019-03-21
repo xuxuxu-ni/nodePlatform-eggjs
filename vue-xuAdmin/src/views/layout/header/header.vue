@@ -18,7 +18,7 @@
                   </span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="info">{{ $t('userDropdownMenu.basicInfor') }}</el-dropdown-item>
-              <el-dropdown-item command="b">{{ $t('userDropdownMenu.changePassword') }}</el-dropdown-item>
+              <el-dropdown-item command="editPassworld">{{ $t('userDropdownMenu.changePassword') }}</el-dropdown-item>
               <el-dropdown-item command="logout" divided>{{ $t('userDropdownMenu.logout') }}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -80,6 +80,8 @@
         } else if (command === 'logout') {
           Cookies.remove('access_token');
           location.reload()
+        } else if (command === 'editPassworld') {
+          this.$router.push({path: '/editPassworld'});
         }
       }
     }

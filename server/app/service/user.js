@@ -94,6 +94,40 @@ class UserService extends Service {
         })
         return results
     }
+
+    // 修改密码
+    async editPassworld(id, pass) {
+        let results
+        await this.ctx.model.User.update({
+            password: pass
+        },{
+            where:{
+                id
+            }
+        }).then(res=>{
+            console.log(res);
+            if (res[0] > 0){
+                results = {
+                    code: 200,
+                    message: '修改成功,请重新登录'
+                }
+            } else {
+                results = {
+                    code: 10000,
+                    message: '修改失败,请重试'
+                }
+            }
+
+        }).catch(err=>{
+            console.log(err);
+            results = {
+                code: 10000,
+                message: error
+            }
+        })
+
+        return results
+    }
 }
 
 module.exports = UserService

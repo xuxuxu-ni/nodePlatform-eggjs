@@ -15,7 +15,7 @@ module.exports = app => {
             type: STRING,
             allowNull: false
         }, // 作者id
-        CcommentId: {
+        CommentId: {
             type: STRING,
             allowNull: false
         }, // 评论id

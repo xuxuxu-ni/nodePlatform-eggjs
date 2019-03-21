@@ -13,7 +13,7 @@ class AppBootHook {
 
     async willReady() {
         let keys = this.app.config.keys;
-        await this.app.model.sync({ force: true}).then((res) => {
+        await this.app.model.sync({ force: false}).then((res) => {
             res.User.findOne({
                 where: {
                     username: "admin"//查询条件

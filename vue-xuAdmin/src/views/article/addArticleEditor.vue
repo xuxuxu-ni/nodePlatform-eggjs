@@ -138,10 +138,9 @@
             console.log(error);
           });
 
-        // this.$axios.post('/comment/replyComment', {
-        //   "to_user_id": "32306360496411e9901b65a0664389a9",
-        //   "CcommentId": "e5552650498d11e9875e3d9681c01fb9",
-        //   "content": "这是回复内容"
+        // this.$axios.post('/comment/addComment', {
+        //   "articleId": "545fbcd04b2e11e9bfa585993145b740",
+        //   "content": "评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容"
         // }).then( response => {
         //   console.log(response);
         //   debugger
@@ -150,8 +149,7 @@
         //     message: response.data.message,
         //     type: 'success'
         //   })
-        // })
-        //   .catch(function (error) {
+        // }).catch(function (error) {
         //     console.log(error);
         //   });
       }

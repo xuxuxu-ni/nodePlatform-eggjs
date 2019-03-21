@@ -30,10 +30,6 @@
         label="角色">
       </el-table-column>
       <el-table-column
-        prop="status"
-        label="用户状态">
-      </el-table-column>
-      <el-table-column
         label="操作">
         <template slot-scope="scope">
           <el-button

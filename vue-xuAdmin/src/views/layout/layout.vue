@@ -41,7 +41,6 @@
   .main-enter, .main-leave-to {
     opacity: 0;
     transform: translateY(30px);
-
   }
   .main-enter-active {
     transition: all 0.2s;

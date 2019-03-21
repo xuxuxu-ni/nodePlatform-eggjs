@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html id="ne_wrap"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>人间_网易新闻</title>
+<meta name="keywords" content="人间_网易新闻">
+<meta name="description" content="人间_网易新闻">
+<!--  -->
+<!--to mobile-->
+<script>
+// function checkMobile(){
+// 	if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|mobile/i.test(navigator.userAgent.toLowerCase())&&!/pc=1/.test(location.search)){
+// 		return true;
+// 	}else{
+// 		return false;
+// 	}
+// }
+// if(checkMobile()){window.location.href="http://renjian.163.com/special/thelivings-mobile/"}
+</script>
+<link href="css/news.css" rel="stylesheet" type="text/css">
+<script src="js/ntes_jslib_1.x.js" type="text/javascript" charset="gb2312"></script>
+<script src="js/ne.js"></script>
+<link rel="stylesheet" href="css/mingdu.css">
+</head>
+<body>
+<style type="text/css">.author a{color: #888888;}</style>
+<!--<base target="_blank">--><base href="." target="_blank">
+<div class="renjian_wrap" id="renjian_wrap">
+<!-- 白色头部 -->
+<!-- 头部开始 -->
+<style>
+.rj_hd{height:55px;width:100%;position: relative;top: 0;z-index: 999;}
+.rj_hd .rj_hd_inner{height:55px;background:#fff;}
+.rj_hd .logo{float:left;overflow:hidden;text-indent:-999em;width:110px;height:55px;background:url(http://cms-bucket.nosdn.127.net/2018/06/28/b038961a3f294a4081ffcd21785f9e58.png) no-repeat}
+.rj_hd .nav{float:left;padding:20px 0 0 20px;font:14px/16px "Sim sun"}
+.rj_hd .nav a{float:left;color:#000;}
+.rj_hd .nav span{padding:0 10px;float:left;color:#c4c4c4;}
+.rj_hd .search{float:right;width:217px;padding:0 0 0 20px;height:55px;border-left:1px solid #c4c4c4;}
+.rj_hd .search .search_ipt{float:left;padding-top:20px;border:0;background:0;height:16px;width:150px;font:14px/16px "Sim sun";color:#878890}
+.rj_hd .search .search_sbm{float:right;width:62px;height:55px;border:0;background:url(http://img1.cache.netease.com/f2e/news/renjian/images/sprite.png) no-repeat -110px 0;text-indent:-999px;overflow:hidden;cursor:pointer}
+.rj_hd .func{float:right;padding:20px 33px 0 0;font:14px/16px "Sim sun"}
+.rj_hd .func a{float:left;color:#000;}
+.rj_hd .func span{padding:0 10px;float:left;color:#c4c4c4}
+.rj_bd{width:75%;min-width:800px;float:right;border-left:1px solid #ddd}
+</style>
+		<div class="rj_hd">
+			<div class="rj_hd_inner">
+				<a class="logo" href="http://renjian.163.com/" title="人间">人间</a>
+				<div class="nav">
+					<a href="http://www.163.com/">网易首页</a>
+					<span>|</span>
+					<a href="http://news.163.com/">网易新闻</a>
+				</div>
+				<div class="search">
+					<form action="http://renjian.163.com/" onsubmit="return search_to();" id="top_form" target="_blank" name="nisearch_top" method="post">
+						<input type="text" class="search_ipt" value="输入要搜索的内容" id="searchInput_top">
+						<input type="submit" class="search_sbm">
+					</form>
+				</div>
+				<div class="func" id="rj_func"><a class="login" href="http://reg.email.163.com/mailregAll/reg0.jsp">注册</a><span>|</span><a class="reg" href="https://reg.163.com/logins.jsp?url=http://renjian.163.com/" target="_self">登录</a></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if(NE.cookie.get("S_INFO")&&NE.cookie.get("P_INFO")){
+				var userMail = NE.cookie.get("P_INFO").split("|")[0];
+				var userId = NE.cookie.get("S_INFO").split("|")[3];
+				NE("#rj_func").html('<a class="login" href="http://reg.163.com/Main.jsp?username='+userMail+'">'+userMail+'</a><span>|</span><a class="reg" href="http://reg.163.com/Logout.jsp?username='+userId+'&url='+window.location.href+'" target="_self">安全退出</a>')
+			}else{
+				NE("#rj_func").html('<a class="login" href="http://reg.email.163.com/mailregAll/reg0.jsp">注册</a><span>|</span><a class="reg" href="https://reg.163.com/logins.jsp?url='+window.location.href+'" target="_self">登录</a>')
+			}
+			NE("#searchInput_top").bind("focus",function(){
+				if(this.value == "输入要搜索的内容"){
+					this.value = ""
+				}
+			})
+			NE("#searchInput_top").bind("blur",function(){
+				if(this.value == ""){
+					this.value = "输入要搜索的内容"
+				}
+			})
+			function search_to(){
+				if(document.getElementById('searchInput_top').value == "" || document.getElementById('searchInput_top').value == "输入要搜索的内容"){
+					alert("请输入要搜索的内容");
+					return false;
+				}
+				document.getElementById('top_form').action='http://cn.bing.com/search?q=site%3Arenjian.163.com+'+encodeURIComponent(document.getElementById('searchInput_top').value);
+				document.nisearch_top.submit();
+			}
+			// NE(window).bind("scroll",function(){
+			// 	if((document.body.scrollTop)>55){
+			// 		NE(".rj_hd").css({"position":"fixed","top":"0px"})
+			// 	}else{
+			// 		NE(".rj_hd").css({"position":"relative","top":"0px"})
+			// 	}
+			// })
+		</script>
+<h1 style="display:none">人间</h1>
+    <div class="renjian_content">
+        <!-- 项目内容 -->
+<div style="overflow:hidden;background:#11161c url(http://img4.cache.netease.com/cnews/2015/11/17/20151117174329db6e8.jpg) no-repeat center top;position: relative;"><video id="banner_video" onplay="canplay()" src="http://flv.bn.netease.com/videolib3/1511/04/aYbyP5596/SD/aYbyP5596-mobile.mp4" loop="loop" autoplay="autoplay" style="opacity: 1; display: block; width: 1500px; height: 170px; position: relative; left: 50%; margin-left: -750px;"><div class="banner" style="background: url(http://img6.cache.netease.com/cnews/2015/8/11/20150811195001eaca0.jpg) no-repeat center ;"></div></video><i style="width: 1920px;display: block;height: 170px;position: absolute;left: 50%;top: 0;margin-left: -960px;background: url(http://img0.ph.126.net/6fLbyxtYQfcAjos_wlMBMw==/6631406415282713001.png);"></i></div>
+<script>
+  function canplay(){
+  	NE("#banner_video").css({"opacity":1})
+  }
+var video = NE("#banner_video")[0];
+NE(window).bind("click", playvideo)
+function playvideo(){video.play(); NE(window).unbind("click", playvideo)}
+//setTimeout(function(){
+//NE("#banner_video").css({"opacity":1})
+//},1000)
+</script>
+        <!-- 导航 -->
+        <style>.nav2 .wrapper ul li{width:125px;}</style>
+<div class="nav2">
+	<div class="wrapper">
+		<ul class="clearfix">
+			<li><a href="http://renjian.163.com/special/renjian_texie/" class="">特写</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_jishi/" class="">记事</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_daxie/" class="">大写</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_haodu/" class="">好读</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_kanke/" class="">看客</a><span></span></li>
+			<li><a href="http://music.163.com/#/djradio?id=334008053" class="">FM</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_zuozhe/" class="">作者</a><span></span></li>
+			<li><a href="http://renjian.163.com/special/renjian_guanyu/" class="">关于</a></li>
+		</ul>
+	</div>
+</div>
+<style>
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav2 {
+  margin-bottom: 55px;
+  width: 100%;
+  height: 84px;
+  background-color: #fafafa;
+}
+.nav2 ul li {
+  width: 200px;
+  float: left;
+  position: relative;
+  line-height: 84px;
+  text-align: center;
+}
+.nav2 ul li a {
+  line-height: 84px;
+  font-size: 18px;
+  color: #444444;
+  font-weight: bold;
+}
+.nav2 ul li a:hover {
+  color: #888888;
+  text-decoration: none;
+}
+.nav2 ul li span {
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #adabb4;
+  display: block;
+}
+</style>
+        <!-- 两个图片 475*308-->
+        <div class="wrapper">
+            <ul class="two_pic clearfix">
+                                                <li>
+                    <a href="http://renjian.163.com/19/0319/13/EAKQOJ1I000181RK.html" class="img">
+                        <img src="image/2019_03_19_69f322d548b247d2a3f5709b9950ec4e.jpeg">
+                    </a>
+                    <div class="clearfix">
+                        <div class="fl w110">
+                            <div class="jishi"></div>
+                            <!-- <div class="daxie"></div> -->
+                        </div>
+                        <div class="fl w365">
+                            <h2><a href="http://renjian.163.com/19/0319/13/EAKQOJ1I000181RK.html">爸，去工作吧，别再等牛市了</a></h2>
+                            <div class="author">九月</div>
+                            <p>“一辈子都等过去了，还不如撒手出来做事还钱！”</p>
+                        </div>
+                    </div>
+                </li>
+                                <li>
+                    <a href="http://renjian.163.com/19/0318/12/EAI5JVQG000181RV.html" class="img">
+                        <img src="image/2019_03_18_e6e0e0770c05475eaa2999d0e77b0783.jpeg">
+                    </a>
+                    <div class="clearfix">
+                        <div class="fl w110">
+                            <div class="daxie"></div>
+                            <!-- <div class="daxie"></div> -->
+                        </div>
+                        <div class="fl w365">
+                            <h2><a href="http://renjian.163.com/19/0318/12/EAI5JVQG000181RV.html">动迁之下的真假兄弟情</a></h2>
+                            <div class="author">某人某事</div>
+                            <p>谭家老大没忘给在监狱里的弟弟留下一层落脚的地方，孙家的姐弟四个，却在母亲去世后都亮出了想要独吞财产的遗嘱。</p>
+                        </div>
+                    </div>
+                </li>
+                            </ul>
+        </div>
+       <!--  热门文章 -->
+       <div class="hot_article">
+           <div class="wrapper clearfix">
+               <div class="hot_article_tit fl"><img src="image/hot_article_tit.png" alt="热门文章"></div>
+               <div class="hot_article_tit2 fr"><img src="image/hot_article_tit2.png" alt="人间"></div>
+               <div class="hot_article_list">
+                   <ul class="clearfix">
+                                                                       <li class="ml130 "><a href="http://renjian.163.com/19/0312/13/EA2RQBVA000181RV.html">一根价值连城的烟屁股</a></li>
+                                              <li class=""><a href="http://renjian.163.com/19/0311/13/EA07PN5R000181RV.html">爱上那个让我成为自己的男人</a></li>
+                                              <li class="ml130 "><a href="http://renjian.163.com/19/0311/12/EA05JHUE000181RK.html">医闹不闹了，我却后悔了</a></li>
+                                              <li class=""><a href="http://renjian.163.com/19/0309/15/E9R9JAMK000181RV.html">这上海，还没我们工地好</a></li>
+                                              <li class="ml130 "><a href="http://renjian.163.com/19/0309/14/E9R8COOI000181RK.html">逃不出幻想江湖的大哥</a></li>
+                                              <li class=""><a href="http://renjian.163.com/19/0308/14/E9OJG5AM000181RK.html">被领导惯出来的害群之马</a></li>
+                                          </ul>
+               </div>
+
+           </div>
+       </div>
+<style>.texie_tit,.jishi_tit,.daxie_tit,.haodu_tit{display:block;}</style>
+       <!-- 特写 -->
+       <div class="texie wrapper pt60 pb70 b_bottom" id="texie">
+            <a href="http://renjian.163.com/special/renjian_texie/" class="texie_tit" style="background:url(http://img4.cache.netease.com/cnews/2015/8/7/2015080716201583ce2.jpg) no-repeat center"></a>
+            <!--  3个盒子开始 310*202 -->
+            <ul class="three_box clearfix">
+                                                <li>
+                    <a href="http://renjian.163.com/19/0316/15/EADC4660000181RK.html" class="img"><img src="image/2019_03_19_261f2c952b724eabae8b51724ddbb48a.jpeg" alt="想做小偷，你有上岗证吗？"></a>
+                    <h3><a href="http://renjian.163.com/19/0316/15/EADC4660000181RK.html" class="tit">想做小偷，你有上岗证吗？</a></h3>
+                    <div class="author">黄石孤老</div>
+                    <p>阿非和一帮“学员”一起学习偷窃技术。学成后，陈经理颁给他一个“上岗证”。</p>
+                </li>
+                                 <li>
+                    <a href="http://renjian.163.com/19/0312/13/EA2RQBVA000181RV.html" class="img"><img src="image/2019_03_14_878dc0d9744b40dfb489da354e218fc8.jpeg" alt="一根价值连城的烟屁股"></a>
+                    <h3><a href="http://renjian.163.com/19/0312/13/EA2RQBVA000181RV.html" class="tit">一根价值连城的烟屁股</a></h3>
+                    <div class="author">晓渡</div>
+                    <p>你和我一样，都不是坐牢的，等出事了，花的银子海了去了，对吧？</p>
+                </li>
+                                 <li>
+                    <a href="http://renjian.163.com/19/0307/15/E9M58OQB000181RV.html" class="img"><img src="image/2019_03_09_01eb4f19987b490b893695f112dfbdd6.jpeg" alt="地下室里藏着一群代孕妈妈"></a>
+                    <h3><a href="http://renjian.163.com/19/0307/15/E9M58OQB000181RV.html" class="tit">地下室里藏着一群代孕妈妈</a></h3>
+                    <div class="author">软尾兔</div>
+                    <p>这些孕母这样躺着就能挣到种3年田都拿不上的钱，她们巴不得呢。</p>
+                </li>
+                             </ul>
+            <!-- 3个盒子结束 -->
+            <a href="http://renjian.163.com/special/renjian_texie/" target="_blank" class="more"></a>
+       </div>
+       <!-- 记事 -->
+       <div class="jishi wrapper pt60 pb70 b_bottom" id="jishi">
+            <a href="http://renjian.163.com/special/renjian_jishi/" class="jishi_tit" style="background:url(http://img2.cache.netease.com/cnews/2015/8/7/201508071619366f6a5.jpg) no-repeat center"></a>
+            <!--  2个盒子开始 475*308 -->
+            <ul class="two_box clearfix">
+                                                <li>
+                    <a href="http://renjian.163.com/19/0316/15/EADCF3HO000181RV.html" class="img"><img src="image/2019_03_16_16935e0470ca471ba296209f5fbb836d.jpeg" alt="我的客户们，投诉上瘾了"></a>
+                    <h3><a href="http://renjian.163.com/19/0316/15/EADCF3HO000181RV.html" class="tit">我的客户们，投诉上瘾了</a></h3>
+                    <div class="author">渔姐</div>
+                    <p>可能投诉的过程会让你们不开心，但从长远看，正是我们的投诉促进了你们运营商的不断进步。</p>
+                </li>
+                                <li>
+                    <a href="http://renjian.163.com/19/0315/13/EAAHA318000181RK.html" class="img"><img src="image/2019_03_15_5145ae2b3d4d46fea477a5b0846ca0e4.jpeg" alt="工作四个月，讨薪大半年"></a>
+                    <h3><a href="http://renjian.163.com/19/0315/13/EAAHA318000181RK.html" class="tit">工作四个月，讨薪大半年</a></h3>
+                    <div class="author">赵雪川</div>
+                    <p>对一个北漂来说，即便手握公司没签劳动合同的证据，但决定让自己陷入一场官司并非易事。</p>
+                </li>
+                            </ul>
+            <!-- 2个盒子结束 -->
+            <a href="http://renjian.163.com/special/renjian_jishi/" target="_blank" class="more"></a>
+       </div>
+       <!-- 大写 -->
+       <div class="daxie wrapper pt70 pb80 b_bottom" id="daxie">
+           <a href="http://renjian.163.com/special/renjian_daxie/" class="daxie_tit" style="background:url(http://img4.cache.netease.com/cnews/2015/8/7/20150807162139ac60f.jpg) no-repeat center"></a>
+           <!-- 1个盒子 -->
+           <div class="one_box">
+                                        <a href="http://renjian.163.com/19/0318/12/EAI5JVQG000181RV.html" class="img"><img src="image/2019_03_18_c145d907210d44ba9de093307ab2c352.jpeg" alt="动迁之下的真假兄弟情 | 连载06"></a>
+                <h3><a href="http://renjian.163.com/19/0318/12/EAI5JVQG000181RV.html" class="tit">动迁之下的真假兄弟情 | 连载06</a></h3>
+                <div class="author">某人某事</div>
+                <p>谭家老大没忘给弟弟留下地方，孙家的姐弟四个，却想要独吞财产。</p>
+                       </div>
+           <!-- 1个盒子结束 -->
+            <a href="http://renjian.163.com/special/renjian_daxie/" target="_blank" class="more"></a>
+       </div>
+       <!-- 好读 -->
+       <div class="haodu wrapper pt60 pb70 " id="haodu">
+            <a href="http://renjian.163.com/special/renjian_haodu/" class="haodu_tit" style="background:url(http://img5.cache.netease.com/cnews/2015/8/7/20150807161452b6be1.jpg) no-repeat center"></a>
+            <!--  3个盒子开始 310*202 -->
+            <ul class="three_box clearfix">
+                                                <li>
+                    <a href="http://renjian.163.com/18/1224/16/E3Q8V8QS000181RV.html" class="img"><img src="image/2018_12_26_48cfa43262f249348041aee32f7dfc8f.jpeg" alt="被扫地出门的美国租客们"></a>
+					<h3><a href="http://renjian.163.com/18/1224/16/E3Q8V8QS000181RV.html" class="tit">被扫地出门的美国租客们</a></h3>
+                    <div class="author">马修·德斯蒙德</div>
+                    <p>每年因为缴不出房租而被扫地出门的美国国民，数以百万计。</p>
+                </li>
+                                 <li>
+                    <a href="http://renjian.163.com/19/0311/13/EA07PN5R000181RV.html" class="img"><img src="image/2019_03_13_fd2fce8a8c3c48ddb7b7f98c895a1fcd.png" alt="爱上那个让我成为自己的男人"></a>
+					<h3><a href="http://renjian.163.com/19/0311/13/EA07PN5R000181RV.html" class="tit">爱上那个让我成为自己的男人</a></h3>
+                    <div class="author">米歇尔·奥巴马</div>
+                    <p>我深深地、充满愉悦地爱上了一个男人。我不打算躲开，但我需要让自己站稳。</p>
+                </li>
+                                 <li>
+                    <a href="http://renjian.163.com/19/0219/14/E8CR5NDS000181RV.html" class="img"><img src="image/2019_02_21_213d11d8ed784e9f83217b50e99efcb4.jpeg" alt="除了凶手，还有谁害死了她"></a>
+					<h3><a href="http://renjian.163.com/19/0219/14/E8CR5NDS000181RV.html" class="tit">除了凶手，还有谁害死了她</a></h3>
+                    <div class="author">凯文·库克</div>
+                    <p>检方相信，在那天晚上曾听到过基蒂叫声的邻居应该有40到50个人。</p>
+                </li>
+                             </ul>
+            <!-- 3个盒子结束 -->
+            <a href="http://renjian.163.com/special/renjian_haodu/" target="_blank" class="more"></a>
+       </div>
+        <!-- 写作工作室 -->
+        <div class="writing_workshop">
+
+            <div class="wrapper">
+                <div class="writing_workshop_tit" style="background:url(http://img1.cache.netease.com/f2e/news/renjian/images/workshop.png) no-repeat center"></div>
+                <ul class="clearfix">
+                                                            <li class="clearfix">
+                        <a href="http://renjian.163.com/special/bodytalk/?1439530762908" class="img"><img src="image/201508141340209df55.png" alt="让身体说话"></a>
+                        <h3><a href="http://renjian.163.com/special/bodytalk/?1439530762908" class="tit">让身体说话</a></h3>
+                        <p>她的故事，跟身体有关</p>
+                    </li>
+                                         <li class="clearfix">
+                        <a href="http://renjian.163.com/special/rainbow/" class="img"><img src="image/201508031440525911a.png" alt="虹桥"></a>
+                        <h3><a href="http://renjian.163.com/special/rainbow/" class="tit">虹桥</a></h3>
+                        <p>书写我们的彩虹故事</p>
+                    </li>
+                                         <li class="clearfix">
+                        <a href="http://renjian.163.com/special/bluelabor/" class="img"><img src="image/20150803134633caf0b.png" alt="蓝衣坊"></a>
+                        <h3><a href="http://renjian.163.com/special/bluelabor/" class="tit">蓝衣坊</a></h3>
+                        <p>一线打工者的写作工坊</p>
+                    </li>
+                                         <li class="clearfix">
+                        <a href="http://renjian.163.com/special/citizen/" class="img"><img src="image/2018_09_20_7b61caf0a34d4ce8a5f102fdcc9cb6dd.png" alt="大国小民"></a>
+                        <h3><a href="http://renjian.163.com/special/citizen/" class="tit">大国小民</a></h3>
+                        <p>说说老百姓的事</p>
+                    </li>
+                                     </ul>
+            </div>
+        </div>
+    </div>
+<div class="N-nav-bottom">
+    <div class="N-nav-bottom-main">
+    	<div class="ntes_foot_link">
+	<span class="N-nav-bottom-copyright"><span class="N-nav-bottom-copyright-icon">&#169;</span> 1997-2015 网易公司版权所有</span>
+	<a href="http://corp.163.com/">About NetEase</a> |
+	<a href="http://gb.corp.163.com/gb/about/overview.html">公司简介</a> |
+	<a href="http://gb.corp.163.com/gb/contactus.html">联系方法</a> |
+	<a href="http://corp.163.com/gb/job/job.html">招聘信息</a> |
+	<a href="http://help.163.com/">客户服务</a> |
+	<a href="http://gb.corp.163.com/gb/legal.html">隐私政策</a> |
+	<a href="http://emarketing.biz.163.com/">广告服务</a> |
+	<a href="http://sitemap.163.com/">网站地图</a> |
+	<a href="http://www.163.com/special/0077450P/feedback_window.html" class="ne_foot_feedback_link">意见反馈</a> |
+	<a href="http://www.bjjubao.org/index.htm">不良信息举报</a>
+</div>
+    </div>
+    	<style>
+	.N-nav-bottom-sub{width: 960px; margin:0 auto; position: relative; height: 0px; z-index: 1000; }
+	.ne_foot_feedback_box{width: 360px; height: 270px; position: absolute; z-index: 9999; bottom: 34px; right: 0; display: none; }
+	.ne_foot_feedback_box .feedback_close{width: 11px; height: 11px; background: url(http://img1.cache.netease.com/f2e/www/feedback/images/box_close.png) no-repeat; position: absolute; right: 8px; top: 7px; font-size: 0; overflow: hidden; text-indent: -9990em; }
+	.ne_foot_feedback_box .feedback_cor{width: 19px; height: 13px; background: url(http://img1.cache.netease.com/f2e/www/feedback/images/box_cor.png) no-repeat; position: absolute; left: 236px; top: 250px; }
+	.ne_foot_feedback_box .feedback_box{border:1px solid #cdcdcd; background: #fff; width: 358px; height: 250px; overflow: hidden; }
+	.ne_foot_feedback_box .feedback_box iframe{display: block; border: 0; width: 100%; height: 250px; overflow: hidden; }
+	</style>
+	<div class="N-nav-bottom-sub" id="N-nav-bottom-sub"></div>
+	<script>
+	(function(){
+		if(!window.NTES) return;
+		function showFeedbackBox(x,y){
+			var footmainNd = NTES('.N-nav-bottom-main')[0];
+			var feedbacklinkNd = NTES('.ne_foot_feedback_link')[0];
+			if(!footmainNd){
+				window.open(feedbacklinkNd.href);
+				return;
+			};
+			var x = x;
+			var y = y;
+			if(x){
+				NTES(".ne_foot_feedback_box")[0].style.top = x +"px";
+			}else{
+				x = feedbacklinkNd.offsetLeft - footmainNd.offsetLeft + (feedbacklinkNd.offsetWidth/2) - 246;
+				if(NTES.browser.msie && (parseInt(NTES.browser.version) == 7 ||parseInt(NTES.browser.version) == 6)){
+					x = feedbacklinkNd.offsetLeft + (feedbacklinkNd.offsetWidth/2) - 246;
+				}
+				NTES(".ne_foot_feedback_box")[0].style.left = x +"px";
+			}
+			if(y){
+				NTES(".ne_foot_feedback_box")[0].style.top = y +"px";
+			}
+			NTES(".ne_foot_feedback_box")[0].style.display = "block";
+		}
+		function bindFeedbackBoxClose(){
+			NTES(".ne_foot_feedback_box .feedback_close").addEvent("click",function(){
+				NTES(".ne_foot_feedback_box")[0].style.display = "none";
+				return false;
+			});
+		}
+		NTES(".ne_foot_feedback_link").addEvent("click",function(){
+			if(NTES("#ne_foot_feedback_box")){
+				showFeedbackBox();
+			}else{
+				var boxNd = document.createElement("div");
+				boxNd.className = "ne_foot_feedback_box";
+				boxNd.id = "ne_foot_feedback_box";
+				boxNd.innerHTML = '<a href="javascript:;" target="_self" class="feedback_close">关闭</a> <span class="feedback_cor"></span> <div class="feedback_box"> <iframe src="http://www.163.com/special/0077450P/feedback_window.html" frameborder="0" witdh="100%" height="290" scrolling="no"></iframe> </div>';
+				document.getElementById('N-nav-bottom-sub').appendChild(boxNd);
+				window.setTimeout(function(){
+					showFeedbackBox();
+					bindFeedbackBoxClose();
+				},500);
+			}
+			return false;
+		});
+	})();
+	</script>
+</div>
+</div>
+<script src="js/renjian.947699.min.js"></script>
+<script>"use strict";
+(function(){main()})();
+</script>
+<!-- START NetEase Devilfish 2006 -->
+<script src="js/ntes.js" type="text/javascript"></script>
+<script type="text/javascript">
+_ntes_nacc = "renjian";
+neteaseTracker();
+</script>
+<!-- START WRating v1.0 -->
+<!-- END WRating v1.0 -->
+<!-- big data statistics -->
+
+<!-- big data analysis 0628 -->
+<script src="js/analysis0628.350ctAoOoFtN.1.js"></script>
+<script>var aaa = "\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002e\u002c\u002c\u003a\u003a\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003a\u003a\u003a\u003a\u002c\u002c\u002e\u002e\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002e\u002c\u003a\u003b\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u003b\u003b\u003a\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002c\u003a\u003b\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0069\u0069\u003b\u003b\u003a\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u003b\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u0069\u0069\u003b\u003b\u003b\u0069\u0069\u003b\u0069\u0031\u0072\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0072\u0072\u0069\u0069\u003b\u003a\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u003b\u0069\u0069\u0072\u0072\u0072\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0072\u0033\u0039\u0073\u003b\u0069\u0069\u0069\u0069\u0031\u0038\u0039\u0072\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0073\u0073\u0072\u0072\u0072\u0069\u003b\u003a\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002c\u003b\u0069\u0069\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0053\u0047\u0053\u0069\u0069\u0069\u0069\u0069\u0069\u0072\u0033\u0038\u0035\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0073\u0073\u0073\u0072\u0069\u0069\u003b\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u003b\u0069\u0069\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0073\u0033\u0047\u0053\u0069\u003b\u003b\u0069\u0069\u0069\u0069\u003b\u0073\u0039\u0038\u0053\u0031\u0073\u0073\u0031\u0031\u0072\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0072\u0072\u0073\u0073\u0072\u0072\u0069\u003b\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u0069\u0069\u0069\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003a\u0073\u0039\u0039\u0039\u0038\u0033\u0031\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u0069\u0031\u0053\u0033\u0039\u0039\u0039\u0033\u0073\u003a\u003a\u003b\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u0069\u0069\u0072\u0072\u0073\u0072\u0072\u0069\u003b\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003a\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u002c\u002c\u002c\u002c\u002c\u002c\u003a\u0069\u0069\u0069\u003b\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u003a\u003a\u003b\u003a\u003a\u002c\u002c\u002c\u002e\u002e\u002c\u003a\u0069\u0073\u0035\u0033\u0039\u0053\u0035\u0068\u0073\u0072\u003b\u003b\u0069\u0072\u0073\u0072\u0072\u0069\u003b\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u003b\u0069\u0069\u0069\u0069\u003b\u003a\u003a\u0069\u0073\u0068\u0053\u0033\u0039\u0039\u0047\u0026\u0026\u0058\u0047\u0033\u0068\u0072\u002c\u002e\u002e\u002e\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u002e\u002e\u002c\u002c\u002c\u002e\u002e\u002e\u002e\u002e\u002e\u002e\u002e\u002e\u002e\u002e\u003a\u0073\u0053\u0058\u0048\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0041\u0038\u0031\u0069\u0069\u0072\u0073\u0072\u0069\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003a\u0069\u0069\u0069\u0069\u003b\u003b\u0073\u0039\u0041\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0042\u0058\u0068\u003b\u002e\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002e\u002e\u002e\u0031\u0058\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0053\u0069\u0069\u0073\u0073\u0072\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0069\u0069\u003b\u0069\u0053\u0048\u0040\u0040\u004d\u0042\u0042\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0038\u0069\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002e\u002c\u002e\u002e\u0068\u0048\u0040\u0040\u0041\u0047\u0039\u0039\u0038\u0058\u0048\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0068\u0069\u0073\u0073\u0073\u0069\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0069\u0069\u0072\u0072\u0072\u0033\u004d\u0040\u0048\u0035\u003a\u0020\u0020\u002e\u002c\u003b\u0031\u0047\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0035\u002e\u002e\u002c\u002c\u002c\u002c\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u002e\u003a\u0047\u0040\u0023\u0068\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003a\u0068\u0026\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0038\u0073\u0073\u0073\u0073\u0072\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0072\u0031\u0041\u0040\u0042\u0031\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0033\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0047\u002c\u002e\u002c\u002c\u002c\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u003a\u0041\u0040\u0041\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0073\u0042\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0026\u0031\u0073\u0073\u0073\u0072\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0073\u0068\u0042\u0040\u0058\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0072\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0047\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u002c\u0047\u0040\u0042\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003b\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0031\u0073\u0073\u0073\u0069\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u003a\u0069\u0069\u0073\u0073\u0026\u0040\u0048\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0053\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0053\u002e\u002e\u002c\u002c\u002c\u002c\u002c\u002c\u002e\u0073\u0040\u0040\u0031\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0053\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0026\u0073\u0073\u0073\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0073\u0068\u0023\u0040\u0068\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0069\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0040\u004d\u0069\u002e\u002c\u002e\u002c\u002c\u002c\u002c\u002e\u0035\u0040\u0023\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0031\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0039\u0072\u0073\u0073\u0072\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u003b\u0069\u0069\u0073\u0073\u0053\u0040\u0040\u003b\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0068\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0033\u002e\u002c\u002c\u002c\u002c\u002c\u002c\u002e\u0035\u0040\u0023\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0058\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0042\u0031\u0073\u0073\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u002c\u0069\u0069\u0072\u0073\u0072\u0033\u0040\u0023\u0069\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003b\u0042\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u002c\u002c\u002c\u003a\u003a\u003a\u003a\u002c\u0031\u0040\u0040\u0031\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0033\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0039\u0072\u0073\u0073\u0072\u0069\u003b\u002e\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u003a\u0069\u0069\u0073\u0073\u0072\u0053\u0040\u0040\u0042\u0073\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0068\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0069\u002c\u003a\u003a\u003a\u003a\u003a\u002c\u0069\u004d\u0040\u0023\u0033\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0072\u0026\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0073\u0073\u0073\u0073\u0069\u0069\u002c\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u003b\u0069\u0072\u0073\u0073\u0073\u0035\u0023\u0040\u0040\u0040\u0041\u0035\u003b\u002e\u0020\u0020\u0020\u0020\u0020\u002e\u0069\u0053\u0048\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0073\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u0041\u0040\u0040\u0040\u0023\u0058\u0035\u0072\u003b\u003a\u002c\u003a\u0069\u0031\u0039\u0048\u0040\u0040\u0040\u0040\u0040\u0023\u0042\u0042\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0042\u0031\u0073\u0073\u0073\u0069\u0069\u002c\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u002e\u003b\u0069\u0072\u0073\u0073\u0073\u0031\u0048\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0041\u0026\u0058\u0026\u0048\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0048\u0058\u0039\u0039\u0038\u0026\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0073\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u002c\u0039\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0048\u0035\u0069\u002c\u002e\u002e\u002c\u0069\u0033\u0042\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0073\u0073\u0073\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u002e\u0069\u0069\u0073\u0073\u0073\u0073\u0072\u0038\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0058\u0069\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0068\u0042\u0040\u0040\u0040\u0040\u0040\u0042\u0069\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u0073\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0039\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0058\u0040\u0040\u0040\u0040\u0040\u0039\u0072\u0073\u0073\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u002e\u0069\u0069\u0073\u0073\u0073\u0031\u0073\u0031\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0039\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0026\u0023\u0023\u0040\u0040\u0038\u002c\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003a\u0038\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u004d\u0040\u0040\u0040\u0041\u0072\u0072\u0073\u0073\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u002e\u003b\u0069\u0073\u0031\u0031\u0031\u0031\u0073\u0039\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0031\u0042\u0023\u0040\u0042\u0069\u002c\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003a\u003b\u0041\u0040\u0040\u0023\u0023\u0023\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0041\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0042\u0040\u0040\u0048\u0072\u0069\u0072\u0073\u0073\u0073\u0069\u0069\u002c\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u003b\u0069\u0072\u0031\u0031\u0031\u0031\u0031\u0073\u0058\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0073\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0035\u004d\u0040\u004d\u0073\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003b\u003a\u0069\u0058\u0040\u0040\u0023\u004d\u004d\u0023\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0033\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0058\u0040\u0040\u0038\u0069\u003b\u0072\u0073\u0073\u0073\u0073\u0069\u0069\u002c\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u003a\u0069\u0072\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0047\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0023\u0048\u0072\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u0035\u0023\u0040\u0041\u0072\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003a\u003a\u0053\u004d\u0040\u0040\u0023\u004d\u004d\u0023\u0023\u0023\u0040\u0040\u0040\u0040\u0041\u0035\u003b\u002e\u0020\u0020\u002c\u003b\u0053\u004d\u0040\u0048\u0031\u003b\u0069\u0073\u0031\u0031\u0031\u0031\u0073\u0069\u003b\u002e\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u002c\u0069\u0069\u0073\u0031\u0031\u0031\u0031\u0031\u0073\u0072\u0053\u0048\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0058\u0068\u0069\u003b\u003a\u003a\u0069\u0053\u0042\u0040\u004d\u0053\u003a\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003a\u003a\u0069\u0039\u004d\u0040\u0040\u0023\u0023\u0023\u0023\u0023\u0023\u0040\u0040\u0040\u0040\u0040\u004d\u0042\u0042\u0023\u0040\u0040\u0042\u0053\u003b\u003b\u0073\u0073\u0031\u0031\u0031\u0068\u0031\u0072\u0069\u003a\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0031\u0031\u0031\u0073\u0073\u0073\u0073\u0072\u0072\u0035\u0026\u004d\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0042\u0033\u0069\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003a\u003a\u0069\u0053\u0026\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0026\u0033\u0072\u0069\u0072\u0073\u0073\u0031\u0031\u0031\u0031\u0068\u0073\u0069\u003b\u002e\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u002c\u0069\u0069\u0073\u0031\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0031\u0053\u0047\u0048\u004d\u0023\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u0040\u004d\u0048\u0047\u0035\u0069\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003b\u0069\u0073\u0035\u0039\u0058\u0041\u0042\u004d\u004d\u004d\u0042\u0048\u0041\u0058\u0038\u0033\u0035\u0068\u0031\u0031\u0031\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0069\u0069\u002c\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u003b\u0069\u0069\u0031\u0031\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0068\u0068\u0035\u0053\u0033\u0039\u0038\u0047\u0047\u0058\u0047\u0038\u0039\u0053\u0035\u0031\u0073\u0073\u0072\u003b\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u0069\u0073\u0031\u0068\u0068\u0068\u0068\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0068\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0031\u0031\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0068\u0035\u0035\u0035\u0035\u0035\u0035\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0031\u0072\u0069\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u0069\u0073\u0031\u0068\u0068\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0035\u0068\u0068\u0068\u0068\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0069\u0069\u0073\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0031\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0068\u0031\u0031\u0073\u0072\u0069\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u0069\u0069\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003a\u0069\u0069\u0072\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0073\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u0069\u0069\u0069\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0072\u0069\u0069\u003a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0069\u0073\u0073\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u003b\u003a\u003a\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u003b\u003a\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0073\u0072\u0069\u003b\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u0069\u0069\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u003b\u0069\u0073\u0035\u0053\u0033\u0039\u0039\u0039\u0039\u0039\u0033\u0033\u0035\u0031\u0072\u003b\u003b\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0069\u0069\u003a\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003b\u0069\u0072\u0073\u0031\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u003b\u0072\u0035\u0039\u0038\u0039\u0053\u0068\u0031\u0073\u0073\u0073\u0031\u0031\u0035\u0033\u0039\u0038\u0053\u0073\u0069\u0069\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0072\u0069\u003b\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u003b\u0069\u0072\u0073\u0073\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u0069\u0069\u0069\u0068\u0039\u0038\u0053\u0073\u0069\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u003b\u0069\u0072\u0068\u0039\u0038\u0053\u0073\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0072\u0069\u003b\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002c\u003b\u0069\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0069\u0035\u0038\u0033\u0073\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0069\u0072\u0035\u0039\u0068\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0073\u0072\u0069\u003b\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u0069\u0069\u0072\u0072\u0073\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0072\u0073\u0031\u0072\u0069\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0031\u0031\u0031\u0073\u0072\u0069\u003b\u003a\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002c\u003b\u0069\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0073\u0073\u0072\u0069\u0069\u003b\u003a\u002c\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u003a\u003b\u0069\u0069\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0069\u003b\u003b\u003a\u002c\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002c\u003a\u003b\u003b\u0069\u0072\u0072\u0072\u0072\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0031\u0031\u0031\u0073\u0073\u0073\u0073\u0073\u0073\u0073\u0072\u0072\u0069\u0069\u003b\u003a\u002c\u002c\u002e\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002c\u002c\u003a\u003a\u003b\u003b\u0069\u0069\u0069\u0072\u0072\u0072\u0072\u0072\u0073\u0073\u0072\u0073\u0073\u0073\u0072\u0072\u0072\u0072\u0072\u0069\u0069\u0069\u003b\u003b\u003a\u003a\u002c\u002e\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u002e\u002e\u002e\u002c\u002c\u002c\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u003a\u002c\u002c\u002e\u002e\u002e\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u000d\u000a\u000d\u000a";document.insertBefore(document.createComment(aaa), document.childNodes[document.childNodes.length-1])
+</script>
+
+</body></html>
