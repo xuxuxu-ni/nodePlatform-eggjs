@@ -32,7 +32,7 @@ class LoginController extends Controller {
                 let access_token = await this.ctx.helper.createToken({id: user.id}, "2", "hours");
                 // console.log("token::"+access_token);
                 let uid = user.id
-                this.ctx.service.login.saveToken({uid, access_token, refresh_token})
+                await this.ctx.service.login.saveToken({uid, access_token, refresh_token})
                 results = {
                     code: 200,
                     data: {

@@ -61,7 +61,7 @@ class UserService extends Service {
         await this.ctx.model.SystemUser.findById(myId).then(res=>{
             myRoleId = res.roleId
         })
-        if (myRoleId == 0 ||  myRoleId >= userRoleId) {
+        if (myRoleId == 0 || userRoleId != 0 && myRoleId >= userRoleId) {
             results = {
                 code: 10000,
                 message: '未获得此操作权限'

@@ -12,7 +12,8 @@ const routerData = {
     }
   },
   actions: {
-    newRoutes({commit}, token) {
+    newRoutes({commit}) {
+      // 后台返回动态路由
       let newArr = [
         // {
         //   path: '/',

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/public/xuArticle/bootstarp/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/xuArticle/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/xuArticle/css/common.css">
-    <link rel="stylesheet" href="/public/xuArticle/css/login.css">
+    <link rel="stylesheet" href="/public/web/bootstarp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/web/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/web/css/common.css">
+    <link rel="stylesheet" href="/public/web/css/login.css">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -35,10 +35,10 @@
                 </div>
             </div>
             <div class="cont_back_info">
-                <div class="cont_img_back_grey"> <img src="/public/xuArticle/images/bg26.jpg" alt="" /> </div>
+                <div class="cont_img_back_grey"> <img src="/public/web/images/bg26.jpg" alt="" /> </div>
             </div>
             <div class="cont_forms" >
-                <div class="cont_img_back_"> <img src="/public/xuArticle/images/bg26.jpg" alt="" /> </div>
+                <div class="cont_img_back_"> <img src="/public/web/images/bg26.jpg" alt="" /> </div>
                 <div class="cont_form_login"> <a href="#" onclick="ocultar_login_sign_up()" ><i class="glyphicon glyphicon-remove"></i></a>
                     <h3>登录</h3>
                     <input type="text" placeholder="User/Email" />
@@ -57,9 +57,9 @@
     </div>
 </div>
 
-<script src="/public/xuArticle/js/jquery-2.2.0.min.js"></script>
-<script src="/public/xuArticle/js/common.js"></script>
-<script src="/public/xuArticle/js/login.js"></script>
+<script src="/public/web/js/jquery-2.2.0.min.js"></script>
+<script src="/public/web/js/common.js"></script>
+<script src="/public/web/js/login.js"></script>
 
 </body>
 </html>

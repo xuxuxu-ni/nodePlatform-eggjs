@@ -30,6 +30,7 @@ module.exports = app => {
         session_key: STRING, // 微信session_key
     });
 
+    // User.hasMany(Article, {as: 'articlesss'})
     return User;
 };
 

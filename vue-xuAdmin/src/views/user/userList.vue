@@ -60,7 +60,7 @@ export default {
   data () {
     return {
       total: 0,
-      currentPage: 0,
+      currentPage: 1,
       sort: null,
       userListData: []
     }

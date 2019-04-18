@@ -89,11 +89,9 @@ export default {
       })
     },
     getList (postdata) {
-      debugger
       let that = this
       this.$axios.post('/comment/commentList', postdata)
         .then(function (response) {
-          debugger
           for (let i = 0; i < response.data.rows.length; i++) {
             let d = new Date(response.data.rows[i].createdAt)
             let moth = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1)
