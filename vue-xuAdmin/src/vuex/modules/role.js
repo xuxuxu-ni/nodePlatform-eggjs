@@ -9,7 +9,7 @@ export default {
       state.info = {
         role: data.role,
         name: data.name,
-        avatar: data.avatar,
+        avatar: data.avatar ? data.avatar : "/static/images/logo.png",
         uid: data.id
       }
       sessionStorage.setItem('info', JSON.stringify(store.getters.info))

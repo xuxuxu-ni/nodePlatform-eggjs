@@ -13,8 +13,8 @@ class AppBootHook {
 
     async willReady() {
         let keys = this.app.config.keys;
-        await this.app.model.sync({ force: false}).then((res) => {
-            res.User.findOne({
+        await this.app.model.sync({ force: true}).then((res) => {
+            res.SystemUser.findOne({
                 where: {
                     username: "admin"//查询条件
                 }
@@ -23,7 +23,7 @@ class AppBootHook {
                 console.log(chalk.green("超级管理员账号检查..."))
                 if(!result){
                     const password = await cryptoMd5("admin", keys)
-                    await res.User.create({
+                    await res.SystemUser.create({
                         username: "admin",
                         password: password,
                         name: "超级管理员",
@@ -40,8 +40,8 @@ class AppBootHook {
                 }
             })
         }).catch( err => {
-            console.red(chalk.red("========== 用户表创建失败 =========="))
-            console.red(chalk.red(err))
+            console.log(chalk.red("========== 用户表创建失败 =========="))
+            console.log(chalk.red(err))
         });
     }
 

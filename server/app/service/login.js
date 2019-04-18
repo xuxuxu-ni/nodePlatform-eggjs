@@ -9,7 +9,7 @@ const Service = require('egg').Service;
 class UserService extends Service {
     // 登录查询账号
     async findUsername(username) {
-        let user = await this.app.model.User.findOne({
+        let user = await this.app.model.SystemUser.findOne({
             where: {username}
         })
         return user;
@@ -17,7 +17,7 @@ class UserService extends Service {
 
     // 登录查询个人信息
     async getUserInfor(info) {
-        let userInfo = await this.app.model.User.findOne({
+        let userInfo = await this.app.model.SystemUser.findOne({
             where: {id: info.message.id}
         })
         return userInfo
@@ -25,20 +25,20 @@ class UserService extends Service {
 
     // 查询用户信息
     async getUserInforId(uid) {
-        let userInfo = await this.app.model.User.findById(uid)
+        let userInfo = await this.app.model.SystemUser.findById(uid)
         return userInfo
     }
 
     // 生成 token 保存数据库
     async saveToken(data) {
-        await this.app.model.Token.upsert(data)
+        await this.app.model.SystemToken.upsert(data)
     }
 
     // 生成 微信数据 保存数据库
     async saveWXdata(data) {
         console.log(this.app);
         let {session_key,openid} = data
-        await this.app.model.WxUser.upsert({
+        await this.app.model.SystemUser.upsert({
             session_key,
             openid,
         }).then(res => {
@@ -50,7 +50,7 @@ class UserService extends Service {
 
     // 查找 token 信息
     async findToken(access_token){
-        let tokenInfo = await this.app.model.Token.findOne({
+        let tokenInfo = await this.app.model.SystemToken.findOne({
             where: {
                 access_token
             }

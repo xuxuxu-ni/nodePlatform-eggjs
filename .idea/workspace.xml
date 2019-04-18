@@ -2,168 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b4a1f39-bb58-46b8-b2f2-7aaf60b3ff95" name="Default Changelist" comment="cms文章管理后台基本完成">
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/articleDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/css/mingdu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/css/news.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/20150803134633caf0b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/201508031440525911a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/201508141340209df55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2018_09_20_7b61caf0a34d4ce8a5f102fdcc9cb6dd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2018_12_26_48cfa43262f249348041aee32f7dfc8f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_02_21_213d11d8ed784e9f83217b50e99efcb4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_09_01eb4f19987b490b893695f112dfbdd6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_13_fd2fce8a8c3c48ddb7b7f98c895a1fcd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_14_878dc0d9744b40dfb489da354e218fc8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_15_5145ae2b3d4d46fea477a5b0846ca0e4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_16_16935e0470ca471ba296209f5fbb836d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_18_c145d907210d44ba9de093307ab2c352.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_18_e6e0e0770c05475eaa2999d0e77b0783.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_19_261f2c952b724eabae8b51724ddbb48a.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/2019_03_19_69f322d548b247d2a3f5709b9950ec4e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/hot_article_tit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/image/hot_article_tit2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/js/analysis0628.350ctAoOoFtN.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/js/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/js/ntes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/js/ntes_jslib_1.x.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/js/renjian.947699.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/20150729124722f7514.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2015073019222641e19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/20150731183352eccad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2015073119420696d69.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/20150803134633caf0b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/201508031440525911a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2015101215055315297.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/20160812170257f5bde.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2018_05_29_305c0a2dc610423c808a972d1b1c3e0b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_11_36827cf4f2c14c438f1772ef07c978aa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_11_a734b7bb811e4523a8f763137ffacbac.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_11_f40276cf5d7241edb88053662730e701.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_16_16935e0470ca471ba296209f5fbb836d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_16_1a1726292ee2493eb00088a104c3f527.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_16_a5cf00d892404e23babb4d1568c86ed6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_18_43243dd28ef54c218b930dae859f1791.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_18_e6e0e0770c05475eaa2999d0e77b0783.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_19_69f322d548b247d2a3f5709b9950ec4e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_19_bdfd7204d526497792854db932aa6da4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_20_0f7874ac8f4e4f429b4f728b3b55fdd1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_20_1e448d2b254b451596b6bee4f13bbd45.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/_tiesdk.QyQLEfWIyn6L.4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/_tiesdk.gHMAYIdv4dnc.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/analysis0628.350ctAoOoFtN.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/face_map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/news.BmDT9sluSdyy.37.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/ntes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/ntes_jslib_1.x.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/qrcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/qrcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/renjian_image.1180014.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/renjian_image.1261793.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/tie_box_ad_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/tool.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/watchman.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/writing_studio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_05_29_305c0a2dc610423c808a972d1b1c3e0b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_10_27_87e27bb09fa8407a8214481e0a8e8722.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_10_30_facf6dc4ac2648caa8d9618cbdf12020.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_01_9e9d6d1fe8e04524ad4369081e8107e1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_02_8248444a60fa4905aa7f008a36fb237b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_06_98d5ee0a7a67467a9c34b85f9777876c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_06_de4216aade254ec7b8cadf8916c58e96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_08_9c893349b5424abfb96550ef50d52cae.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_10_a596366f153e4d308c8e2d0ca726e021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_15_bfa9e21374894169ac107d4b70fac00b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_18_2ea7dc84efd645a295e646f6f3c3038c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_21_386a1590b950453baddf657d6270e784.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_22_a711067af2d34df2ba2c361a89a32f0a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_26_035cd4a7dc0842e6a2fce193befbe2fc.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_26_4766a0ff7f484273af74e79c2bf8c584.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_26_b7e7cb65d9a84716a91955cce21ae6e6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_27_1a5860f5b9d54f308a35d14c58797cd0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_28_056794968feb463dbcb22c74f3c4c91a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_11_29_ca50a7a35be94aae83a8cadbad3818d8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_02_36ba19a90daa4f3491374e8a77109041.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_05_69bc60643ba04bdb9152e3235558b3b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_10_6e330226f7fa49529c3b396430f99c5a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_12_d1721f63abec40a2a824870e0037568b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_13_22c23838ff944ef88cd822f9d4dc84bc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_17_8202ee919dce46d58784520dcacab1bf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_18_e5db90574ccc4160bd46ba2f3a57e569.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_21_3f99c6525f5b41cc9f4995d30f172332.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_22_0b5f8712ee4b4411b750aa4c27ec6a7f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_27_0ac11ab9bb71417ea5d01b104e905a98.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_28_275431d16674402790d687cacaa5a869.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2018_12_29_bc19391afe7c475ba38ff741d061f165.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_04_5ae7cd5340774b4a83b87803e7e4cdef.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_08_132cd72bd2784a72bfb7e2623dbb6378.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_09_d65ed254660a440ca1572c31d9ca404b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_11_9dbf55acf42d4820bee3c85f57996d58.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_17_246e1429d12b40d681c9b7c02160db3a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_18_3c28e5ba58064f76b1b152c5deac446e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_22_f8783ef6b9bf4637aa60b56eaad5faf9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_28_04674804f4284762b7e1db1b767d2ccd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_01_29_f1bb767fe7cd4597b20462edcd702918.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_12_950e8e150aba4242b27f3b9024dbf7b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_14_f56a74bd003a4d319e767778be65a42c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_18_ef17af06323f44179f55fbd9b0fb9575.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_19_19ef06e6351547fea3ad6ac78ef9167a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_22_434e5571bc9b42dea5d01f1a064b9dde.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_26_9f9643145aa449a79d0461d647c4c360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_02_28_3c7f12ef66124b9f98f6bcfe30b52fbe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_01_36c677bd8045495c833b7145971b03b6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_06_5dc925d4ae1e49ac99e82c9c9299d80a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_08_789dedf47f8c42699af94bb39f34ce02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_11_3ac72c848c6f435da698d9152483421b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_13_3079810e64d14f4fa4ed0feeff9d7dba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_14_5ce3fd44825d4fc9a0ae342c22c391e0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_16_16935e0470ca471ba296209f5fbb836d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_16_1a1726292ee2493eb00088a104c3f527.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_16_a5cf00d892404e23babb4d1568c86ed6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_18_43243dd28ef54c218b930dae859f1791.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_18_e6e0e0770c05475eaa2999d0e77b0783.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_19_1dbfa4c0fbee4ee1bfc1cd45b248133f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_19_69f322d548b247d2a3f5709b9950ec4e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_19_bdfd7204d526497792854db932aa6da4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_20_0f7874ac8f4e4f429b4f728b3b55fdd1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/2019_03_20_1e448d2b254b451596b6bee4f13bbd45.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/analysis0628.350ctAoOoFtN.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/kk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/news.BmDT9sluSdyy.37.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/ntes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/ntes_jslib_1.x.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/qrcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/renjian_list.1261822.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/renjian_list.1261824.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app/public/web/看客_files/swiper.1222868.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/commentList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/user/editPassworld.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controller/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controller/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controller/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controller/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controller/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/extend/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/extend/helper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/model/Reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/model/Reply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controller/getShareInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controller/getShareInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/database/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/database/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/model/Token.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/model/SystemToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/model/SystemUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/model/WxUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/model/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/model/Orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/model/qrcodes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/model/Qrcodes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/service/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/service/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/service/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/service/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/service/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/service/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/cn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticleEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticleEditor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/articleList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/article/articleList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/build/webpack.dev.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/build/webpack.prod.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/dist/static/js/vendor.66a6b88c06e2326c37dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/dist/static/js/vendor.66a6b88c06e2326c37dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/assets/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/static/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/assets/lang.png" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/static/images/lang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/aside/aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/aside/aside.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/layout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/systemSetting/bannerSetting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/systemSetting/bannerSetting.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/views/user/userList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/views/user/userList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -177,78 +42,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/service/article.js">
+        <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="240">
+              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/service/comment.js">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/public/web/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/app/public/web/articleDetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#plaintext#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/news.BmDT9sluSdyy.37.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5957">
-              <caret line="259" column="38" selection-start-line="259" selection-start-column="38" selection-end-line="259" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/model/Comment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/model/Article.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controller/comment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+            <state relative-caret-position="162">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -256,10 +62,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
-              <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+            <state relative-caret-position="351">
+              <caret line="25" column="62" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="62" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -274,9 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ID</find>
-      <find>position</find>
-      <find>filterTag</find>
       <find>styleLoaders</find>
       <find>fontawesome</find>
       <find>wxLogin</find>
@@ -304,10 +124,15 @@
       <find>rank</find>
       <find>restaurants</find>
       <find>CcommentId</find>
+      <find>user</find>
+      <find>Token</find>
+      <find>favicon.ico</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;/public</replace>
       <replace>src=&quot;/public</replace>
+      <replace>SystemUser</replace>
+      <replace>SystemToken</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -316,16 +141,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/app/view/xuArticle/login.nj" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/aside/aside.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/index.html" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/components/wangeditor/wangeditor.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/components/editor/wangeditor.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/editor/wangeditor.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/components/editor/wangeditor-editor.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/editor/markdownView.vue" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/main.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/editor/wangeditorView.vue" />
         <option value="$PROJECT_DIR$/server/app/model/reply.js" />
         <option value="$PROJECT_DIR$/server/app/model/comment.js" />
@@ -333,9 +149,6 @@
         <option value="$PROJECT_DIR$/server/config/config.default.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/router/index.js" />
         <option value="$PROJECT_DIR$/server/app/controller/article.js" />
-        <option value="$PROJECT_DIR$/server/app/service/article.js" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js" />
-        <option value="$PROJECT_DIR$/server/app/service/login.js" />
         <option value="$PROJECT_DIR$/server/app/controller/login.js" />
         <option value="$PROJECT_DIR$/server/app/controller/register.js" />
         <option value="$PROJECT_DIR$/server/app/model/User.js" />
@@ -344,7 +157,6 @@
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/user/addUser.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/layout.vue" />
         <option value="$PROJECT_DIR$/server/app/model/Reply.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/server/app/controller/comment.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/article/commentList.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/article/articleList.vue" />
@@ -356,17 +168,30 @@
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/en.js" />
         <option value="$PROJECT_DIR$/server/app/router.js" />
         <option value="$PROJECT_DIR$/server/app/controller/user.js" />
-        <option value="$PROJECT_DIR$/server/app/service/user.js" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/user/editPassworld.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js" />
-        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue" />
         <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/systemSetting/bannerSetting.vue" />
-        <option value="$PROJECT_DIR$/server/app/service/register.js" />
         <option value="$PROJECT_DIR$/server/app/model/Comment.js" />
-        <option value="$PROJECT_DIR$/server/app/service/comment.js" />
         <option value="$PROJECT_DIR$/server/app/extend/helper.js" />
         <option value="$PROJECT_DIR$/server/app/public/web/index.html" />
         <option value="$PROJECT_DIR$/server/app/public/web/articleDetail.html" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/src/main.js" />
+        <option value="$PROJECT_DIR$/server/app/database/db.js" />
+        <option value="$PROJECT_DIR$/server/app/model/system_User.js" />
+        <option value="$PROJECT_DIR$/server/app/model/WxUser.js" />
+        <option value="$PROJECT_DIR$/server/app/model/SystemUser.js" />
+        <option value="$PROJECT_DIR$/server/app/service/article.js" />
+        <option value="$PROJECT_DIR$/server/app/service/comment.js" />
+        <option value="$PROJECT_DIR$/server/app/service/register.js" />
+        <option value="$PROJECT_DIR$/server/app/service/user.js" />
+        <option value="$PROJECT_DIR$/server/app/controller/getShareInfo.js" />
+        <option value="$PROJECT_DIR$/server/app/service/login.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/build/webpack.dev.conf.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/build/webpack.prod.conf.js" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/src/views/layout/aside/aside.vue" />
+        <option value="$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js" />
       </list>
     </option>
   </component>
@@ -381,9 +206,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="80" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -391,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -401,97 +229,6 @@
             <path>
               <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="extend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="医闹不闹了，我却后悔了_网易人间_网易新闻_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -505,106 +242,40 @@
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="axios" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
               <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="syssetting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="systemSetting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodePlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodePlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-xuAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue-xuAdmin/static/images" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
@@ -620,19 +291,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/app/public/web" />
-      <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views/user" />
-      <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views/article" />
-      <recent name="$PROJECT_DIR$/server/app/model" />
-      <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\nodePlatform\vue-xuAdmin\static\images" />
       <recent name="$PROJECT_DIR$/server/app/public/web/js" />
       <recent name="$PROJECT_DIR$/server/app/public/web/image" />
       <recent name="$PROJECT_DIR$/server/app/public/xuArticle" />
       <recent name="$PROJECT_DIR$/server/app/public" />
-      <recent name="$PROJECT_DIR$/server/app/database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\nodePlatform\vue-xuAdmin\static\images" />
+      <recent name="$PROJECT_DIR$/server/app/public/web" />
+      <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views/user" />
+      <recent name="$PROJECT_DIR$/vue-xuAdmin/src/views/article" />
+      <recent name="$PROJECT_DIR$/server/app/model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -731,6 +402,7 @@
       <workItem from="1553014453073" duration="9311000" />
       <workItem from="1553044868859" duration="37160000" />
       <workItem from="1553134859673" duration="192000" />
+      <workItem from="1555464206437" duration="15878000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目,增加 vue-xuAdmin">
       <created>1548212328103</created>
@@ -792,26 +464,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369081000" />
+    <option name="totallyTimeSpent" value="384959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992" visible="true" weight="0.31402004" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992" visible="true" weight="0.19810326" />
       <window_info id="Structure" order="1" sideWeight="0.5008" side_tool="true" weight="0.24034335" />
       <window_info id="DB Browser" order="2" weight="0.3297568" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923833" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32874015" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35503685" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29822835" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923833" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24201474" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20177165" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32923833" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -882,21 +555,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/app/controller/getShareInfo.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/app/controller/getShareInfo.js</url>
-          <line>13</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/app/controller/getShareInfo.js</url>
-          <line>20</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/app/service/user.js</url>
           <line>24</line>
           <option name="timeStamp" value="114" />
@@ -905,365 +563,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/config/config.local.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/config.default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/config.prod.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/egg/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="740" column="4" selection-start-line="740" selection-start-column="4" selection-end-line="740" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticle.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#869#933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/user/addUser.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/node_modules/vue-router/dist/vue-router.esm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1492" column="4" selection-start-line="1492" selection-start-column="4" selection-end-line="1492" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#140#173#0" expanded="true" />
-            <element signature="e#271#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/layout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/Reply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/commentList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/articleList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/article/addArticleEditor.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="140" column="7" lean-forward="true" selection-start-line="140" selection-start-column="7" selection-end-line="153" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/cn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/i18n/lang/en.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="241" column="35" selection-start-line="241" selection-start-column="35" selection-end-line="241" selection-end-column="35" />
-          <folding>
-            <element signature="e#387#391#0" />
-            <element signature="e#7133#7137#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="29" column="14" selection-start-line="23" selection-start-column="12" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/user/editPassworld.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/axios/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/user/userList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/user/editUser.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="113" column="20" lean-forward="true" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/systemSetting/bannerSetting.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/public/web/看客_files/ne.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/public/web/css/mingdu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/public/web/css/news.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2962" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2018_05_29_305c0a2dc610423c808a972d1b1c3e0b.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/2019_03_11_36827cf4f2c14c438f1772ef07c978aa.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/service/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/public/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="594">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/news.BmDT9sluSdyy.37.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5957">
+        <state relative-caret-position="6993">
           <caret line="259" column="38" selection-start-line="259" selection-start-column="38" selection-end-line="259" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/Comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/model/Article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controller/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1275,6 +585,317 @@
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#plaintext#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/routerData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="240" column="13" lean-forward="true" selection-start-line="240" selection-start-column="13" selection-end-line="240" selection-end-column="13" />
+          <folding>
+            <element signature="e#387#391#0" />
+            <element signature="e#7133#7137#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/config.prod.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/plugin.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/config.default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#140#173#0" expanded="true" />
+            <element signature="e#271#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/config.local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/database/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/Qrcodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/middleware/verifyToken.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/public/web/医闹不闹了，我却后悔了_网易人间_网易新闻_files/_tiesdk.gHMAYIdv4dnc.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="6846" selection-start-line="2" selection-start-column="6846" selection-end-line="2" selection-end-column="6846" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/WxUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/SystemToken.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/SystemUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/Article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/Comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/model/Orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/service/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/home.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controller/getShareInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="86" column="38" lean-forward="true" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/extend/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/static/images/icon.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/assets/login/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/assets/login/loginbg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/static/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/login/index.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/header/header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/check-versions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-758">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/views/layout/aside/aside.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/webpack.base.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/webpack.prod.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/build/webpack.dev.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-xuAdmin/src/vuex/modules/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

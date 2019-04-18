@@ -32,7 +32,7 @@ class articleService extends Service {
         }).then(async res => {
             console.log(res);
             for (let i = 0; i < res.rows.length; i ++) {
-                await ctx.model.User.findById(res.rows[i].author).then(resUser=>{
+                await ctx.model.SystemUser.findById(res.rows[i].author).then(resUser=>{
                     res.rows[i].author = resUser.name
                 }).catch(erruser=>{
                     console.log(erruser);

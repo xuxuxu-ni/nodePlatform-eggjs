@@ -11,7 +11,7 @@ class UserService extends Service {
     async editUserInfo(options) {
         let {id} = options
         let results
-        await this.ctx.model.User.update(options, {
+        await this.ctx.model.SystemUser.update(options, {
             where: {
                 id//查询条件
             }
@@ -37,7 +37,7 @@ class UserService extends Service {
         let {ctx} = this
         let result
         let {currentPage = 1, pageSize = 10} = getListData
-        await this.ctx.model.User.findAndCountAll({
+        await this.ctx.model.SystemUser.findAndCountAll({
             limit: pageSize,
             offset: pageSize * (currentPage - 1),
         }).then(async res => {
@@ -54,11 +54,11 @@ class UserService extends Service {
         let results
         let myId = this.ctx.session.user.id
         let userRoleId,myRoleId
-        await this.ctx.model.User.findById(uid).then(res=>{
+        await this.ctx.model.SystemUser.findById(uid).then(res=>{
             console.log(res);
             userRoleId = res.roleId
         })
-        await this.ctx.model.User.findById(myId).then(res=>{
+        await this.ctx.model.SystemUser.findById(myId).then(res=>{
             myRoleId = res.roleId
         })
         if (myRoleId == 0 ||  myRoleId >= userRoleId) {
@@ -68,7 +68,7 @@ class UserService extends Service {
             }
             return results
         }
-        await this.ctx.model.User.destroy({
+        await this.ctx.model.SystemUser.destroy({
             where: {
                 id: uid
             }
@@ -98,7 +98,7 @@ class UserService extends Service {
     // 修改密码
     async editPassworld(id, pass) {
         let results
-        await this.ctx.model.User.update({
+        await this.ctx.model.SystemUser.update({
             password: pass
         },{
             where:{

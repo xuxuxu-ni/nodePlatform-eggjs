@@ -3,8 +3,7 @@
  * User: nirongxu
  * Date: 2019-01-25
  * Description:
- Model 存放的文件夹必须在 model 内，并且以 Model 名字命名
- 统一主键，名称必须是 id，类型必须是 UUID；
+ 统一主键，名称是 id，类型是 UUID；
  所有字段默认为 NULL，除非显式指定；
  统一 timestamp 机制，每个 Model 必须有 createdAt、updatedAt 和 version，分别记录创建时间、修改时间和版本号。
 

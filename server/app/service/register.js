@@ -13,14 +13,14 @@ class RegisterService extends Service {
         let {username, password} = options
         let keys = this.config.keys;
         let results = ''
-        await this.ctx.model.User.findOne({
+        await this.ctx.model.SystemUser.findOne({
             where: {
                 username//查询条件
             }
         }).then(async result=> {
             if (!result) {
                 options.password = await cryptoMd5(password, keys)
-                await ctx.model.User.create(options).then(ok => {
+                await ctx.model.SystemUser.create(options).then(ok => {
                     results = {
                         code: 200,
                         message: '注册成功'

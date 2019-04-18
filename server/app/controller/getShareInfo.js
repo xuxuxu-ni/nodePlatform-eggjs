@@ -13,7 +13,7 @@ class GetShareInfoController extends Controller {
         let {appID, openid, resData} = this.ctx.request.body
         let { encryptedData, iv } = resData
 
-        await this.app.model.WxUser.findOne({
+        await this.app.model.SystemUser.findOne({
             where: {
                 openid
             }

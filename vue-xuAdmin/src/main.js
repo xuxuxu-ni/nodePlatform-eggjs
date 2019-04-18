@@ -48,7 +48,6 @@ router.beforeEach((to, from, next) => {
           }).catch(function (error) {
             console.log(error);
           });
-
         }()
       } else {
         let is404 = to.matched.some(record => {
