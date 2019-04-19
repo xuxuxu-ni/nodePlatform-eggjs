@@ -15,7 +15,7 @@ exports.sequelize = {
     // 用户名
     username: "root",
     // 密码
-    password: "12345678",
+    password: "123456",
     // 数据库名
     database: "nodePlatform"
 };

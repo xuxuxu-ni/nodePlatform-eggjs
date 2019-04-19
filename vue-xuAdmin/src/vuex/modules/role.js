@@ -9,6 +9,7 @@ export default {
       state.info = {
         role: data.role,
         name: data.name,
+        authorityRouter: data.authorityRouter,
         avatar: data.avatar ? data.avatar : "/static/images/logo.png",
         uid: data.id
       }

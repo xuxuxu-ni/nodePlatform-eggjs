@@ -139,7 +139,7 @@
         @extend %cursor;
       }
       .icon img {
-        margin-#{$top}: 7px;
+        margin-#{$top}: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;

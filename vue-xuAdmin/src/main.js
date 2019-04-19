@@ -28,6 +28,7 @@ router.beforeEach((to, from, next) => {
       next({path: '/'})
     } else {
       if (!store.getters.info) {
+
         !async function getAddRouters () {
 
           // await store.dispatch('getInfo', store.getters.token)
@@ -39,9 +40,11 @@ router.beforeEach((to, from, next) => {
 
           axios.get('/user/getUserInfor').then(async function (response) {
             console.log(response);
-            // debugger
+            debugger
             await store.dispatch('getInfo', response.data)
-            await store.dispatch('newRoutes', store.getters.token)
+            await store.dispatch('newRoutes', store.getters.info.authorityRouter)
+            // await store.dispatch('newRoutes', role)
+
             console.log(store.getters.addRouters)
             await router.addRoutes(store.getters.addRouters)
             next({path: '/index'})
@@ -50,9 +53,12 @@ router.beforeEach((to, from, next) => {
           });
         }()
       } else {
+        debugger
         let is404 = to.matched.some(record => {
+          console.log(record);
+          debugger
           if(record.meta.role){
-            return record.meta.role.indexOf(store.getters.info.role) === -1
+            return store.getters.info.authorityRouter() === -1
           }
         })
         if(is404){

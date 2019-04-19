@@ -30,6 +30,12 @@ class AppBootHook {
                         roleId: "1"
                     }).then( ok => {
                         console.log(chalk.green("系统默认生成超级管理员:用户名 [")+ chalk.blue("admin") + chalk.green("]  密码[")+ chalk.blue("admin")+chalk.green("]"))
+                        console.log(chalk.green(`
+###################################
+****** 欢迎使用 nodePlatform ******
+****** 系统启动完成,准备就绪... ***
+###################################
+                        `))
                     }).catch( err => {
                         console.log(chalk.red("========== 管理员账号检查失败 =========="))
                         console.log(chalk.red(err))
@@ -37,6 +43,12 @@ class AppBootHook {
                     });
                 } else {
                     console.log(chalk.green("系统检查到已存在默认超级管理员:用户名 [")+ chalk.blue("admin") + chalk.green("]  密码[")+ chalk.blue("admin")+chalk.green("]"))
+                    console.log(chalk.green(`
+###################################
+****** 欢迎使用 nodePlatform ******
+****** 系统启动完成,准备就绪... ***
+###################################
+                    `))
                 }
             })
         }).catch( err => {
