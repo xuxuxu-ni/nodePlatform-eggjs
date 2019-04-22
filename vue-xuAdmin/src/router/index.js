@@ -49,166 +49,165 @@ let defaultRouter = [
 ]
 
 let addRouter = [
-  // {
-  //   path: '/',
-  //   iconCls: 'fa fa-universal-access', // 图标样式class
-  //   name: 'systemManage',
-  //   component: () => import('@/views/layout/layout'),
-  //   children: [
-  //     {
-  //       path: '/organizeManage',
-  //       iconCls: 'fa fa-server',
-  //       name: 'organizeManage',
-  //       component: () => import('@/views/commerViews'), // 无限极菜单的容器
-  //       children: [
-  //         {
-  //           path: '/organizeManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'unitManage',
-  //           component: () => import('@/views/systemManage/organizeManage'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/personnelManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'personnelManage',
-  //           component: () => import('@/views/systemManage/personnelManage'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/menuManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'menuManage',
-  //           component: () => import('@/views/systemManage/menuManage'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/roleManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'roleManage',
-  //           component: () => import('@/views/systemManage/roleManage'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/jurisdictionManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'jurisdictionManage',
-  //           component: () => import('@/views/systemManage/jurisdictionManage'),
-  //           children: []
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: '/parameterManage',
-  //       iconCls: 'fa fa-server',
-  //       name: 'parameterManage',
-  //       component: () => import('@/views/commerViews'), // 无限极菜单的容器
-  //       children: [
-  //         {
-  //           path: '/codeManage',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'codeManage',
-  //           component: () => import('@/views/systemManage/codeManage'),
-  //           children: []
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/',
-  //   iconCls: 'fa fa-universal-access', // 图标样式class
-  //   name: 'business',
-  //   component: () => import('@/views/layout/layout'),
-  //   children: [
-  //     {
-  //       path: '/kehujiekuanshengpi',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'kehujiekuanshengpi',
-  //       component: () => import('@/views/business/kehujiekuanshengpi'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/fuyoutuipiaochaxun',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'fuyoutuipiaochaxun',
-  //       component: () => import('@/views/business/fuyoutuipiaochaxun'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/customerInformation',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'customerInformation',
-  //       component: () => import('@/views/business/customerInformation'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/orderInformation',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'orderInformation',
-  //       component: () => import('@/views/business/orderInformation'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/lenderManage',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'lenderManage',
-  //       component: () => import('@/views/business/lenderManage'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/reduceManage',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'reduceManage',
-  //       component: () => import('@/views/business/reduceManage'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/wxxiaozhangguanli',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'wxxiaozhangguanli',
-  //       component: () => import('@/views/business/wxxiaozhangguanli'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/xiaozhangguanli',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'xiaozhangguanli',
-  //       component: () => import('@/views/business/xiaozhangguanli'),
-  //       children: []
-  //     },
-  //     {
-  //       path: '/cuishouguanli',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: 'cuishouguanli',
-  //       component: () => import('@/views/commerViews'),
-  //       children: [
-  //         {
-  //           path: '/neibujigoupaidan',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'neibujigoupaidan',
-  //           component: () => import('@/views/business/neibujigoupaidan'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/cuishouzhuguanpaidan',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'cuishouzhuguanpaidan',
-  //           component: () => import('@/views/business/cuishouzhuguanpaidan'),
-  //           children: []
-  //         },
-  //         {
-  //           path: '/cuishou',
-  //           iconCls: 'el-icon-edit-outline', // 图标样式class
-  //           name: 'cuishou',
-  //           component: () => import('@/views/business/cuishou'),
-  //           children: []
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
-
+  {
+    path: '/',
+    iconCls: 'fa fa-universal-access', // 图标样式class
+    name: 'systemManage',
+    component: () => import('@/views/layout/layout'),
+    children: [
+      {
+        path: '/organizeManage',
+        iconCls: 'fa fa-server',
+        name: 'organizeManage',
+        component: () => import('@/views/commerViews'), // 无限极菜单的容器
+        children: [
+          {
+            path: '/organizeManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'unitManage',
+            component: () => import('@/views/systemManage/organizeManage'),
+            children: []
+          },
+          {
+            path: '/personnelManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'personnelManage',
+            component: () => import('@/views/systemManage/personnelManage'),
+            children: []
+          },
+          {
+            path: '/menuManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'menuManage',
+            component: () => import('@/views/systemManage/menuManage'),
+            children: []
+          },
+          {
+            path: '/roleManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'roleManage',
+            component: () => import('@/views/systemManage/roleManage'),
+            children: []
+          },
+          {
+            path: '/jurisdictionManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'jurisdictionManage',
+            component: () => import('@/views/systemManage/jurisdictionManage'),
+            children: []
+          }
+        ]
+      },
+      {
+        path: '/parameterManage',
+        iconCls: 'fa fa-server',
+        name: 'parameterManage',
+        component: () => import('@/views/commerViews'), // 无限极菜单的容器
+        children: [
+          {
+            path: '/codeManage',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'codeManage',
+            component: () => import('@/views/systemManage/codeManage'),
+            children: []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/',
+    iconCls: 'fa fa-universal-access', // 图标样式class
+    name: 'business',
+    component: () => import('@/views/layout/layout'),
+    children: [
+      {
+        path: '/kehujiekuanshengpi',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'kehujiekuanshengpi',
+        component: () => import('@/views/business/kehujiekuanshengpi'),
+        children: []
+      },
+      {
+        path: '/fuyoutuipiaochaxun',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'fuyoutuipiaochaxun',
+        component: () => import('@/views/business/fuyoutuipiaochaxun'),
+        children: []
+      },
+      {
+        path: '/customerInformation',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'customerInformation',
+        component: () => import('@/views/business/customerInformation'),
+        children: []
+      },
+      {
+        path: '/orderInformation',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'orderInformation',
+        component: () => import('@/views/business/orderInformation'),
+        children: []
+      },
+      {
+        path: '/lenderManage',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'lenderManage',
+        component: () => import('@/views/business/lenderManage'),
+        children: []
+      },
+      {
+        path: '/reduceManage',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'reduceManage',
+        component: () => import('@/views/business/reduceManage'),
+        children: []
+      },
+      {
+        path: '/wxxiaozhangguanli',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'wxxiaozhangguanli',
+        component: () => import('@/views/business/wxxiaozhangguanli'),
+        children: []
+      },
+      {
+        path: '/xiaozhangguanli',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'xiaozhangguanli',
+        component: () => import('@/views/business/xiaozhangguanli'),
+        children: []
+      },
+      {
+        path: '/cuishouguanli',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: 'cuishouguanli',
+        component: () => import('@/views/commerViews'),
+        children: [
+          {
+            path: '/neibujigoupaidan',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'neibujigoupaidan',
+            component: () => import('@/views/business/neibujigoupaidan'),
+            children: []
+          },
+          {
+            path: '/cuishouzhuguanpaidan',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'cuishouzhuguanpaidan',
+            component: () => import('@/views/business/cuishouzhuguanpaidan'),
+            children: []
+          },
+          {
+            path: '/cuishou',
+            iconCls: 'el-icon-edit-outline', // 图标样式class
+            name: 'cuishou',
+            component: () => import('@/views/business/cuishou'),
+            children: []
+          }
+        ]
+      }
+    ]
+  },
   {
     path: '/',
     iconCls: 'el-icon-tickets', // 图标样式class
@@ -331,6 +330,13 @@ let addRouter = [
         iconCls: 'fa fa-toggle-on', // 图标样式class
         name: 'btnControl',
         component: () => import('@/views/permissions/btnPermissions'),
+        children: []
+      },
+      {
+        path: '/roleList',
+        iconCls: 'fa fa-toggle-on', // 图标样式class
+        name: 'roleList',
+        component: () => import('@/views/permissions/roleList'),
         children: []
       }
     ]

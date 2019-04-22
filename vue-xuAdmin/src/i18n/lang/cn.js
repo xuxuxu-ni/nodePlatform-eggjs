@@ -25,6 +25,7 @@ const cn = {
     permissions: '权限管理',
     pageControl: '页面权限',
     btnControl: '按钮权限',
+    roleList: '角色列表',
     table: '表格',
     multiDataTable: '多选数据表格',
     filterTable: '筛选表格',

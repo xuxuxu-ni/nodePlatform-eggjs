@@ -74,7 +74,7 @@ class LoginController extends Controller {
         this.ctx.body = {
             name: userInfo.name,
             role,
-            authorityRouter: ['/addArticleEditor', '/commentList'],
+            authorityRouter: ['/addArticleEditor', '/commentList', '/pagePermissions', '/btnPermissions', '/roleList','/organizeManage','/roleManage'],
             avatar: userInfo.avatar,
             id: userInfo.id
         }

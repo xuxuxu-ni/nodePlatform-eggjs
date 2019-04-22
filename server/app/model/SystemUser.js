@@ -14,7 +14,7 @@ module.exports = app => {
         email: { type: STRING }, // 邮箱
         password: { type: STRING, allowNull: false }, // 密码
         name: STRING, // 姓名
-        sex: {type: STRING, defaultValue: '1'}, // 用户性别：1男性, 2女性, 0未知
+        sex: {type: INTEGER, defaultValue: '1'}, // 用户性别：1男性, 2女性, 0未知
         age: {type: INTEGER, defaultValue: 0}, // 年龄
         avatar: STRING, // 头像
         company: STRING, // 公司
@@ -30,7 +30,6 @@ module.exports = app => {
         session_key: STRING, // 微信session_key
     });
 
-    // User.hasMany(Article, {as: 'articlesss'})
     return User;
 };
 

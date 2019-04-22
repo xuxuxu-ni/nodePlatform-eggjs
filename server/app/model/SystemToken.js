@@ -7,7 +7,7 @@
 const db = require("../database/db");
 
 module.exports = app => {
-    const { STRING, INTEGER, DATE, BOOLEAN, UUID } = app.Sequelize;
+    const { STRING, UUID } = app.Sequelize;
 
     const refresh_token = db.defineModel(app, "refresh_token", {
         uid: { type: UUID, unique: true, allowNull: false }, // 用户id

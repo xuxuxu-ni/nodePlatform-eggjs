@@ -26,6 +26,7 @@ const en = {
     permissions: 'permissions',
     pageControl: 'pageControl',
     btnControl: 'btnControl',
+    roleList: 'roleList',
     table: 'table',
     multiDataTable: 'multiDataTable',
     filterTable: 'filterTable',

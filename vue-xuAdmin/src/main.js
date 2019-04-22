@@ -40,7 +40,6 @@ router.beforeEach((to, from, next) => {
 
           axios.get('/user/getUserInfor').then(async function (response) {
             console.log(response);
-            debugger
             await store.dispatch('getInfo', response.data)
             await store.dispatch('newRoutes', store.getters.info.authorityRouter)
             // await store.dispatch('newRoutes', role)

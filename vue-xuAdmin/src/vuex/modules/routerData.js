@@ -36,7 +36,6 @@ const routerData = {
       eachSelect(addRouter, perRouter)
       commit('setRouters', addRouter)
 
-
     }
   }
 }
