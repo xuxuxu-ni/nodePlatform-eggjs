@@ -17,12 +17,10 @@ const routerData = {
       function eachSelect (routers, userRole) {
         for (let j = 0; j < routers.length; j++) {
           if (routers[j].path !== '/' && userRole.indexOf(routers[j].path) === -1) {
-            debugger
             routers.splice(j, 1)
             j = j - 1
           }
           if (routers[j] && routers[j].children && routers[j].children.length) {
-            debugger
             eachSelect(routers[j].children, userRole)
             if (!routers[j].children.length){
               routers.splice(j, 1)

@@ -11,6 +11,7 @@ module.exports = app => {
 
     const Roles = db.defineModel(app, "system_roles", {
         name: STRING, // 名字
+        describe: STRING, // 角色描述
         status: {type: INTEGER, defaultValue: '1'}, //  用户状态： 0:禁用, 1:启用
     });
 

@@ -52,10 +52,8 @@ router.beforeEach((to, from, next) => {
           });
         }()
       } else {
-        debugger
         let is404 = to.matched.some(record => {
           console.log(record);
-          debugger
           if(record.meta.role){
             return store.getters.info.authorityRouter() === -1
           }
