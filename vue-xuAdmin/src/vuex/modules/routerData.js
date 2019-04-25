@@ -1,4 +1,5 @@
 import {defaultRouter, addRouter} from '@/router/index'
+import store from '../index'
 
 const routerData = {
   state: {
@@ -30,8 +31,9 @@ const routerData = {
 
         }
       }
-
-      eachSelect(addRouter, perRouter)
+      if (store.getters.info.role !== 'superAdmin') {
+        eachSelect(addRouter, perRouter)
+      }
       commit('setRouters', addRouter)
 
     }

@@ -62,7 +62,7 @@ export default {
       let that = this
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$axios.post('/api/setting/setNavClassify', {
+          this.$axios.post('/router/setting/setNavClassify', {
             navClassifyData: formData
           })
             .then(response => {
@@ -107,7 +107,7 @@ export default {
   mounted () {
     //  页面加载完之后从后台获取导航列表
     let that = this
-    // this.$axios.get('/api/setting/getNavClassify')
+    // this.$axios.get('/router/setting/getNavClassify')
     //   .then(function (response) {
     //     if (response.status === 200) {
     //       console.log(response)

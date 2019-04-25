@@ -161,7 +161,7 @@
       editor.customConfig.onchange = (html) => {
         that.article.contentHtml = html
       }
-      editor.customConfig.uploadImgServer = '/api/editor/uploadImg'  // 上传图片到服务器
+      editor.customConfig.uploadImgServer = '/router/editor/uploadImg'  // 上传图片到服务器
       editor.customConfig.debug = true
       // editor.customConfig.showLinkImg = false
       editor.create()

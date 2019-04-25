@@ -94,7 +94,7 @@ let addRouter = [
             path: '/roleManage',
             iconCls: 'el-icon-edit-outline', // 图标样式class
             name: 'roleManage',
-            component: () => import('@/views/systemManage/roleManage'),
+            component: () => import('@/views/systemManage/roleManage/roleManage'),
             children: []
           },
           {
@@ -550,24 +550,6 @@ let addRouter = [
     iconCls: 'el-icon-setting', // 图标样式class
     name: 'systemSettings',
     component: () => import('@/views/layout/layout'),
-    meta: {role: ['superAdmin']},
-    children: [
-      {
-        r_name: roleNmae.navMenu,
-        path: '/navClassifies',
-        iconCls: 'el-icon-menu', // 图标样式class
-        name: 'navMenu',
-        component: () => import('@/views/syssetting/navClassify'),
-        children: []
-      }
-    ]
-  },
-  {
-    r_name: roleNmae.systemSettings,
-    path: '/',
-    iconCls: 'el-icon-setting', // 图标样式class
-    name: 'systemSettings',
-    component: () => import('@/views/layout/layout'),
     children: [
       {
         r_name: roleNmae.bannerSetting,
@@ -606,7 +588,7 @@ let addRouter = [
         path: '/navClassifies',
         iconCls: 'el-icon-menu', // 图标样式class
         name: 'navMenu',
-        component: () => import('@/views/syssetting/navClassify'),
+        component: () => import('@/views/systemSetting/navClassify'),
         children: []
       }
     ]
