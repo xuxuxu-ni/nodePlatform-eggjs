@@ -45,7 +45,7 @@ module.exports = {
             return result
         }
         let verifyResult = verify(token)
-        let tokenInfo = await this.ctx.service.login.findToken(token);
+        let tokenInfo = await this.ctx.service.admin.login.findToken(token);
 
         if (!verifyResult.verify) {
             // 2小时的 token 验证失败了
@@ -59,7 +59,7 @@ module.exports = {
                     let refresh_token = await this.createToken({id: tokenInfo.uid}, "7", "days");
                     let access_token = await this.createToken({id: tokenInfo.uid}, "2", "hours");
                     let {id, uid} = {id: tokenInfo.id, uid: tokenInfo.uid}
-                    await this.ctx.service.login.saveToken({id, uid, access_token, refresh_token})
+                    await this.ctx.service.admin.login.saveToken({id, uid, access_token, refresh_token})
 
                     await this.error(200, 11000, access_token);
 

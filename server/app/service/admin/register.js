@@ -4,8 +4,8 @@
  * Date: 2019-03-17
  * Description: 文件描述
  */
-const Service = require('egg').Service;
-const {cryptoMd5} = require('../extend/helper');
+const Service = require('egg/index').Service;
+const {cryptoMd5} = require('../../extend/helper');
 
 class RegisterService extends Service {
     async userRegister(options){

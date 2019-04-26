@@ -46,67 +46,87 @@
         </template>
       </el-table-column>
     </el-table>
-    <add-role :dialogVisible="dialogFormVisible" :form="formData"></add-role>
-    <role-allocate :dialogVisible="dialogFormVisible2" :roleTree="roleTree" ></role-allocate>
+    <el-dialog title="角色信息" class="dialog1" :visible.sync="dialogFormVisible">
+      <el-form :model="form">
+        <el-form-item label="角色名称" :label-width="formLabelWidth">
+          <el-input v-model="form.name" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="角色描述" :label-width="formLabelWidth">
+          <el-input v-model="form.describe" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="是否开启" :label-width="formLabelWidth">
+          <el-switch v-model="form.status"></el-switch>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible=false">取 消</el-button>
+        <el-button type="primary" @click="addRoleSubmit">确 定</el-button>
+      </div>
+    </el-dialog>
+    <el-dialog title="权限分配" class="dialog2" :visible.sync="dialogFormVisible2">
+      <el-tree
+        :data="roleTree"
+        show-checkbox
+        node-key="id"
+        :props="defaultProps">
+      </el-tree>
+
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible2 = false">取 消</el-button>
+        <el-button type="primary" @click="dialogFormVisible2 = false">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
-  import RoleTable from "../roleTable";
-  import AddRole from "./addRole";
-  import RoleAllocate from "./roleAllocate";
-
   export default {
     name: "roleManage",
-    components: {RoleAllocate, AddRole, RoleTable},
     data() {
       return {
-        tableData: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          describe: '上海市普陀区金沙江路 1518 弄',
-          status: '禁用'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          describe: '上海市普陀区金沙江路 1517 弄',
-          status: '禁用'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          describe: '上海市普陀区金沙江路 1519 弄',
-          status: '启用'
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          describe: '上海市普陀区金沙江路 1516 弄',
-          status: '启用'
-        }],
+        tableData: [],
         dialogFormVisible: false,
         dialogFormVisible2: false,
-        formData: {
+        form: {
           name: '',
           describe: '',
           status: true
         },
-
+        formLabelWidth: '120px',
+        defaultProps: {
+          children: 'children',
+          label: 'r_name',
+          id: 'path'
+        }
       };
     },
     methods: {
       handleEdit(index, row) {
         for (let item in row) {
-          this.formData[item] = row[item]
+          this.form[item] = row[item]
         }
-        this.formData.status = row.status === "启用" ? true : false
+        this.form.status = row.status === "启用" ? true : false
         this.dialogFormVisible = true
       },
       addRole() {
-        this.formData = {
+        this.form = {
           name: '',
           describe: '',
           status: true
         }
         this.dialogFormVisible = true;
+      },
+      addRoleSubmit() {
+        let that = this
+        this.$axios.post('/permissions/addRole', this.form).then((res) => {
+          that.$message({
+            showClose: true,
+            message: res.data.message,
+            type: 'success'
+          })
+        }).catch((err) => {
+          console.log(err);
+        })
       },
       roleEdit(index, row) {
         console.log(index, row)
@@ -115,9 +135,16 @@
       handleDelete(index, row) {
         console.log(index, row);
       },
-      backFormData(start) {
-
-        this.dialogFormVisible = start;
+      getList (postdata) {
+        let that = this
+        this.$axios.post('/permissions/getRoleList', postdata)
+          .then(function (response) {
+            console.log(response)
+            that.tableData = response.data.rows
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
       }
     },
     computed: {
@@ -130,6 +157,9 @@
         }
         return addRouters
       }
+    },
+    mounted () {
+      this.getList()
     }
   }
 </script>

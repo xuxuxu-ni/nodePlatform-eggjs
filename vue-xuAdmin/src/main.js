@@ -55,7 +55,7 @@ router.beforeEach((to, from, next) => {
         let is404 = to.matched.some(record => {
           console.log(record);
           if(record.meta.role){
-            return store.getters.info.authorityRouter() === -1
+            return store.getters.info.authorityRouter === -1
           }
         })
         if(is404){

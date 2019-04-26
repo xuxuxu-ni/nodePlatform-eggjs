@@ -119,7 +119,14 @@ export default {
       console.log(that.ruleForm2);
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$axios.post('/user/register', that.ruleForm2).then((res) => {
+          let newData = {}
+          for (let item in that.ruleForm2) {
+            // 重复密码应该在前台过滤掉不应该带到后台的,但是,,,无所谓了
+            if (item != 'checkPass') {
+              newData[item] = that.ruleForm2[item]
+            }
+          }
+          this.$axios.post('/user/register', newData).then((res) => {
               that.$message({
                 showClose: true,
                 message: res.data.message,

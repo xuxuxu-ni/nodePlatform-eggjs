@@ -4,7 +4,7 @@
  * Date: 2019-03-20
  * Description: 文件描述
  */
-const Service = require('egg').Service;
+const Service = require('egg/index').Service;
 
 class UserService extends Service {
     // 修改用户信息

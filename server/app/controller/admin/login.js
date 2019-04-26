@@ -4,8 +4,8 @@
  * Date: 2019-01-25
  * Description: 文件描述
  */
-const Controller = require('../core/base_controller');
-const {cryptoMd5} = require('../extend/helper');
+const Controller = require('../../core/base_controller');
+const {cryptoMd5} = require('../../extend/helper');
 
 
 class LoginController extends Controller {
@@ -14,7 +14,7 @@ class LoginController extends Controller {
         let {username, password} = this.ctx.request.body
         let keys = this.config.keys;
         let results = '';
-        let user = await this.ctx.service.login.findUsername(username)
+        let user = await this.ctx.service.admin.login.findUsername(username)
         if (!user) {
             results = {
                 code: 10000,
@@ -32,7 +32,7 @@ class LoginController extends Controller {
                 let access_token = await this.ctx.helper.createToken({id: user.id}, "2", "hours");
                 // console.log("token::"+access_token);
                 let uid = user.id
-                await this.ctx.service.login.saveToken({uid, access_token, refresh_token})
+                await this.ctx.service.admin.login.saveToken({uid, access_token, refresh_token})
                 results = {
                     code: 200,
                     data: {
@@ -60,7 +60,7 @@ class LoginController extends Controller {
             }
         });
 
-        let userInfo = await this.ctx.service.login.getUserInfor(result)
+        let userInfo = await this.ctx.service.admin.login.getUserInfor(result)
         this.ctx.session.user = userInfo;
         let role = ''
         if (userInfo.roleId == 0) {
@@ -84,7 +84,7 @@ class LoginController extends Controller {
     // 获取用户信息
     async getUserInforId() {
         let {id} = this.ctx.request.body
-        let userInfo = await this.ctx.service.login.getUserInforId(id)
+        let userInfo = await this.ctx.service.admin.login.getUserInforId(id)
 
         this.ctx.body = userInfo
 

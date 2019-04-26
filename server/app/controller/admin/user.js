@@ -4,8 +4,8 @@
  * Date: 2019-03-20
  * Description: 文件描述
  */
-const Controller = require('../core/base_controller');
-const {cryptoMd5} = require('../extend/helper');
+const Controller = require('../../core/base_controller');
+const {cryptoMd5} = require('../../extend/helper');
 
 class UserController extends Controller {
     // 资料修改
@@ -19,7 +19,7 @@ class UserController extends Controller {
             }
         }
 
-        let results = await this.service.user.editUserInfo(newData)
+        let results = await this.service.admin.user.editUserInfo(newData)
 
         this.ctx.body = results
     }
@@ -27,7 +27,7 @@ class UserController extends Controller {
     // 获取用户列表
     async userList() {
         let getListData = this.ctx.request.body
-        let list = await this.ctx.service.user.userList(getListData)
+        let list = await this.ctx.service.admin.user.userList(getListData)
 
         this.ctx.body = list
     }
@@ -35,7 +35,7 @@ class UserController extends Controller {
     // 删除用户
     async delUser() {
         let id = this.ctx.request.body.id
-        let result = await this.ctx.service.user.delUser(id)
+        let result = await this.ctx.service.admin.user.delUser(id)
         this.ctx.body = result
     }
 
@@ -44,7 +44,7 @@ class UserController extends Controller {
         let {oldPassword, newPassword} = this.ctx.request.body
         let keys = this.config.keys;
         let results = '';
-        let myPassword = this.ctx.session.user.password
+        let myPassword = this.ctx.session.admin.user.password
         let myId = this.ctx.session.user.id
         let oldPass = await cryptoMd5(oldPassword, keys)
 
@@ -56,7 +56,7 @@ class UserController extends Controller {
             }
         } else {
             let newPass = await cryptoMd5(newPassword, keys)
-            results = await this.ctx.service.user.editPassworld(myId,newPass)
+            results = await this.ctx.service.admin.user.editPassworld(myId,newPass)
         }
 
         this.ctx.body = results

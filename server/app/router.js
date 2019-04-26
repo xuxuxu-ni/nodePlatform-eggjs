@@ -35,7 +35,7 @@ module.exports = app => {
 
 
 
-  router.post('/wxLogin', controller.login.wxLogin);
+  router.post('/wxLogin', controller.admin.login.wxLogin);
   router.post('/decryptData', controller.getShareInfo.decryptData);
 
 };
