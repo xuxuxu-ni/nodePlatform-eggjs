@@ -27,6 +27,13 @@ class RoleController extends Controller {
         this.ctx.body = result
     }
 
+    // 分配角色权限
+    async rolePermissions() {
+        let permissionsData = this.ctx.request.body
+        let result = await this.ctx.service.admin.role.rolePermissions(permissionsData)
+        this.ctx.body = result
+    }
+
 
 }
 

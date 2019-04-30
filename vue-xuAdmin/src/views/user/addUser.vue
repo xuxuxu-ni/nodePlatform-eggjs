@@ -17,7 +17,8 @@
             v-for="item in roleData"
             :key="item.id"
             :label="item.name"
-            :value="item.id">
+            :value="item.id"
+            :disabled="item.disabled">
           </el-option>
         </el-select>
       </el-form-item>
@@ -123,7 +124,6 @@ export default {
       this.$axios.post('/permissions/getRoleList')
         .then(function (response) {
           console.log(response)
-
           that.roleData = response.data.rows
         })
         .catch(function (error) {
@@ -132,7 +132,6 @@ export default {
     },
     submitForm (formName) {
       let that = this
-      console.log(that.ruleForm2);
       this.$refs[formName].validate((valid) => {
         if (valid) {
           let newData = {}
@@ -147,6 +146,16 @@ export default {
                 message: res.data.message,
                 type: 'success'
               })
+            that.ruleForm2 = {
+              mobilePhone: '',
+              username: '',
+              password: '',
+              roleId: '',
+              sex: '1',
+              checkPass: '',
+              name: '',
+              avatar: ''
+            }
           }).catch((err) => {
             console.log(err);
           })

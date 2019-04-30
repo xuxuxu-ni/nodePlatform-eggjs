@@ -19,7 +19,8 @@
             v-for="item in roleData"
             :key="item.id"
             :label="item.name"
-            :value="item.id">
+            :value="item.id"
+            :disabled="item.disabled">
           </el-option>
         </el-select>
       </el-form-item>
@@ -68,7 +69,7 @@ export default {
         mobilePhone: '',
         username: '',
         roleId: '',
-        sex: '',
+        sex: "1",
         age: 0,
         checkPass: '',
         name: '',

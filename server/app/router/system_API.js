@@ -29,6 +29,8 @@ module.exports = app => {
     router.post('/permissions/addRole',isLogin, controller.admin.role.addRole)
     // 删除角色
     router.post('/permissions/delRole',isLogin, controller.admin.role.delRole)
+    // 分配角色权限
+    router.post('/permissions/rolePermissions',isLogin, controller.admin.role.rolePermissions)
 
 }
 

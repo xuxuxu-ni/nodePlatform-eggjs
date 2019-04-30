@@ -69,17 +69,24 @@
         <el-button type="primary" @click="addRoleSubmit">确 定</el-button>
       </div>
     </el-dialog>
-    <el-dialog title="权限分配" class="dialog2" :visible.sync="dialogFormVisible2">
+    <el-dialog title="权限分配" class="dialog2" @opened="setRoleData" :visible.sync="dialogFormVisible2">
+      <el-input
+        placeholder="输入关键字进行过滤"
+        v-model="filterText"
+        style="margin-bottom: 20px"
+      >
+      </el-input>
       <el-tree
         :data="roleTree"
+        node-key="r_id"
         show-checkbox
-        node-key="id"
+        ref="permission"
+        :filter-node-method="filterNode"
         :props="defaultProps">
       </el-tree>
-
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible2 = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible2 = false">确 定</el-button>
+        <el-button type="primary" @click="rolePermissionSubmit">确 定</el-button>
       </div>
     </el-dialog>
   </div>
@@ -96,14 +103,18 @@
         form: {
           name: '',
           describe: '',
-          status: true
+          status: true,
+          permission: []
         },
         formLabelWidth: '120px',
         defaultProps: {
           children: 'children',
           label: 'r_name',
-          id: 'path'
-        }
+          id: 'r_id'
+        },
+        selectRoleId: '',
+        selectData: [],
+        filterText: '',
       };
     },
     methods: {
@@ -144,9 +155,34 @@
           console.log(err);
         })
       },
+      rolePermissionSubmit() {
+        let that = this
+        let rolePermissionData = {
+          selectPermission: that.$refs.permission.getCheckedKeys(),
+          rid: that.selectRoleId
+        }
+        this.$axios.post('/permissions/rolePermissions', rolePermissionData).then((res) => {
+          that.$message({
+            showClose: true,
+            message: res.data.message,
+            type: 'success'
+          })
+          this.dialogFormVisible = false;
+          this.getList()
+        }).catch((err) => {
+          console.log(err);
+        })
+      },
       roleEdit(index, row) {
         console.log(index, row)
+        this.selectRoleId = row.id
+        debugger
+        this.selectData = row.permission ? row.permission.split(',') : []
         this.dialogFormVisible2 = true;
+      },
+      setRoleData() {
+        this.$refs.permission.setCheckedKeys([]);
+        this.$refs.permission.setCheckedKeys(this.selectData);
       },
       handleDelete (index, row) {
         console.log(index, row)
@@ -184,6 +220,15 @@
           .catch(function (error) {
             console.log(error)
           })
+      },
+      filterNode(value, data) {
+        if (!value) return true;
+        return data.r_name.indexOf(value) !== -1;
+      }
+    },
+    watch: {
+      filterText(val) {
+        this.$refs.permission.filter(val);
       }
     },
     computed: {

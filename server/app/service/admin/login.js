@@ -24,6 +24,7 @@ class UserService extends Service {
         }).then( async res => {
             let roleInfo = await ctx.model.SystemRole.findById(res.roleId)
             res.roleName = roleInfo.name
+            res.authorityRouter = roleInfo.permission
             userInfo = res
         })
         return userInfo

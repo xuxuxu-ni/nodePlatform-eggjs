@@ -1,9 +1,7 @@
 <template>
   <div>
     <el-table
-      :data="userListData"
-      style="width: 100%"
-      max-height="550">
+      :data="userListData">
       <el-table-column
         fixed
         prop="createdAt"
@@ -112,14 +110,12 @@ export default {
             let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
 
-            that.$axios.post('/permissions/getRoleList')
-              .then(function (res) {
-
+            that.$axios.post('/permissions/getRoleList').then(function (res) {
                 for (let j = 0; j < res.data.rows.length; j++) {
-                  debugger
                   if (response.data.rows[i].roleId === res.data.rows[j].id ){
                     response.data.rows[i].roleId = res.data.rows[j].name
-
+                    that.total = response.data.count
+                    that.userListData = response.data.rows
                   }
                 }
 
@@ -127,12 +123,7 @@ export default {
               .catch(function (error) {
                 console.log(error)
               })
-
-
           }
-          console.log(response)
-          that.total = response.data.count
-          that.userListData = response.data.rows
         })
         .catch(function (error) {
           console.log(error)
