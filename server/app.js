@@ -13,7 +13,8 @@ class AppBootHook {
 
     async willReady() {
         let keys = this.app.config.keys;
-        await this.app.model.sync({ force: true}).then((res) => {
+        let rid;
+        await this.app.model.sync({ force: false}).then(async (res) => {
             console.log(chalk.green(`
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ || || || || || || // // // // // // // //
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\        _ooOoo_          // // // // // // //
@@ -38,12 +39,37 @@ class AppBootHook {
 // // //      佛祖保佑      永无BUG      永不修改        \\\\ \\\\ \\\\
 // // // // // // || || || || || || || || || || \\\\ \\\\ \\\\ \\\\ \\\\ \\\\
             `))
-            res.SystemUser.findOne({
+
+            await res.SystemRole.findOne({
+                where: {
+                    name: "超级管理员"//查询条件
+                }
+            }).then(async result=>{
+                console.log(chalk.green("========== 系统表创建完成 =========="))
+                console.log(chalk.green("系统最高权限角色检查..."))
+                if(!result){
+                    await res.SystemRole.create({
+                        name: '超级管理员',
+                        describe: '系统最高权限',
+                        status: true
+                    }).then( ok => {
+                        rid = ok.id
+                        console.log(chalk.green("系统默认最高权限角色生成成功:角色名 [")+ chalk.blue("超级管理员") + chalk.green("]"))
+                    }).catch( err => {
+                        console.log(chalk.red("========== 系统最高权限角色检查失败 =========="))
+                        console.log(chalk.red(err))
+                    });
+                } else {
+                    console.log(chalk.green("系统检查到已存在默认最高权限角色:角色名 [")+ chalk.blue("超级管理员") + chalk.green("]"))
+                }
+            })
+
+
+            await res.SystemUser.findOne({
                 where: {
                     username: "admin"//查询条件
                 }
             }).then(async result=>{
-                console.log(chalk.green("========== 用户表创建完成 =========="))
                 console.log(chalk.green("超级管理员账号检查..."))
                 if(!result){
                     const password = await cryptoMd5("admin", keys)
@@ -51,9 +77,9 @@ class AppBootHook {
                         username: "admin",
                         password: password,
                         name: "超级管理员",
-                        roleId: "1"
+                        roleId: rid
                     }).then( ok => {
-                        console.log(chalk.green("系统默认生成超级管理员:用户名 [")+ chalk.blue("admin") + chalk.green("]  密码[")+ chalk.blue("admin")+chalk.green("]"))
+                        console.log(chalk.green("系统默认超级管理员账号生成成功:用户名 [")+ chalk.blue("admin") + chalk.green("]  密码[")+ chalk.blue("admin")+chalk.green("]"))
                         console.log(chalk.green(`
 ###################################
 ****** 欢迎使用 nodePlatform ******
@@ -99,7 +125,7 @@ class AppBootHook {
                 }
             })
         }).catch( err => {
-            console.log(chalk.red("========== 用户表创建失败 =========="))
+            console.log(chalk.red("========== 系统表创建失败 =========="))
             console.log(chalk.red(err))
             console.log(chalk.red(`
  * _ooOoo_

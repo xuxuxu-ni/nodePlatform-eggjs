@@ -31,7 +31,7 @@ const routerData = {
 
         }
       }
-      if (store.getters.info.role !== 'superAdmin') {
+      if (store.getters.info.role !== '超级管理员') {
         eachSelect(addRouter, perRouter)
       }
       commit('setRouters', addRouter)

@@ -13,9 +13,12 @@
       </el-form-item>
       <el-form-item label="角色">
         <el-select v-model="ruleForm2.roleId" placeholder="请选择等级">
-          <el-option label="普通用户" value="0"></el-option>
-          <el-option label="管理员" value="2"></el-option>
-          <el-option label="超级管理员" value="1"></el-option>
+          <el-option
+            v-for="item in roleData"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id">
+          </el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="姓名" prop="name">
@@ -73,11 +76,12 @@ export default {
       }
     }
     return {
+      roleData: '',
       ruleForm2: {
         mobilePhone: '',
         username: '',
         password: '',
-        roleId: '0',
+        roleId: '',
         sex: '1',
         checkPass: '',
         name: '',
@@ -114,6 +118,18 @@ export default {
       }
       return  isLt2M && isJPG || isPNG;
     },
+    getList () {
+      let that = this
+      this.$axios.post('/permissions/getRoleList')
+        .then(function (response) {
+          console.log(response)
+
+          that.roleData = response.data.rows
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    },
     submitForm (formName) {
       let that = this
       console.log(that.ruleForm2);
@@ -121,7 +137,6 @@ export default {
         if (valid) {
           let newData = {}
           for (let item in that.ruleForm2) {
-            // 重复密码应该在前台过滤掉不应该带到后台的,但是,,,无所谓了
             if (item != 'checkPass') {
               newData[item] = that.ruleForm2[item]
             }
@@ -144,6 +159,9 @@ export default {
     resetForm (formName) {
       this.$refs[formName].resetFields()
     }
+  },
+  mounted() {
+    this.getList()
   }
 }
 </script>

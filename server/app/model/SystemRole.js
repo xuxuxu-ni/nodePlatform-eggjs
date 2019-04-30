@@ -7,12 +7,12 @@
 const db = require("../database/db");
 
 module.exports = app => {
-    const { STRING, INTEGER } = app.Sequelize;
+    const { STRING, INTEGER ,BOOLEAN} = app.Sequelize;
 
     const Roles = db.defineModel(app, "system_roles", {
         name: STRING, // 名字
         describe: STRING, // 角色描述
-        status: {type: INTEGER, defaultValue: '1'}, //  用户状态： 0:禁用, 1:启用
+        status: {type: BOOLEAN, defaultValue: true}, //  用户状态： 0:禁用, 1:启用
     });
 
     return Roles;

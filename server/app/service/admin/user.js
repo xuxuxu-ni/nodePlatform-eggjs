@@ -34,7 +34,6 @@ class UserService extends Service {
 
     // 获取用户列表
     async userList(getListData) {
-        let {ctx} = this
         let result
         let {currentPage = 1, pageSize = 10} = getListData
         await this.ctx.model.SystemUser.findAndCountAll({

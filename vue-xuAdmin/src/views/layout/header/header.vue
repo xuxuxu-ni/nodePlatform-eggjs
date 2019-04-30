@@ -4,13 +4,12 @@
       <span class="hideAside" @click="collapse"><i class="fa fa-indent fa-lg"></i></span>
       <ul class="personal">
         <li class="fullScreen" @click="fullScreen">
-          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i
-            class="fa fa-arrows-alt fa-lg"></i></el-tooltip>
+          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i class="fa fa-arrows-alt fa-lg"></i></el-tooltip>
         </li>
         <li>
           <langSelect></langSelect>
         </li>
-        <li>{{ $t(`role.${this.$store.getters.info.role}`) }}</li>
+        <li>{{ this.$store.getters.info.role }}</li>
         <li>
           <el-dropdown @command="handleCommand">
                   <span class="el-dropdown-link">

@@ -9,7 +9,7 @@ const Service = require('egg/index').Service;
 class UserService extends Service {
     // 登录查询账号
     async findUsername(username) {
-        let user = await this.app.model.SystemUser.findOne({
+        let user = await this.ctx.model.SystemUser.findOne({
             where: {username}
         })
         return user;
@@ -17,8 +17,14 @@ class UserService extends Service {
 
     // 登录查询个人信息
     async getUserInfor(info) {
-        let userInfo = await this.app.model.SystemUser.findOne({
+        let {ctx} = this
+        let userInfo;
+        await this.ctx.model.SystemUser.findOne({
             where: {id: info.message.id}
+        }).then( async res => {
+            let roleInfo = await ctx.model.SystemRole.findById(res.roleId)
+            res.roleName = roleInfo.name
+            userInfo = res
         })
         return userInfo
     }
@@ -38,7 +44,7 @@ class UserService extends Service {
     async saveWXdata(data) {
         console.log(this.app);
         let {session_key,openid} = data
-        await this.app.model.SystemUser.upsert({
+        await this.ctx.model.SystemUser.upsert({
             session_key,
             openid,
         }).then(res => {
@@ -50,7 +56,7 @@ class UserService extends Service {
 
     // 查找 token 信息
     async findToken(access_token){
-        let tokenInfo = await this.app.model.SystemToken.findOne({
+        let tokenInfo = await this.ctx.model.SystemToken.findOne({
             where: {
                 access_token
             }

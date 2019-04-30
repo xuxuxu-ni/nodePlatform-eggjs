@@ -62,18 +62,18 @@ class LoginController extends Controller {
 
         let userInfo = await this.ctx.service.admin.login.getUserInfor(result)
         this.ctx.session.user = userInfo;
-        let role = ''
-        if (userInfo.roleId == 0) {
-            role = 'ordinary'
-        } else if (userInfo.roleId == 1) {
-            role = 'superAdmin'
-        } else if (userInfo.roleId == 2) {
-            role = 'admin'
-        }
+        // let role = ''
+        // if (userInfo.roleId == 0) {
+        //     role = 'ordinary'
+        // } else if (userInfo.roleId == 1) {
+        //     role = 'superAdmin'
+        // } else if (userInfo.roleId == 2) {
+        //     role = 'admin'
+        // }
 
         this.ctx.body = {
             name: userInfo.name,
-            role,
+            role: userInfo.roleName,
             authorityRouter: [],
             avatar: userInfo.avatar,
             id: userInfo.id
@@ -89,7 +89,6 @@ class LoginController extends Controller {
         this.ctx.body = userInfo
 
     }
-
 
     async wxLogin(){
         let {code, appID, secret} = this.ctx.request.body

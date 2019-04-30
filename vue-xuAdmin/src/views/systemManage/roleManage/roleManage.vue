@@ -49,10 +49,16 @@
     <el-dialog title="角色信息" class="dialog1" :visible.sync="dialogFormVisible">
       <el-form :model="form">
         <el-form-item label="角色名称" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
+          <el-input v-model="form.name"
+                    maxlength="8"
+                    show-word-limit
+                    autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="角色描述" :label-width="formLabelWidth">
-          <el-input v-model="form.describe" autocomplete="off"></el-input>
+          <el-input v-model="form.describe"
+                    maxlength="15"
+                    show-word-limit
+                    autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="是否开启" :label-width="formLabelWidth">
           <el-switch v-model="form.status"></el-switch>
@@ -118,12 +124,22 @@
       },
       addRoleSubmit() {
         let that = this
+        if (!this.form.name){
+          that.$message({
+            showClose: true,
+            message: '角色名称不能为空',
+            type: 'error'
+          })
+          return false
+        }
         this.$axios.post('/permissions/addRole', this.form).then((res) => {
           that.$message({
             showClose: true,
             message: res.data.message,
             type: 'success'
           })
+          this.dialogFormVisible = false;
+          this.getList()
         }).catch((err) => {
           console.log(err);
         })
@@ -132,14 +148,37 @@
         console.log(index, row)
         this.dialogFormVisible2 = true;
       },
-      handleDelete(index, row) {
-        console.log(index, row);
-      },
-      getList (postdata) {
+      handleDelete (index, row) {
+        console.log(index, row)
         let that = this
-        this.$axios.post('/permissions/getRoleList', postdata)
+        this.$axios.post('/permissions/delRole', {
+          id: row.id
+        })
+          .then(response => {
+            console.log(response)
+            that.$message({
+              showClose: true,
+              message: response.data.message,
+              type: 'success'
+            })
+            that.getList()
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      },
+      getList () {
+        let that = this
+        this.$axios.post('/permissions/getRoleList')
           .then(function (response) {
             console.log(response)
+            for (let i = 0; i < response.data.rows.length; i++) {
+              if ( response.data.rows[i].status){
+                response.data.rows[i].status = '启用'
+              } else {
+                response.data.rows[i].status = '禁用'
+              }
+            }
             that.tableData = response.data.rows
           })
           .catch(function (error) {

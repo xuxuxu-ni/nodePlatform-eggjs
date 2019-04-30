@@ -6,10 +6,21 @@
         <el-input v-model="ruleForm2.username" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="角色">
-        <el-select v-model="ruleForm2.roleId" placeholder="请选择等级">
-          <el-option label="普通用户" value="0"></el-option>
-          <el-option label="管理员" value="2"></el-option>
-          <el-option label="超级管理员" value="1"></el-option>
+        <el-select v-if="roleName" v-model="ruleForm2.roleId" disabled  placeholder="请选择等级">
+          <el-option
+            v-for="item in roleData"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id">
+          </el-option>
+        </el-select>
+        <el-select v-else v-model="ruleForm2.roleId"  placeholder="请选择等级">
+          <el-option
+            v-for="item in roleData"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id">
+          </el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="姓名" prop="name">
@@ -51,10 +62,12 @@ export default {
   name: 'addUser',
   data () {
     return {
+      roleName: false,
+      roleData: '',
       ruleForm2: {
         mobilePhone: '',
         username: '',
-        roleId: '0',
+        roleId: '',
         sex: '',
         age: 0,
         checkPass: '',
@@ -86,6 +99,37 @@ export default {
       }
       return  isLt2M && isJPG || isPNG;
     },
+    getList () {
+      let that = this
+      this.$axios.post('/permissions/getRoleList')
+        .then(function (response) {
+          console.log(response)
+          that.roleData = response.data.rows
+
+          let id = that.$route.query.userId
+          if (!id) {
+            id = that.$store.getters.info.uid
+          }
+          that.$axios.post('/user/getUserInforId', {id})
+            .then(function (res) {
+              console.log(res)
+              res.data.password = ''
+              that.ruleForm2 = res.data
+              for (let i = 0; i < that.roleData.length; i++) {
+                if (res.data.roleId === that.roleData[i].id && that.roleData[i].name === '超级管理员'){
+                  that.roleName = true
+                }
+              }
+              return false
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    },
     submitForm (formName) {
       let that = this
       console.log(that.ruleForm2);
@@ -111,21 +155,8 @@ export default {
     }
   },
   mounted() {
-    let that = this
-    let id = this.$route.query.userId
-    if (!id) {
-      id = this.$store.getters.info.uid
-    }
-    this.$axios.post('/user/getUserInforId', {id})
-      .then(function (response) {
-        console.log(response)
-        response.data.password = ''
-        that.ruleForm2 = response.data
-        return false
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+    this.getList()
+
   }
 }
 </script>

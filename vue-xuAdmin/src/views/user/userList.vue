@@ -112,13 +112,21 @@ export default {
             let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
 
-            if (response.data.rows[i].roleId == 0) {
-              response.data.rows[i].roleId = '普通用户'
-            } else if (response.data.rows[i].roleId == 1) {
-              response.data.rows[i].roleId = '超级管理员'
-            } else if (response.data.rows[i].roleId == 2) {
-              response.data.rows[i].roleId = '管理员'
-            }
+            that.$axios.post('/permissions/getRoleList')
+              .then(function (res) {
+
+                for (let j = 0; j < res.data.rows.length; j++) {
+                  debugger
+                  if (response.data.rows[i].roleId === res.data.rows[j].id ){
+                    response.data.rows[i].roleId = res.data.rows[j].name
+
+                  }
+                }
+
+              })
+              .catch(function (error) {
+                console.log(error)
+              })
 
 
           }

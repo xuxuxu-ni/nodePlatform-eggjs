@@ -23,10 +23,13 @@ module.exports = app => {
     router.post('/user/editPassworld', isLogin, controller.admin.user.editPassworld)
     // 删除用户
     router.post('/user/delUser', isLogin, controller.admin.user.delUser)
-    // 增加角色
-    router.post('/permissions/addRole',isLogin, controller.admin.role.addRole)
     // 角色列表
     router.post('/permissions/getRoleList',isLogin, controller.admin.role.getRoleList)
+    // 增加角色
+    router.post('/permissions/addRole',isLogin, controller.admin.role.addRole)
+    // 删除角色
+    router.post('/permissions/delRole',isLogin, controller.admin.role.delRole)
+
 }
 
 

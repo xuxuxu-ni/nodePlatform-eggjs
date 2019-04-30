@@ -5,9 +5,14 @@
  * Description: 文件描述
  */
 const Controller = require('../../core/base_controller');
-const {cryptoMd5} = require('../../extend/helper');
 
 class RoleController extends Controller {
+    // 获取角色列表
+    async getRoleList() {
+        let roleList = await this.ctx.service.admin.role.getRoleList()
+        this.ctx.body = roleList
+    }
+
     // 增加角色
     async addRole() {
         let roleData = this.ctx.request.body
@@ -15,12 +20,14 @@ class RoleController extends Controller {
         this.ctx.body = results
     }
 
-    // 获取权限列表
-    async getRoleList() {
-        let roleList = await this.ctx.service.admin.role.getRoleList()
-
-        this.ctx.body = roleList
+    // 删除用户
+    async delRole() {
+        let id = this.ctx.request.body.id
+        let result = await this.ctx.service.admin.role.delRole(id)
+        this.ctx.body = result
     }
+
+
 }
 
 module.exports = RoleController
