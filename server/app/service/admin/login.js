@@ -22,9 +22,12 @@ class UserService extends Service {
         await this.ctx.model.SystemUser.findOne({
             where: {id: info.message.id}
         }).then( async res => {
-            let roleInfo = await ctx.model.SystemRole.findById(res.roleId)
-            res.roleName = roleInfo.name
-            res.authorityRouter = roleInfo.permission
+            console.log(res);
+            if (res) {
+                let roleInfo = await ctx.model.SystemRole.findById(res.roleId)
+                res.setDataValue('roleName', roleInfo.name)
+                res.setDataValue("authorityRouter", roleInfo.permission)
+            }
             userInfo = res
         })
         return userInfo

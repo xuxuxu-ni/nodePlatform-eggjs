@@ -28,6 +28,14 @@ class UserController extends Controller {
     async userList() {
         let getListData = this.ctx.request.body
         let list = await this.ctx.service.admin.user.userList(getListData)
+        let roleList = await this.ctx.service.admin.role.getRoleList()
+        for (let i = 0; i < list.rows.length; i++) {
+            for (let j = 0; j < roleList.rows.length; j++) {
+                if (list.rows[i].roleId === roleList.rows[j].id ){
+                    list.rows[i].dataValues.roleName = roleList.rows[j].name
+                }
+            }
+        }
 
         this.ctx.body = list
     }

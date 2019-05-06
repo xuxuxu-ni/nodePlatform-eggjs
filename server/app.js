@@ -14,7 +14,7 @@ class AppBootHook {
     async willReady() {
         let keys = this.app.config.keys;
         let rid;
-        await this.app.model.sync({ force: true}).then(async (res) => {
+        await this.app.model.sync({ force: false}).then(async (res) => {
             console.log(chalk.green(`
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ || || || || || || // // // // // // // //
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\        _ooOoo_          // // // // // // //

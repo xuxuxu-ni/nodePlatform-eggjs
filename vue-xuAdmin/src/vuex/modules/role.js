@@ -6,6 +6,11 @@ export default {
   },
   mutations: {
     getInfo (state, data) {
+      if (data.authorityRouter && data.authorityRouter.indexOf(',') != -1){
+        data.authorityRouter = data.authorityRouter.split(",")
+      } else if (data.authorityRouter == null){
+        data.authorityRouter = []
+      }
       state.info = {
         role: data.role,
         name: data.name,

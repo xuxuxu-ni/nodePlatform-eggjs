@@ -39,11 +39,9 @@ router.beforeEach((to, from, next) => {
           // next({path: '/index'})
 
           axios.get('/user/getUserInfor').then(async function (response) {
-            console.log(response);
             await store.dispatch('getInfo', response.data)
             await store.dispatch('newRoutes', store.getters.info.authorityRouter)
             // await store.dispatch('newRoutes', role)
-
             console.log(store.getters.addRouters)
             await router.addRoutes(store.getters.addRouters)
             next({path: '/index'})

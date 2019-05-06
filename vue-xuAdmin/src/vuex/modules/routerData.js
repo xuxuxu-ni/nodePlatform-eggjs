@@ -28,9 +28,8 @@ const routerData = {
           //     j = j - 1
           //   }
           // }
-
-          debugger
-          if (userRole.indexOf(routers[j].r_id) === -1) {
+debugger
+          if (routers[j].r_id && userRole.indexOf(routers[j].r_id.toString()) === -1) {
             routers.splice(j, 1)
             j = j - 1
           }
@@ -46,6 +45,7 @@ const routerData = {
       if (store.getters.info.role !== '超级管理员') {
         eachSelect(addRouter, perRouter)
       }
+      debugger
       commit('setRouters', addRouter)
 
     }

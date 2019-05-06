@@ -160,6 +160,5 @@ class RoleService extends Service {
 
 }
 
-module
-    .exports = RoleService
+module.exports = RoleService
 

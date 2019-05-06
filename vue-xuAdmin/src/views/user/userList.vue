@@ -24,7 +24,7 @@
         label="手机">
       </el-table-column>
       <el-table-column
-        prop="roleId"
+        prop="roleName"
         label="角色">
       </el-table-column>
       <el-table-column
@@ -109,20 +109,8 @@ export default {
             let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
             let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
-
-            that.$axios.post('/permissions/getRoleList').then(function (res) {
-                for (let j = 0; j < res.data.rows.length; j++) {
-                  if (response.data.rows[i].roleId === res.data.rows[j].id ){
-                    response.data.rows[i].roleId = res.data.rows[j].name
-                    that.total = response.data.count
-                    that.userListData = response.data.rows
-                  }
-                }
-
-              })
-              .catch(function (error) {
-                console.log(error)
-              })
+            that.total = response.data.count
+            that.userListData = response.data.rows
           }
         })
         .catch(function (error) {

@@ -10,6 +10,7 @@ class UserService extends Service {
     // 修改用户信息
     async editUserInfo(options) {
         let {id} = options
+        options.status = options.status ? "1": "0"
         let results
         await this.ctx.model.SystemUser.update(options, {
             where: {
@@ -50,23 +51,8 @@ class UserService extends Service {
 
     // 删除用户
     async delUser(uid) {
-        let results
-        let myId = this.ctx.session.user.id
-        let userRoleId,myRoleId
-        await this.ctx.model.SystemUser.findById(uid).then(res=>{
-            console.log(res);
-            userRoleId = res.roleId
-        })
-        await this.ctx.model.SystemUser.findById(myId).then(res=>{
-            myRoleId = res.roleId
-        })
-        if (myRoleId == 0 || userRoleId != 0 && myRoleId >= userRoleId) {
-            results = {
-                code: 10000,
-                message: '未获得此操作权限'
-            }
-            return results
-        }
+        let results;
+
         await this.ctx.model.SystemUser.destroy({
             where: {
                 id: uid

@@ -6,6 +6,7 @@
 module.exports = app => {
   const { router, controller, middleware } = app;
   const isLogin = middleware.verifyToken()
+
   /*************** admin接口请求路由 ***************/
   require('./router/system_API')(app,isLogin);
 

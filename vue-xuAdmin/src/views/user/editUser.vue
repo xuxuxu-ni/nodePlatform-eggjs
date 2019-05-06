@@ -39,6 +39,9 @@
       <el-form-item label="手机号" prop="mobilePhone">
         <el-input v-model="ruleForm2.mobilePhone" autocomplete="off"></el-input>
       </el-form-item>
+      <el-form-item label="是否启用">
+        <el-switch v-model="ruleForm2.status"></el-switch>
+      </el-form-item>
       <el-form-item label="头像上传">
         <el-upload
           class="avatar-uploader"
@@ -69,6 +72,7 @@ export default {
         mobilePhone: '',
         username: '',
         roleId: '',
+        status: '',
         sex: "1",
         age: 0,
         checkPass: '',
@@ -102,11 +106,9 @@ export default {
     },
     getList () {
       let that = this
-      this.$axios.post('/permissions/getRoleList')
-        .then(function (response) {
+      this.$axios.post('/permissions/getRoleList').then(function (response) {
           console.log(response)
           that.roleData = response.data.rows
-
           let id = that.$route.query.userId
           if (!id) {
             id = that.$store.getters.info.uid
@@ -115,10 +117,19 @@ export default {
             .then(function (res) {
               console.log(res)
               res.data.password = ''
+              if (res.data.status === '1'){
+                res.data.status = true
+              } else {
+                res.data.status = false
+              }
+
               that.ruleForm2 = res.data
+              that.roleName = true
               for (let i = 0; i < that.roleData.length; i++) {
-                if (res.data.roleId === that.roleData[i].id && that.roleData[i].name === '超级管理员'){
-                  that.roleName = true
+                debugger
+                if (that.$store.getters.info.role === '超级管理员' && that.$store.getters.info.uid !== id ){
+                  that.roleName = false
+                  debugger
                 }
               }
               return false
@@ -142,6 +153,7 @@ export default {
                 message: res.data.message,
                 type: 'success'
               })
+            console.log(that.ruleForm2);
           }).catch((err) => {
             console.log(err);
           })
@@ -157,7 +169,6 @@ export default {
   },
   mounted() {
     this.getList()
-
   }
 }
 </script>

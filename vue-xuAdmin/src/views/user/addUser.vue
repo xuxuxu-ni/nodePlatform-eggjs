@@ -11,8 +11,8 @@
       <el-form-item label="确认密码" prop="checkPass">
         <el-input type="password" v-model="ruleForm2.checkPass" autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item label="角色">
-        <el-select v-model="ruleForm2.roleId" placeholder="请选择等级">
+      <el-form-item label="角色"  prop="roleId">
+        <el-select v-model="ruleForm2.roleId" placeholder="请选择用户角色" >
           <el-option
             v-for="item in roleData"
             :key="item.id"
@@ -98,7 +98,10 @@ export default {
         ],
         checkPass: [
           {required: true, validator: validatePass2, trigger: 'blur'}
-        ]
+        ],
+        roleId: [
+          { required: true, message: '请选择用户角色', trigger: 'change' }
+        ],
       }
     }
   },
