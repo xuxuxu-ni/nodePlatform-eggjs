@@ -179,7 +179,6 @@
       roleEdit(index, row) {
         console.log(index, row)
         this.selectRoleId = row.id
-        debugger
         this.selectData = row.permission ? row.permission.split(',') : []
         this.dialogFormVisible2 = true;
       },

@@ -7,7 +7,6 @@ export default function fig () {
       console.dir(err)
       return
     }
-    debugger
     console.log(data)
   })
 }

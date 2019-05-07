@@ -126,10 +126,8 @@ export default {
               that.ruleForm2 = res.data
               that.roleName = true
               for (let i = 0; i < that.roleData.length; i++) {
-                debugger
                 if (that.$store.getters.info.role === '超级管理员' && that.$store.getters.info.uid !== id ){
                   that.roleName = false
-                  debugger
                 }
               }
               return false
