@@ -49,139 +49,138 @@
 </template>
 
 <script>
-  import E from 'wangeditor'
+import E from 'wangeditor'
 
-  export default {
-    name: 'addArticle',
-    data() {
-      return {
-        article: {
-          title: '文章测试-标题',
-          sort: '',
-          top: true,
-          contentHtml: '',
-          thumbnail: '',
-          banner: ''
-        },
-        initData: "",
-        restaurants: [],
+export default {
+  name: 'addArticle',
+  data () {
+    return {
+      article: {
+        title: '文章测试-标题',
+        sort: '',
+        top: true,
+        contentHtml: '',
+        thumbnail: '',
+        banner: ''
+      },
+      initData: '',
+      restaurants: []
+    }
+  },
+  methods: {
+    handlethumbnailSuccess (res, file) {
+      this.article.thumbnail = res.data[0]
+    },
+    beforethumbnailUpload (file) {
+      const isJPG = file.type === 'image/jpeg'
+      const isPNG = file.type === 'image/png'
+      const isLt2M = file.size / 1024 / 1024 < 2
+
+      if (!(isJPG || isPNG)) {
+        this.$message.error('上传文章缩略图只能是 JPG/PNG 格式!')
+      }
+      if (!isLt2M) {
+        this.$message.error('上传文章缩略图大小不能超过 2MB!')
+      }
+      return isLt2M && isJPG || isPNG
+    },
+    handleBannerSuccess (res, file) {
+      this.article.banner = res.data[0]
+    },
+    beforeBannerUpload (file) {
+      const isJPG = file.type === 'image/jpeg'
+      const isPNG = file.type === 'image/png'
+      const isLt5M = file.size / 1024 / 1024 < 5
+
+      if (!(isJPG || isPNG)) {
+        this.$message.error('上传banner只能是 JPG/PNG 格式!')
+      }
+      if (!isLt5M) {
+        this.$message.error('上传banner图片大小不能超过 5MB!')
+      }
+      return isLt5M && isJPG || isPNG
+    },
+    querySearch (queryString, cb) {
+      var restaurants = this.restaurants
+      var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
+      // 调用 callback 返回建议列表的数据
+      cb(results)
+    },
+    createFilter (queryString) {
+      return (restaurant) => {
+        return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0)
       }
     },
-    methods: {
-      handlethumbnailSuccess(res, file) {
-        this.article.thumbnail = res.data[0];
-      },
-      beforethumbnailUpload(file) {
-        const isJPG = file.type === 'image/jpeg';
-        const isPNG = file.type === 'image/png';
-        const isLt2M = file.size / 1024 / 1024 < 2;
-
-        if (!(isJPG || isPNG)) {
-          this.$message.error('上传文章缩略图只能是 JPG/PNG 格式!');
-        }
-        if (!isLt2M) {
-          this.$message.error('上传文章缩略图大小不能超过 2MB!');
-        }
-        return  isLt2M && isJPG || isPNG;
-      },
-      handleBannerSuccess(res, file) {
-        this.article.banner = res.data[0];
-      },
-      beforeBannerUpload(file) {
-        const isJPG = file.type === 'image/jpeg';
-        const isPNG = file.type === 'image/png';
-        const isLt5M = file.size / 1024 / 1024 < 5;
-
-        if (!(isJPG || isPNG)) {
-          this.$message.error('上传banner只能是 JPG/PNG 格式!');
-        }
-        if (!isLt5M) {
-          this.$message.error('上传banner图片大小不能超过 5MB!');
-        }
-        return  isLt5M && isJPG || isPNG;
-      },
-      querySearch(queryString, cb) {
-        var restaurants = this.restaurants
-        var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
-        // 调用 callback 返回建议列表的数据
-        cb(results)
-      },
-      createFilter(queryString) {
-        return (restaurant) => {
-          return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0)
-        }
-      },
-      loadAll() {
-        return [
-          {'value': 'vue'},
-          {'value': 'node.js'}
-        ]
-      },
-      handleSelect(item) {
-        console.log(item)
-      },
-
-      getContent: function () {
-        alert(this.editorContent)
-      },
-      submitArticle() {
-        let that = this
-        this.$axios.post('/article/addArticle', this.article).then(response => {
-          console.log(response);
-          that.$message({
-            showClose: true,
-            message: response.data.message,
-            type: 'success'
-          })
-        })
-          .catch(function (error) {
-            console.log(error);
-          });
-
-        // this.$axios.post('/comment/addComment', {
-        //   "articleId": "545fbcd04b2e11e9bfa585993145b740",
-        //   "content": "评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容"
-        // }).then( response => {
-        //   console.log(response);
-        //   debugger
-        //   that.$message({
-        //     showClose: true,
-        //     message: response.data.message,
-        //     type: 'success'
-        //   })
-        // }).catch(function (error) {
-        //     console.log(error);
-        //   });
-      }
+    loadAll () {
+      return [
+        {'value': 'vue'},
+        {'value': 'node.js'}
+      ]
     },
-    mounted() {
+    handleSelect (item) {
+      console.log(item)
+    },
+
+    getContent: function () {
+      alert(this.editorContent)
+    },
+    submitArticle () {
       let that = this
-      this.restaurants = this.loadAll()
-      var editor = new E(this.$refs.editor)
-      editor.customConfig.onchange = (html) => {
-        that.article.contentHtml = html
-      }
-      editor.customConfig.uploadImgServer = '/router/editor/uploadImg'  // 上传图片到服务器
-      editor.customConfig.debug = true
-      // editor.customConfig.showLinkImg = false
-      editor.create()
-
-
-      let id = this.$route.query.articleId
-
-      if (!id) return false
-      this.$axios.post('/article/getArticle', {id})
-        .then(function (response) {
-          console.log(response)
-          that.article = response.data
-          editor.txt.html(response.data.contentHtml)
-          return false
+      this.$axios.post('/article/addArticle', this.article).then(response => {
+        console.log(response)
+        that.$message({
+          showClose: true,
+          message: response.data.message,
+          type: 'success'
         })
+      })
         .catch(function (error) {
           console.log(error)
         })
+
+      // this.$axios.post('/comment/addComment', {
+      //   "articleId": "545fbcd04b2e11e9bfa585993145b740",
+      //   "content": "评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容"
+      // }).then( response => {
+      //   console.log(response);
+      //   debugger
+      //   that.$message({
+      //     showClose: true,
+      //     message: response.data.message,
+      //     type: 'success'
+      //   })
+      // }).catch(function (error) {
+      //     console.log(error);
+      //   });
     }
+  },
+  mounted () {
+    let that = this
+    this.restaurants = this.loadAll()
+    var editor = new E(this.$refs.editor)
+    editor.customConfig.onchange = (html) => {
+      that.article.contentHtml = html
+    }
+    editor.customConfig.uploadImgServer = '/router/editor/uploadImg' // 上传图片到服务器
+    editor.customConfig.debug = true
+    // editor.customConfig.showLinkImg = false
+    editor.create()
+
+    let id = this.$route.query.articleId
+
+    if (!id) return false
+    this.$axios.post('/article/getArticle', {id})
+      .then(function (response) {
+        console.log(response)
+        that.article = response.data
+        editor.txt.html(response.data.contentHtml)
+        return false
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   }
+}
 </script>
 
 <style scoped>
