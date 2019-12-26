@@ -28,6 +28,8 @@ export default {
     var validatePass = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请输入密码'))
+      } else if (value.toString().length < 6){
+        callback(new Error('密码长度不能低于6位'))
       } else {
         if (this.ruleForm2.checkPass !== '') {
           this.$refs.ruleForm2.validateField('checkPass')
@@ -38,6 +40,8 @@ export default {
     var validatePass2 = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请再次输入密码'))
+      }else if (value.toString().length < 6){
+        callback(new Error('密码长度不能低于6位'))
       } else if (value !== this.ruleForm2.password) {
         callback(new Error('两次输入密码不一致!'))
       } else {

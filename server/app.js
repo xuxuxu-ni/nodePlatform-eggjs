@@ -14,6 +14,7 @@ class AppBootHook {
     async willReady() {
         let keys = this.app.config.keys;
         let rid;
+        // force 为 true 时,系统每次启动都会删除之前数据表,重新建表
         await this.app.model.sync({ force: false}).then(async (res) => {
             console.log(chalk.green(`
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ || || || || || || // // // // // // // //

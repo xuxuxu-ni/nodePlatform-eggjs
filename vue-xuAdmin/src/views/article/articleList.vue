@@ -73,7 +73,12 @@ export default {
   },
   methods: {
     handleEdit (index, row) {
-      this.$router.push({path: '/addArticleEditor?articleId=' + row.id});
+      this.$router.push({
+        path: '/addArticleEditor',
+        query:{
+          articleId:  row.id
+        }
+      });
     },
     handleDelete (index, row) {
       console.log(index, row)

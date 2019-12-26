@@ -28,6 +28,17 @@
         label="角色">
       </el-table-column>
       <el-table-column
+        prop="status"
+        label="状态"
+        filter-placement="bottom-end">
+        <template slot-scope="scope">
+          <el-tag
+            :type="scope.row.status === '启用' ? 'primary' : 'danger'"
+            disable-transitions>{{scope.row.status}}
+          </el-tag>
+        </template>
+      </el-table-column>
+      <el-table-column
         label="操作">
         <template slot-scope="scope">
           <el-button
@@ -65,7 +76,12 @@ export default {
   },
   methods: {
     handleEdit (index, row) {
-      this.$router.push({path: '/editUser?userId=' + row.id});
+      this.$router.push({
+        path: '/editUser',
+        query:{
+          userId:  row.id
+        }
+      });
     },
     handleDelete (index, row) {
       console.log(index, row)
@@ -109,9 +125,15 @@ export default {
             let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
             let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
-            that.total = response.data.count
-            that.userListData = response.data.rows
+
+            if ( response.data.rows[i].status == 1){
+              response.data.rows[i].status = '启用'
+            } else {
+              response.data.rows[i].status = '禁用'
+            }
           }
+          that.total = response.data.count
+          that.userListData = response.data.rows
         })
         .catch(function (error) {
           console.log(error)
