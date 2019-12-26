@@ -39,25 +39,25 @@
           filterText: '',
           data2: [{
             id: 1,
-            label: '系统管理部门(浪花易借)',
+            label: '系统管理部门(xx公司)',
             children: [{
               id: 4,
-              label: '浪花易借(浪花易借)',
+              label: 'xx公司(xx公司)',
               children: [{
                 id: 9,
-                label: '财务部(浪花易借)'
+                label: '财务部(xx公司)'
               }, {
                 id: 10,
-                label: '信息科(浪花易借)'
+                label: '信息科(xx公司)'
               },{
                 id: 2,
-                label: '催收部(浪花易借)',
+                label: '催收部(xx公司)',
                 children: [{
                   id: 5,
-                  label: '催无虑(浪花易借)'
+                  label: '催无虑(xx公司)'
                 }, {
                   id: 6,
-                  label: '催收员(浪花易借)'
+                  label: '催收员(xx公司)'
                 }]
               }]
             }]

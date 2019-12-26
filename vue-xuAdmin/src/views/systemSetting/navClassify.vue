@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic">
+    <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" style="width: 800px" label-width="100px" class="demo-dynamic">
       <el-form-item
         prop="indexName"
         label="首页"
