@@ -4,6 +4,13 @@
 ### 后台: egg.js
 ### 数据库: mysql
 
+👤 **NiRongxu**
+
+* Github: [@NiRongxu](https://github.com/NiRongxu)
+* QQ: 595485548
+* QQ群: 157216616
+* email: 595485548@qq.com
+
 ### 已实现功能
 #### 使用之前请先了解`egg.js`，然后把`/server/config/config.local.js`数据库配置成自己的，只要手动创建数据库就行，数据表在系统运行时会自动创建,并且自动创建超级管理员账号,为了系统稳定性该账号不可以被删除,不可以被降级权限
 
@@ -40,6 +47,8 @@
 ![image.png](https://i.loli.net/2019/12/26/THP75qMD964xmCy.png)
 ![image.png](https://i.loli.net/2019/12/26/VPlrNURWHmhaDAd.png)
 ![image.png](https://i.loli.net/2019/12/26/JQzEFRYcAMSm1bP.png)
+## 结语
+如果这个框架对你有帮助的话，请给个星点个star
 
 
 
