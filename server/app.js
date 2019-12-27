@@ -14,7 +14,8 @@ class AppBootHook {
     async willReady() {
         let keys = this.app.config.keys;
         let rid;
-        // force 为 true 时,系统每次启动都会删除之前数据表,重新建表
+        // force 为 true 时,系统每次启动都会删除之前所有数据表,重新建表(类似删库)
+        // force 为 false 时,系统缺失数据表的时候会自动创建, 比如在/app/model/ 下新建一个模型时,系统运行会自动创建这个模型的数据表
         await this.app.model.sync({ force: false}).then(async (res) => {
             console.log(chalk.green(`
 \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ \\\\ || || || || || || // // // // // // // //
