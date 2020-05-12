@@ -1,10 +1,14 @@
 <template>
   <div>
+    <div class="cardshadow roleListTable">
+      <div>
+        <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addUserFn" plain>添加账号</el-button>
+      </div>
     <el-table
       :data="userListData">
       <el-table-column
         fixed
-        prop="createdAt"
+        prop="created_at"
         label="创建时间">
       </el-table-column>
       <el-table-column
@@ -20,7 +24,7 @@
         label="姓名">
       </el-table-column>
       <el-table-column
-        prop="mobilePhone"
+        prop="mobile_phone"
         label="手机">
       </el-table-column>
       <el-table-column
@@ -53,6 +57,7 @@
     </el-table>
     <el-pagination
       background
+      hide-on-single-page
       layout="prev, pager, next"
       :total="total"
       @current-change="currentChange"
@@ -60,76 +65,84 @@
       @next-click="currentChange"
     >
     </el-pagination>
+    </div>
+    <user-info v-if="dialogVisible" :title="title" :dialogVisible="dialogVisible" :userId="userId" @successCallback="successCallback"/>
   </div>
 </template>
 
 <script>
+import UserInfo from "../../components/userForm/userInfo"
 export default {
-  name: 'articleList',
+  name: "articleList",
+  components: { UserInfo },
   data () {
     return {
       total: 0,
       currentPage: 1,
       sort: null,
-      userListData: []
+      userListData: [],
+      dialogVisible: false,
+      title: "",
+      userId: ""
     }
   },
   methods: {
+    addUserFn () {
+      this.dialogVisible = true
+      this.title = "添加账号"
+      this.userId = ""
+    },
     handleEdit (index, row) {
-      this.$router.push({
-        path: '/editUser',
-        query:{
-          userId:  row.id
-        }
-      });
+      this.dialogVisible = true
+      this.title = "编辑信息"
+      this.userId = row.id
+    },
+    successCallback () {
+      this.dialogVisible = false
+      this.getList()
     },
     handleDelete (index, row) {
       console.log(index, row)
       let that = this
-      this.$axios.post('/user/delUser', {
+      this.$request.fetchDelUser({
         id: row.id
       })
         .then(response => {
-          console.log(response)
-            that.$message({
-              showClose: true,
-              message: response.data.message,
-              type: 'success'
-            })
-            that.getList({
-                currentPage: that.currentPage,
-                pageSize:10,
-              })
+          that.$message({
+            showClose: true,
+            message: response.data.message,
+            type: "success"
+          })
+          that.getList({
+            currentPage: that.currentPage,
+            pageSize: 10
+          })
         })
         .catch(err => {
           console.log(err)
         })
     },
-    currentChange(page){
-      console.log(page);
+    currentChange (page) {
+      console.log(page)
       this.currentPage = page
       this.getList({
         currentPage: page,
-        pageSize:10,
+        pageSize: 10
       })
     },
-    getList (postdata) {
+    getList (postdata = {
+      currentPage: 1,
+      pageSize: 10
+    }) {
       let that = this
-      this.$axios.post('/user/userList', postdata)
+      this.$request.fetchUserList(postdata)
         .then(function (response) {
           for (let i = 0; i < response.data.rows.length; i++) {
-            let d = new Date(response.data.rows[i].createdAt)
-            let moth = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1)
-            let date = d.getDate() < 10 ? '0' + d.getDate() : d.getDate()
-            let hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours()
-            let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
-            let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
-            response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
-
-            if ( response.data.rows[i].status == 1){
-              response.data.rows[i].status = '启用'
+            response.data.rows[i].created_at = that.$getDateDiff(response.data.rows[i].created_at)
+            if (response.data.rows[i].status === "1") {
+              response.data.rows[i].status = "启用"
             } else {
-              response.data.rows[i].status = '禁用'
+              response.data.rows[i].status = "禁用"
             }
           }
           that.total = response.data.count
@@ -141,10 +154,7 @@ export default {
     }
   },
   mounted () {
-    this.getList({
-      currentPage: 1,
-      pageSize:10,
-    })
+    this.getList()
   }
 }
 </script>

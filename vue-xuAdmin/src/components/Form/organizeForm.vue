@@ -1,6 +1,6 @@
 <template>
     <div class="cardshadow organizeForm">
-      <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+      <el-form status-icon label-width="100px" class="demo-ruleForm">
         <el-form-item label="单位编号" prop="number">
           <el-input v-model="form.number" placeholder="单位编号"></el-input>
         </el-form-item>
@@ -28,22 +28,22 @@
 </template>
 
 <script>
-    export default {
-      name: "organizeForm",
-      data() {
-        return {
-          radio: '1',
-          form: {
-            number: '10101',
-            name: '天天',
-            higher: '浪花易借',
-            describe: '',
-            serial: '1'
-          },
-          formLabelWidth: '120px'
-        }
-      }
+export default {
+  name: "organizeForm",
+  data () {
+    return {
+      radio: "1",
+      form: {
+        number: "10101",
+        name: "天天",
+        higher: "浪花易借",
+        describe: "",
+        serial: "1"
+      },
+      formLabelWidth: "120px"
     }
+  }
+}
 </script>
 
 <style scoped>

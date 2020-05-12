@@ -18,23 +18,20 @@
 </template>
 
 <script>
-  import layoutAside from './aside/aside'
-  import layoutHeader from './header/header'
-  import Bottom from './Footer/bottom'
-  import langSelect from '../../components/lang/langSelect'
+import layoutAside from "./aside/aside"
+import layoutHeader from "./header/header"
+import Bottom from "./Footer/bottom"
+import langSelect from "../../components/lang/langSelect"
 
-  export default {
-    name: 'dc-home',
-    components: {
-      layoutHeader,
-      Bottom,
-      langSelect,
-      layoutAside
-    },
-    created () {
-      this.$router.push('/index')
-    }
+export default {
+  name: "layout",
+  components: {
+    layoutHeader,
+    Bottom,
+    langSelect,
+    layoutAside
   }
+}
 </script>
 
 <style>

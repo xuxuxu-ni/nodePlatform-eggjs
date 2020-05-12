@@ -4,13 +4,13 @@
       <transition-group name="list" tag="ul">
         <li v-for="(item, index) in $store.getters.tabnavBox" @contextmenu.prevent="openMenu(item,$event,index)"
             :key="item.title" class="tabnav" :class="{ active: $route.path === item.path }">
-          <router-link :to="item.path">{{ $t(`routeNmae.${item.title}`) }}</router-link>
-          <i @click="removeTab(item)" class="el-icon-error" v-if="index !== 0"></i>
+          <router-link :to="item.path">{{ $t(`routeName.${item.title}`) }}</router-link>
+          <i @click="removeTab(item)" class="el-icon-error" v-if="index !== 0"/>
         </li>
       </transition-group>
     </div>
     <ul v-show="this.rightMenuShow" :style="{left:this.left+'px',top:this.top+'px'}" class="menuBox">
-      <li @click="removeTab($store.getters.rightNav)"><i class="fa fa-remove"></i>{{ $t('rightMenu.close') }}</li>
+      <li @click="removeTab($store.getters.rightNav)"><i class="fa fa-remove"/>{{ $t('rightMenu.close') }}</li>
       <li @click="removeOtherTab($store.getters.rightNav)">{{ $t('rightMenu.closeOther') }}</li>
       <li @click="removeAllTab">{{ $t('rightMenu.closeAll') }}</li>
     </ul>
@@ -18,49 +18,49 @@
 </template>
 
 <script>
-  export default {
-    name: 'tabNav',
-    data () {
-      return {
-        rightMenuShow: false,
-        left: 0,
-        top: 0
+export default {
+  name: "tabNav",
+  data () {
+    return {
+      rightMenuShow: false,
+      left: 0,
+      top: 0
+    }
+  },
+  methods: {
+    openMenu (item, e, index) {
+      if (index === 0) {
+        return false
       }
+      this.rightMenuShow = true
+      this.left = e.clientX + 10
+      this.top = e.clientY
+      this.$store.dispatch("openMenu", item)
     },
-    methods: {
-      openMenu (item, e, index) {
-        if (index === 0) {
-          return false
-        }
-        this.rightMenuShow = true
-        this.left = e.clientX + 10
-        this.top = e.clientY
-        this.$store.dispatch('openMenu', item)
-      },
-      removeTab (tabItem) {
-        this.$store.dispatch('removeTab', {tabItem, fullPath: this.$route.fullPath, router: this.$router})
-      },
-      removeOtherTab (tabItem) {
-        this.$store.dispatch('removeOtherTab', {tabItem, router: this.$router})
-      },
-      removeAllTab () {
-        this.$store.dispatch('removeOtherTab', {all: true, router: this.$router})
-      }
+    removeTab (tabItem) {
+      this.$store.dispatch("removeTab", {tabItem, fullPath: this.$route.fullPath, router: this.$router})
     },
-    watch: {
-      rightMenuShow (value) {
-        if (value) {
-          document.body.addEventListener('click', () => {
-            this.rightMenuShow = false
-          })
-        } else {
-          document.body.removeEventListener('click', () => {
-            this.rightMenuShow = false
-          })
-        }
+    removeOtherTab (tabItem) {
+      this.$store.dispatch("removeOtherTab", {tabItem, router: this.$router})
+    },
+    removeAllTab () {
+      this.$store.dispatch("removeOtherTab", {all: true, router: this.$router})
+    }
+  },
+  watch: {
+    rightMenuShow (value) {
+      if (value) {
+        document.body.addEventListener("click", () => {
+          this.rightMenuShow = false
+        })
+      } else {
+        document.body.removeEventListener("click", () => {
+          this.rightMenuShow = false
+        })
       }
     }
   }
+}
 </script>
 <style>
   .tabnav {
@@ -68,9 +68,7 @@
     transition: all 0.5s;
   }
 
-  .list-enter, .list-leave-to
-    /* .list-leave-active for below version 2.1.8 */
-  {
+  .list-enter, .list-leave-to{
     opacity: 0;
     transform: translateY(30px);
 
@@ -129,16 +127,15 @@
       li {
         height: 30px;
         line-height: 31px;
+        display: flex;
+        align-items: center;
         @extend %cursor;
         margin-#{$top}: 6px;
         margin-#{$right}: 5px;
-
         border: 1px solid #cccccc;
-
         overflow: hidden;
         &:not(:first-child) {
           padding-#{$right}: 10px;
-          min-width: 80px;
         }
         a {
           @include set-value(padding, 13px);

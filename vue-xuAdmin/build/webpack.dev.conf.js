@@ -14,6 +14,7 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
+  mode: 'development',
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
@@ -49,14 +50,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       'process.env': require('../config/dev.env')
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
-    new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
       favicon: path.resolve(__dirname, '../static/images/favicon.ico'),
-      inject: true
+      inject: true,
+      dll: (function () {
+        let max = 2
+        let res = []
+        for (let i = 0; i < max; i++) {
+          const dllName = require(path.resolve(__dirname, `../dllManifest/xuAdmin${i}-manifest.json`)).name.split('_')
+          res.push(`/static/dll/${dllName[0]}.${dllName[1]}.dll.js`)
+        }
+        return res
+      })()
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
@@ -94,22 +102,22 @@ module.exports = new Promise((resolve, reject) => {
 // (.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)(.-./\`-'\\.-.)
 //  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-'  \`-'     \`-' `]
           notes: [`
-                                                           $$$$$$\\        $$\\               $$\\           
-                                                          $$  __$$\\       $$ |              \\__|          
-$$\\    $$\\ $$\\   $$\\  $$$$$$\\         $$\\   $$\\ $$\\   $$\\ $$ /  $$ | $$$$$$$ |$$$$$$\\$$$$\\  $$\\ $$$$$$$\\  
-\\$$\\  $$  |$$ |  $$ |$$  __$$\\ $$$$$$\\\\$$\\ $$  |$$ |  $$ |$$$$$$$$ |$$  __$$ |$$  _$$  _$$\\ $$ |$$  __$$\\ 
+                                                           $$$$$$\\        $$\\               $$\\
+                                                          $$  __$$\\       $$ |              \\__|
+$$\\    $$\\ $$\\   $$\\  $$$$$$\\         $$\\   $$\\ $$\\   $$\\ $$ /  $$ | $$$$$$$ |$$$$$$\\$$$$\\  $$\\ $$$$$$$\\
+\\$$\\  $$  |$$ |  $$ |$$  __$$\\ $$$$$$\\\\$$\\ $$  |$$ |  $$ |$$$$$$$$ |$$  __$$ |$$  _$$  _$$\\ $$ |$$  __$$\\
  \\$$\\$$  / $$ |  $$ |$$$$$$$$ |\\______|\\$$$$  / $$ |  $$ |$$  __$$ |$$ /  $$ |$$ / $$ / $$ |$$ |$$ |  $$ |
   \\$$$  /  $$ |  $$ |$$   ____|        $$  $$<  $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ | $$ | $$ |$$ |$$ |  $$ |
    \\$  /   \\$$$$$$  |\\$$$$$$$\\        $$  /\\$$\\ \\$$$$$$  |$$ |  $$ |\\$$$$$$$ |$$ | $$ | $$ |$$ |$$ |  $$ |
     \\_/     \\______/  \\_______|       \\__/  \\__| \\______/ \\__|  \\__| \\_______|\\__| \\__| \\__|\\__|\\__|  \\__|
-                                                                                                          
-                                                                                                          
-                                                                                                          
+
+
+
           `]
         },
         onErrors: config.dev.notifyOnErrors
-        ? utils.createNotifierCallback()
-        : undefined
+          ? utils.createNotifierCallback()
+          : undefined
       }))
 
       resolve(devWebpackConfig)

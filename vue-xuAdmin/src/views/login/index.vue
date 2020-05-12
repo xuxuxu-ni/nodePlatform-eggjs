@@ -65,63 +65,47 @@
   </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        smdl: true,
-        loginForm: {
-          username: 'admin',
-          password: 'admin'
-        }
+export default {
+  data () {
+    return {
+      smdl: true,
+      loginForm: {
+        username: "admin",
+        password: "admin"
       }
-    },
-    methods: {
-      submitForm() {
-        let that = this
-        if (this.loginForm.username === '' || this.loginForm.password === '') {
-          this.$message({
-            showClose: true,
-            message: '账号或密码不能为空',
-            type: 'error'
-          })
-          return false
-        } else {
-          let that = this
-          // that.$store.dispatch('setToken',this.loginForm.username).then(() => {
-          //   that.$router.push({path: '/'})
-          // }).catch(res => {
-          //   that.$message({
-          //     showClose: true,
-          //     message: res,
-          //     type: 'error'
-          //   })
-          // })
-
-          this.$axios.post('/user/login',{
-            username: that.loginForm.username,
-            password: that.loginForm.password,
-          }).then((res)=>{
-            that.$store.dispatch('setToken', res.data.data.access_token).then( res => {
-              that.$router.push({path: '/'})
-              }).catch(res => {
-                that.$message({
-                  showClose: true,
-                  message: res.message,
-                  type: 'error'
-                })
-              })
-          }).catch((err)=>{
-            that.$message({
-              showClose: true,
-              message: err.data.message,
-              type: 'error'
-            })
-          })
-
-        }
-      },
     }
+  },
+  methods: {
+    submitForm () {
+      let that = this
+      console.log(this.$axios)
+      if (this.loginForm.username === "" || this.loginForm.password === "") {
+        this.$message({
+          showClose: true,
+          message: "账号或密码不能为空",
+          type: "error"
+        })
+        return false
+      } else {
+        this.$request.fetchLogin({
+          username: that.loginForm.username,
+          password: that.loginForm.password
+        }).then(res => {
+          that.$restBack(res.data, () => {
+            that.$store.dispatch("setToken", res.data.data.access_token).then(res => {
+              that.$router.push({path: "/"})
+            })
+          }, "登录成功")
+        }).catch((err) => {
+          console.log(err)
+        })
+      }
+    }
+  },
+  mounted () {
+    sessionStorage.removeItem("addTab")
   }
+}
 </script>
 <style lang="scss">
   #login {

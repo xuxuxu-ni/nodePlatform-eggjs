@@ -19,56 +19,56 @@
 </template>
 
 <script>
-    export default {
-        name: "departmentTree",
-      watch: {
-        filterText(val) {
-          this.$refs.tree2.filter(val);
-        }
-      },
+export default {
+  name: "departmentTree",
+  watch: {
+    filterText (val) {
+      this.$refs.tree2.filter(val)
+    }
+  },
 
-      methods: {
-        filterNode(value, data) {
-          if (!value) return true;
-          return data.label.indexOf(value) !== -1;
-        }
-      },
+  methods: {
+    filterNode (value, data) {
+      if (!value) return true
+      return data.label.indexOf(value) !== -1
+    }
+  },
 
-      data() {
-        return {
-          filterText: '',
-          data2: [{
-            id: 1,
-            label: '系统管理部门(xx公司)',
+  data () {
+    return {
+      filterText: "",
+      data2: [{
+        id: 1,
+        label: "系统管理部门(xx公司)",
+        children: [{
+          id: 4,
+          label: "xx公司(xx公司)",
+          children: [{
+            id: 9,
+            label: "财务部(xx公司)"
+          }, {
+            id: 10,
+            label: "信息科(xx公司)"
+          }, {
+            id: 2,
+            label: "催收部(xx公司)",
             children: [{
-              id: 4,
-              label: 'xx公司(xx公司)',
-              children: [{
-                id: 9,
-                label: '财务部(xx公司)'
-              }, {
-                id: 10,
-                label: '信息科(xx公司)'
-              },{
-                id: 2,
-                label: '催收部(xx公司)',
-                children: [{
-                  id: 5,
-                  label: '催无虑(xx公司)'
-                }, {
-                  id: 6,
-                  label: '催收员(xx公司)'
-                }]
-              }]
+              id: 5,
+              label: "催无虑(xx公司)"
+            }, {
+              id: 6,
+              label: "催收员(xx公司)"
             }]
-          }],
-          defaultProps: {
-            children: 'children',
-            label: 'label'
-          }
-        };
+          }]
+        }]
+      }],
+      defaultProps: {
+        children: "children",
+        label: "label"
       }
     }
+  }
+}
 </script>
 
 <style scoped>

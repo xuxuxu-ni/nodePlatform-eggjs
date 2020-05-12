@@ -86,47 +86,47 @@
 </template>
 
 <script>
-  export default {
-    name: "peopleDialogVisible",
-    data() {
-      return {
-        dialogVisible: this.visible,
-        form: {
-          name: '',
-          sex: '1',
-          ID: '',
-          position: '',
-          degre: '',
-          chushengdate: '',
-          workdate: '',
-          political: '',
-          remark: '',
-          department: '',
-          unit: '',
-          username: '',
-          phone: '',
-          jobNumber: '10001'
-        },
-        formLabelWidth: '120px'
-      }
-    },
-    props: ['peopleRowData', 'visible'],
-    watch: {
-      visible(newVal) {
-        console.log(newVal);
-        this.dialogVisible = newVal
-      }
-    },
-    methods: {
-      peopleData() {
-        this.dialogVisible = false
-        this.$emit('peopleData', this.form)
-      }
-    },
-    mounted() {
-      console.log(this.dialogVisible)
+export default {
+  name: "peopleDialogVisible",
+  data () {
+    return {
+      dialogVisible: this.visible,
+      form: {
+        name: "",
+        sex: "1",
+        ID: "",
+        position: "",
+        degre: "",
+        chushengdate: "",
+        workdate: "",
+        political: "",
+        remark: "",
+        department: "",
+        unit: "",
+        username: "",
+        phone: "",
+        jobNumber: "10001"
+      },
+      formLabelWidth: "120px"
     }
+  },
+  props: ["peopleRowData", "visible"],
+  watch: {
+    visible (newVal) {
+      console.log(newVal)
+      this.dialogVisible = newVal
+    }
+  },
+  methods: {
+    peopleData () {
+      this.dialogVisible = false
+      this.$emit("peopleData", this.form)
+    }
+  },
+  mounted () {
+    console.log(this.dialogVisible)
   }
+}
 </script>
 
 <style scoped>

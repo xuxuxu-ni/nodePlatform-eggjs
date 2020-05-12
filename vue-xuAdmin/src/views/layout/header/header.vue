@@ -7,7 +7,7 @@
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i class="fa fa-arrows-alt fa-lg"></i></el-tooltip>
         </li>
         <li>
-          <langSelect></langSelect>
+          <langSelect/>
         </li>
         <li>{{ this.$store.getters.info.role }}</li>
         <li>
@@ -16,8 +16,8 @@
                     {{this.$store.getters.info.name}}<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item command="info">{{ $t('userDropdownMenu.basicInfor') }}</el-dropdown-item>
-              <el-dropdown-item command="editPassworld">{{ $t('userDropdownMenu.changePassword') }}</el-dropdown-item>
+              <el-dropdown-item command="info">{{ $t('userDropdownMenu.basicInfo') }}</el-dropdown-item>
+              <el-dropdown-item command="editPassword">{{ $t('userDropdownMenu.changePassword') }}</el-dropdown-item>
               <el-dropdown-item command="logout" divided>{{ $t('userDropdownMenu.logout') }}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -26,65 +26,82 @@
       </ul>
     </el-header>
     <tabNav></tabNav>
+    <user-info v-if="dialogInfoVisible" :title="title" :dialogVisible="dialogInfoVisible" :userId="userId" @successCallback="successCallback"/>
+    <edit-password v-if="dialogPassVisible" :dialogVisible="dialogPassVisible" @editPwdCallback="editPwdCallback"/>
   </div>
 </template>
 
 <script>
-  import Cookies from 'js-cookie'
-  import langSelect from '../../../components/lang/langSelect'
-  import tabNav from './tabNav'
+import Cookies from "js-cookie"
+import langSelect from "../../../components/lang/langSelect"
+import tabNav from "./tabNav"
+import UserInfo from "../../../components/userForm/userInfo"
+import EditPassword from "../../../components/userForm/editPassword"
 
-  export default {
-    name: 'Header',
-    components: {tabNav, langSelect},
-    data () {
-      return {
-        isfullScreen: true,
-
+export default {
+  name: "Header",
+  components: {EditPassword, tabNav, langSelect, UserInfo},
+  data () {
+    return {
+      isfullScreen: true,
+      dialogInfoVisible: false,
+      dialogPassVisible: false,
+      title: "",
+      userId: ""
+    }
+  },
+  methods: {
+    collapse () {
+      this.$store.dispatch("collapse")
+    },
+    successCallback () {
+      this.dialogInfoVisible = false
+    },
+    editPwdCallback () {
+      this.dialogPassVisible = false
+    },
+    fullScreen () {
+      if (this.isfullScreen) {
+        var docElm = document.documentElement
+        if (docElm.requestFullscreen) {
+          docElm.requestFullscreen()
+        } else if (docElm.mozRequestFullScreen) {
+          docElm.mozRequestFullScreen()
+        } else if (docElm.webkitRequestFullScreen) {
+          docElm.webkitRequestFullScreen()
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen()
+        }
+        this.isfullScreen = false
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen()
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen()
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen()
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen()
+        }
+        this.isfullScreen = true
       }
     },
-    methods: {
-      collapse () {
-        this.$store.dispatch('collapse')
-      },
-      fullScreen () {
-        if (this.isfullScreen) {
-          var docElm = document.documentElement
-          if (docElm.requestFullscreen) {
-            docElm.requestFullscreen()
-          } else if (docElm.mozRequestFullScreen) {
-            docElm.mozRequestFullScreen()
-          } else if (docElm.webkitRequestFullScreen) {
-            docElm.webkitRequestFullScreen()
-          } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen()
-          }
-          this.isfullScreen = false
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen()
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen()
-          } else if (document.webkitCancelFullScreen) {
-            document.webkitCancelFullScreen()
-          } else if (document.msExitFullscreen) {
-            document.msExitFullscreen()
-          }
-          this.isfullScreen = true
-        }
-      },
-      handleCommand (command) {
-        if (command === 'info') {
-          this.$router.push({path: '/editUser?userId=' + this.$store.getters.info.uid});
-        } else if (command === 'logout') {
-          Cookies.remove('access_token');
-          location.reload()
-        } else if (command === 'editPassworld') {
-          this.$router.push({path: '/editPassworld'});
-        }
+    handleCommand (command) {
+      if (command === "info") {
+        this.dialogInfoVisible = true
+        this.title = "编辑信息"
+        this.userId = this.$store.getters.info.uid
+        // this.$router.push({path: '/editUser?userId=' + this.$store.getters.info.uid});
+      } else if (command === "editPassword") {
+        this.dialogPassVisible = true
+        // this.$router.push({path: "/editPassword"})
+      } else if (command === "logout") {
+        Cookies.remove("access_token")
+        location.reload()
       }
     }
   }
+}
 </script>
 
 <style lang="scss">

@@ -24,7 +24,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js',
-    '!src/router/index.js',
+    '!src/router/axios.js',
     '!**/node_modules/**'
   ]
 }

@@ -42,40 +42,40 @@
 </template>
 
 <script>
-    export default {
-      name: "manageTable",
-      data() {
-        return {
-          searchform: {
-            describe: '',
-            type: ''
-          },
-          tableData: [{
-            describe: '催收员',
-            type: '临时'
-          }, {
-            describe: '催收专员A',
-            type: '管理'
-          }, {
-            describe: '催收专员角色',
-            type: '管理'
-          }, {
-            describe: '催收主管角色',
-            type: '管理'
-          }, {
-            describe: '催收员角色',
-            type: '技术'
-          }, {
-            describe: '信息管理员',
-            type: '技术'
-          }, {
-            describe: '财务人员',
-            type: '管理'
-          }],
-          currentRow: null
-        }
+export default {
+  name: "manageTable",
+  data () {
+    return {
+      searchform: {
+        describe: "",
+        type: ""
       },
+      tableData: [{
+        describe: "催收员",
+        type: "临时"
+      }, {
+        describe: "催收专员A",
+        type: "管理"
+      }, {
+        describe: "催收专员角色",
+        type: "管理"
+      }, {
+        describe: "催收主管角色",
+        type: "管理"
+      }, {
+        describe: "催收员角色",
+        type: "技术"
+      }, {
+        describe: "信息管理员",
+        type: "技术"
+      }, {
+        describe: "财务人员",
+        type: "管理"
+      }],
+      currentRow: null
     }
+  }
+}
 </script>
 
 <style scoped>

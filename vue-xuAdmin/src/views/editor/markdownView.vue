@@ -1,17 +1,17 @@
 <template>
   <div>
-    <markdown :onchange="change" :initData="initData"></markdown>
+    <markdown :onchange="change" :initData="initData"/>
   </div>
 </template>
 
 <script>
-import Markdown from '../../components/markdown/markdown-editor'
-import initData from '../../markData.js'
+import Markdown from "../../components/markdown/markdown-editor"
+import initData from "../../markData.js"
 export default {
-  name: 'markdownView',
+  name: "markdownView",
   data () {
     return {
-      initData: initData,
+      initData: initData
     }
   },
   components: {Markdown},
@@ -20,7 +20,7 @@ export default {
       console.log(arguments)
     }
   },
-  mounted() {
+  mounted () {
   }
 }
 </script>

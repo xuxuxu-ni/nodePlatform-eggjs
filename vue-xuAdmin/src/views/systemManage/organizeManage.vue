@@ -12,12 +12,12 @@
 </template>
 
 <script>
-    import DepartmentTree from "../../components/Tree/departmentTree";
-    import OrganizeForm from "../../components/Form/organizeForm";
-    export default {
-        name: "organizeManage",
-      components: {OrganizeForm, DepartmentTree},
-    }
+import DepartmentTree from "../../components/Tree/departmentTree"
+import OrganizeForm from "../../components/Form/organizeForm"
+export default {
+  name: "organizeManage",
+  components: {OrganizeForm, DepartmentTree}
+}
 </script>
 
 <style scoped>

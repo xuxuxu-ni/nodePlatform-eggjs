@@ -1,7 +1,7 @@
 <template>
   <div class="cardshadow roleListTable">
     <div>
-      <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addRole">新增</el-button>
+      <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addRole" plain v-role-btn="'btn_100002'">新增</el-button>
     </div>
     <el-table
       :data="tableData"
@@ -49,7 +49,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-dialog title="角色信息" class="dialog1" :visible.sync="dialogFormVisible">
+    <el-dialog title="角色信息" width="700px" class="dialog1" :visible.sync="dialogFormVisible">
       <el-form :model="form">
         <el-form-item label="角色名称" :label-width="formLabelWidth">
           <el-input v-model="form.name"
@@ -83,6 +83,10 @@
         :data="roleTree"
         node-key="r_id"
         show-checkbox
+        check-on-click-node
+        default-expand-all
+        check-strictly
+        :expand-on-click-node="false"
         ref="permission"
         :filter-node-method="filterNode"
         :props="defaultProps">
@@ -96,158 +100,160 @@
 </template>
 
 <script>
-  export default {
-    name: "roleManage",
-    data() {
-      return {
-        tableData: [],
-        dialogFormVisible: false,
-        dialogFormVisible2: false,
-        form: {
-          name: '',
-          describe: '',
-          status: true,
-          permission: []
-        },
-        formLabelWidth: '120px',
-        defaultProps: {
-          children: 'children',
-          label: 'r_name',
-          id: 'r_id'
-        },
-        selectRoleId: '',
-        selectData: [],
-        filterText: '',
-      };
-    },
-    methods: {
-      handleEdit(index, row) {
-        for (let item in row) {
-          this.form[item] = row[item]
-        }
-        this.form.status = row.status === "启用" ? true : false
-        this.dialogFormVisible = true
+import store from "../../vuex"
+import router from "../../router"
+
+export default {
+  name: "roleManage",
+  data () {
+    return {
+      tableData: [],
+      dialogFormVisible: false,
+      dialogFormVisible2: false,
+      form: {
+        name: "",
+        describe: "",
+        status: true,
+        permission: []
       },
-      addRole() {
-        this.form = {
-          name: '',
-          describe: '',
-          status: true
-        }
-        this.dialogFormVisible = true;
+      formLabelWidth: "120px",
+      defaultProps: {
+        children: "children",
+        label: "r_name",
+        id: "r_id"
       },
-      addRoleSubmit() {
-        let that = this
-        if (!this.form.name){
-          that.$message({
-            showClose: true,
-            message: '角色名称不能为空',
-            type: 'error'
-          })
-          return false
-        }
-        this.$axios.post('/permissions/addRole', this.form).then((res) => {
-          that.$message({
-            showClose: true,
-            message: res.data.message,
-            type: 'success'
-          })
-          this.dialogFormVisible = false;
-          this.getList()
-        }).catch((err) => {
-          console.log(err);
-        })
-      },
-      rolePermissionSubmit() {
-        let that = this
-        let rolePermissionData = {
-          selectPermission: that.$refs.permission.getCheckedKeys(),
-          rid: that.selectRoleId
-        }
-        this.$axios.post('/permissions/rolePermissions', rolePermissionData).then((res) => {
-          that.$message({
-            showClose: true,
-            message: res.data.message,
-            type: 'success'
-          })
-          this.dialogFormVisible = false;
-          this.getList()
-        }).catch((err) => {
-          console.log(err);
-        })
-      },
-      roleEdit(index, row) {
-        console.log(index, row)
-        this.selectRoleId = row.id
-        this.selectData = row.permission ? row.permission.split(',') : []
-        this.dialogFormVisible2 = true;
-      },
-      setRoleData() {
-        this.$refs.permission.setCheckedKeys([]);
-        this.$refs.permission.setCheckedKeys(this.selectData);
-      },
-      handleDelete (index, row) {
-        console.log(index, row)
-        let that = this
-        this.$axios.post('/permissions/delRole', {
-          id: row.id
-        })
-          .then(response => {
-            console.log(response)
-            that.$message({
-              showClose: true,
-              message: response.data.message,
-              type: 'success'
-            })
-            that.getList()
-          })
-          .catch(err => {
-            console.log(err)
-          })
-      },
-      getList () {
-        let that = this
-        this.$axios.post('/permissions/getRoleList')
-          .then(function (response) {
-            console.log(response)
-            for (let i = 0; i < response.data.rows.length; i++) {
-              if ( response.data.rows[i].status){
-                response.data.rows[i].status = '启用'
-              } else {
-                response.data.rows[i].status = '禁用'
-              }
-            }
-            that.tableData = response.data.rows
-          })
-          .catch(function (error) {
-            console.log(error)
-          })
-      },
-      filterNode(value, data) {
-        if (!value) return true;
-        return data.r_name.indexOf(value) !== -1;
-      }
-    },
-    watch: {
-      filterText(val) {
-        this.$refs.permission.filter(val);
-      }
-    },
-    computed: {
-      roleTree: function () {
-        let addRouters = this.$store.getters.addRouters
-        for (let i = 0; i < addRouters.length; i++) {
-          if (addRouters[i].redirect === '/404') {
-            addRouters.splice(i, 1)
-          }
-        }
-        return addRouters
-      }
-    },
-    mounted () {
-      this.getList()
+      selectRoleId: "",
+      selectData: [],
+      filterText: ""
     }
+  },
+  methods: {
+    handleEdit (index, row) {
+      for (let item in row) {
+        this.form[item] = row[item]
+      }
+      this.form.status = row.status === "启用"
+      this.dialogFormVisible = true
+    },
+    addRole () {
+      this.form = {
+        name: "",
+        describe: "",
+        status: true
+      }
+      this.dialogFormVisible = true
+    },
+    addRoleSubmit () {
+      let that = this
+      if (!this.form.name) {
+        that.$message({
+          showClose: true,
+          message: "角色名称不能为空",
+          type: "error"
+        })
+        return false
+      }
+      this.$request.fetchAddRole(this.form).then((res) => {
+        that.$message({
+          showClose: true,
+          message: res.data.message,
+          type: "success"
+        })
+        this.dialogFormVisible = false
+        this.getList()
+      }).catch((err) => {
+        console.log(err)
+      })
+    },
+    rolePermissionSubmit () {
+      let that = this
+      let rolePermissionData = {
+        selectPermission: that.$refs.permission.getCheckedKeys(),
+        rid: that.selectRoleId
+      }
+      this.$request.fetchRolePermissions(rolePermissionData).then(res => {
+        that.$restBack(res.data, () => {
+          that.dialogFormVisible2 = false
+          that.getList()
+        })
+      }).catch((err) => {
+        console.log(err)
+      })
+    },
+    roleEdit (index, row) {
+      console.log(index, row)
+      this.selectRoleId = row.id
+      this.selectData = row.permission ? row.permission.split(",") : []
+      this.dialogFormVisible2 = true
+    },
+    setRoleData () {
+      this.$request.fetchSearchRolePermissions({rid: this.selectRoleId}).then(res => {
+        this.$refs.permission.setCheckedKeys([])
+        let permissionData = res.data.data.permissionPage + "," + res.data.data.permissionButton
+        this.$refs.permission.setCheckedKeys(permissionData.split(","))
+      })
+    },
+    handleDelete (index, row) {
+      let that = this
+      this.$request.fetchDelRole({
+        id: row.id
+      })
+        .then(response => {
+          console.log(response)
+          that.$message({
+            showClose: true,
+            message: response.data.message,
+            type: "success"
+          })
+          that.getList()
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
+    getList () {
+      let that = this
+      this.$request.fetchGetRoleList()
+        .then(function (response) {
+          console.log(response)
+          for (let i = 0; i < response.data.rows.length; i++) {
+            if (response.data.rows[i].status) {
+              response.data.rows[i].status = "启用"
+            } else {
+              response.data.rows[i].status = "禁用"
+            }
+          }
+          that.tableData = response.data.rows
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    },
+    filterNode (value, data) {
+      if (!value) return true
+      return data.r_name.indexOf(value) !== -1
+    }
+  },
+  watch: {
+    filterText (val) {
+      this.$refs.permission.filter(val)
+    }
+  },
+  computed: {
+    roleTree: function () {
+      let roleData = this.$store.getters.roleData
+      for (let i = 0; i < roleData.length; i++) {
+        if (roleData[i].redirect === "/404") {
+          roleData.splice(i, 1)
+        }
+      }
+      return roleData
+    }
+  },
+  mounted () {
+    this.getList()
   }
+}
 </script>
 
 <style scoped>
@@ -262,9 +268,6 @@
   .datepicker {
     width: 260px;
   }
-
-</style>
-<style>
   .dialog1 .el-dialog {
     width: 35%;
   }

@@ -1,12 +1,10 @@
 <template>
   <div>
     <el-table
-      :data="articletData"
-      style="width: 100%"
-      max-height="550">
+      :data="articletData">
       <el-table-column
         fixed
-        prop="createdAt"
+        prop="created_at"
         label="发布时间"
         width="180">
       </el-table-column>
@@ -15,12 +13,12 @@
         label="文章标题">
       </el-table-column>
       <el-table-column
-        prop="commentNum"
+        prop="comment_num"
         label="评论数"
         width="100">
       </el-table-column>
       <el-table-column
-        prop="praiseNum"
+        prop="praise_num"
         label="点赞数"
         width="100">
       </el-table-column>
@@ -30,7 +28,7 @@
         width="150">
       </el-table-column>
       <el-table-column
-        prop="readNum"
+        prop="read_num"
         label="浏览数"
         width="100">
       </el-table-column>
@@ -52,6 +50,7 @@
       background
       layout="prev, pager, next"
       :total="total"
+      :hide-on-single-page="true"
       @current-change="currentChange"
       @prev-click="currentChange"
       @next-click="currentChange"
@@ -62,7 +61,7 @@
 
 <script>
 export default {
-  name: 'articleList',
+  name: "articleList",
   data () {
     return {
       total: 0,
@@ -74,62 +73,53 @@ export default {
   methods: {
     handleEdit (index, row) {
       this.$router.push({
-        path: '/addArticleEditor',
-        query:{
-          articleId:  row.id
+        path: "/addArticleEditor",
+        query: {
+          articleId: row.id
         }
-      });
+      })
     },
     handleDelete (index, row) {
       console.log(index, row)
       let that = this
-      this.$axios.post('/article/delArticle', {
+      this.$request.fetchDelArticle({
         id: row.id
-      })
-        .then(response => {
-          console.log(response)
-            that.$message({
-              showClose: true,
-              message: response.data.message,
-              type: 'success'
-            })
-            that.getList({
-                currentPage: that.currentPage,
-                pageSize:10,
-                sort: null
-              })
+      }).then(response => {
+        console.log(response)
+        that.$message({
+          showClose: true,
+          message: response.data.message,
+          type: "success"
         })
+        that.getList({
+          currentPage: that.currentPage,
+          pageSize: 10,
+          sort: null
+        })
+      })
         .catch(err => {
           console.log(err)
         })
     },
-    currentChange(page){
-      console.log(page);
+    currentChange (page) {
+      console.log(page)
       this.currentPage = page
       this.getList({
         currentPage: page,
-        pageSize:10,
+        pageSize: 10,
         sort: null
       })
     },
     getList (postdata) {
       let that = this
-      this.$axios.post('/article/articleList', postdata)
+      this.$request.fetchArticleList(postdata)
         .then(function (response) {
           for (let i = 0; i < response.data.rows.length; i++) {
-            let d = new Date(response.data.rows[i].createdAt)
-            let moth = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1)
-            let date = d.getDate() < 10 ? '0' + d.getDate() : d.getDate()
-            let hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours()
-            let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
-            let seconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds()
-            response.data.rows[i].createdAt = d.getFullYear() + '-' + moth + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds
-
-            if ( response.data.rows[i].title.length> 22) {
-              response.data.rows[i].title = response.data.rows[i].title.substring(0, 22)+'...'
+            response.data.rows[i].created_at = that.$getDateDiff(response.data.rows[i].created_at)
+            if (response.data.rows[i].title.length > 22) {
+              response.data.rows[i].title = response.data.rows[i].title.substring(0, 22) + "..."
             }
           }
-          console.log(response)
           that.total = response.data.count
           that.articletData = response.data.rows
         })
@@ -141,7 +131,7 @@ export default {
   mounted () {
     this.getList({
       currentPage: 1,
-      pageSize:10,
+      pageSize: 10,
       sort: null
     })
   }

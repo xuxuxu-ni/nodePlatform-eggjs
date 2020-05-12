@@ -1,7 +1,7 @@
 <template>
   <el-dropdown class='international' @command="handleSetLanguage">
     <div>
-      <span class="el-dropdown-link"><i class="fa fa-language fa-lg"></i>&nbsp;{{language}}<i class="el-icon-arrow-down el-icon--right"></i>
+      <span class="el-dropdown-link"><i class="fa fa-language fa-lg"/>&nbsp;{{language}}<i class="el-icon-arrow-down el-icon--right"></i>
     </span>
     </div>
     <el-dropdown-menu slot="dropdown">
@@ -11,33 +11,33 @@
   </el-dropdown>
 </template>
 <script>
-  export default {
-    name: 'langSelect',
-    data () {
-      return {
-        language: ''
+export default {
+  name: "langSelect",
+  data () {
+    return {
+      language: ""
+    }
+  },
+  mounted () {
+    const _lang = localStorage.lang || "cn"
+    this.getLanguage(_lang)
+  },
+  methods: {
+    handleSetLanguage (lang) {
+      this.$i18n.locale = lang
+      localStorage.setItem("lang", lang)
+      this.getLanguage(lang)
+    },
+    getLanguage (val) {
+      if (val === "cn") {
+        this.language = "中文"
       }
-    },
-    mounted () {
-      const _lang = localStorage.lang || 'cn'
-      this.getLanguage(_lang)
-    },
-    methods: {
-      handleSetLanguage (lang) {
-        this.$i18n.locale = lang
-        localStorage.setItem('lang', lang)
-        this.getLanguage(lang)
-      },
-      getLanguage (val) {
-        if (val === 'cn') {
-          this.language = '中文'
-        }
-        if (val === 'en') {
-          this.language = 'English'
-        }
+      if (val === "en") {
+        this.language = "English"
       }
     }
   }
+}
 </script>
 <style>
   .international .el-dropdown-link {  cursor: pointer;  color: #666666;  font-size: 14px;  }

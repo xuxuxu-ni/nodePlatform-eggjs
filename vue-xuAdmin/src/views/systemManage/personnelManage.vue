@@ -11,12 +11,12 @@
 </template>
 
 <script>
-    import DepartmentTree from "../../components/Tree/departmentTree";
-    import DepartmentTable from "../../components/Table/departmentTable";
-    export default {
-        name: "personnelManage",
-      components: {DepartmentTable, DepartmentTree}
-    }
+import DepartmentTree from "../../components/Tree/departmentTree"
+import DepartmentTable from "../../components/Table/departmentTable"
+export default {
+  name: "personnelManage",
+  components: {DepartmentTable, DepartmentTree}
+}
 </script>
 
 <style scoped>

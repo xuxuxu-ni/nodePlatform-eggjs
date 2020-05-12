@@ -135,105 +135,105 @@
 </template>
 
 <script>
-    export default {
-        name: "kehujiekuanTable",
-      data() {
-        return {
-          searchform: {
-            number: '',
-            date: '',
-            name: ''
-          },
-          value6: '',
-          tableData: [{
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }, {
-            name: '张三',
-            phonenumber: '15888888888',
-            credit: 'D级',
-            idnumber: '321281198808088888',
-            applytime: '2019-01-15 11:30:43',
-            borrowamount: '10',
-            lendamount: '8.5',
-            payamount: '10.07',
-            borrowtime: '7',
-            interestrate: '0.001',
-            paytime: '2019-01-21'
-          }],
-          currentRow: null
-        };
-      }
+export default {
+  name: "kehujiekuanTable",
+  data () {
+    return {
+      searchform: {
+        number: "",
+        date: "",
+        name: ""
+      },
+      value6: "",
+      tableData: [{
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }, {
+        name: "张三",
+        phonenumber: "15888888888",
+        credit: "D级",
+        idnumber: "321281198808088888",
+        applytime: "2019-01-15 11:30:43",
+        borrowamount: "10",
+        lendamount: "8.5",
+        payamount: "10.07",
+        borrowtime: "7",
+        interestrate: "0.001",
+        paytime: "2019-01-21"
+      }],
+      currentRow: null
     }
+  }
+}
 </script>
 
 <style scoped>

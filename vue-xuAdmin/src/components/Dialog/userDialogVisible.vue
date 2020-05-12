@@ -83,100 +83,100 @@
 </template>
 
 <script>
-  export default {
-    name: "userDialogVisible",
-    data() {
-      const generateData2 = _ => {
-        const data = [];
-        const cities = ['信息管理员(技术)', '财务人员(管理)', '催收专员角色(管理)', '催收主管(管理)', '催收员角色(管理)', '催收员(临时)'];
-        cities.forEach((city, index) => {
-          data.push({
-            label: city,
-            key: index
-          });
-        });
-        return data;
-      };
-
-      var validatePass = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'));
-        } else {
-          if (this.ruleForm2.checkPass !== '') {
-            this.$refs.ruleForm2.validateField('checkPass');
-          }
-          callback();
-        }
-      };
-      var validatePass2 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请再次输入密码'));
-        } else if (value !== this.ruleForm2.pass) {
-          callback(new Error('两次输入密码不一致!'));
-        } else {
-          callback();
-        }
-      };
-      return {
-        dialogVisible: this.visible,
-        data2: generateData2(),
-        value2: [],
-        filterMethod(query, item) {
-          return item.label.indexOf(query) > -1;
-        },
-
-        ruleForm2: {
-          pass: '',
-          checkPass: ''
-        },
-        form: {
-          value: true,
-          value1: true,
-          value2: '',
-          value3: true,
-          value4: '',
-        },
-        rules2: {
-          pass: [
-            {validator: validatePass, trigger: 'blur'}
-          ],
-          checkPass: [
-            {validator: validatePass2, trigger: 'blur'}
-          ]
-        }
-
-      };
-    },
-    props: ['peopleRowData', 'visible'],
-    watch: {
-      visible(newVal) {
-        console.log(newVal);
-        this.dialogVisible = newVal
-      }
-    },
-    methods: {
-      peopleData() {
-        this.dialogVisible = false
-        this.$emit('userData', this.form)
-      },
-      submitForm(formName) {
-        this.$refs[formName].validate((valid) => {
-          if (valid) {
-            alert('submit!');
-          } else {
-            console.log('error submit!!');
-            return false;
-          }
-        });
-      },
-      resetForm(formName) {
-        this.$refs[formName].resetFields();
-      }
-    },
-    mounted() {
-      console.log(this.dialogVisible)
+export default {
+  name: "userDialogVisible",
+  data () {
+    const generateData2 = _ => {
+      const data = []
+      const cities = ["信息管理员(技术)", "财务人员(管理)", "催收专员角色(管理)", "催收主管(管理)", "催收员角色(管理)", "催收员(临时)"]
+      cities.forEach((city, index) => {
+        data.push({
+          label: city,
+          key: index
+        })
+      })
+      return data
     }
+
+    var validatePass = (rule, value, callback) => {
+      if (value === "") {
+        callback(new Error("请输入密码"))
+      } else {
+        if (this.ruleForm2.checkPass !== "") {
+          this.$refs.ruleForm2.validateField("checkPass")
+        }
+        callback()
+      }
+    }
+    var validatePass2 = (rule, value, callback) => {
+      if (value === "") {
+        callback(new Error("请再次输入密码"))
+      } else if (value !== this.ruleForm2.pass) {
+        callback(new Error("两次输入密码不一致!"))
+      } else {
+        callback()
+      }
+    }
+    return {
+      dialogVisible: this.visible,
+      data2: generateData2(),
+      value2: [],
+      filterMethod (query, item) {
+        return item.label.indexOf(query) > -1
+      },
+
+      ruleForm2: {
+        pass: "",
+        checkPass: ""
+      },
+      form: {
+        value: true,
+        value1: true,
+        value2: "",
+        value3: true,
+        value4: ""
+      },
+      rules2: {
+        pass: [
+          {validator: validatePass, trigger: "blur"}
+        ],
+        checkPass: [
+          {validator: validatePass2, trigger: "blur"}
+        ]
+      }
+
+    }
+  },
+  props: ["peopleRowData", "visible"],
+  watch: {
+    visible (newVal) {
+      console.log(newVal)
+      this.dialogVisible = newVal
+    }
+  },
+  methods: {
+    peopleData () {
+      this.dialogVisible = false
+      this.$emit("userData", this.form)
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert("submit!")
+        } else {
+          console.log("error submit!!")
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
+    }
+  },
+  mounted () {
+    console.log(this.dialogVisible)
   }
+}
 </script>
 
 <style scoped>

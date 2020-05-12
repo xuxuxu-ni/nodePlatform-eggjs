@@ -104,7 +104,7 @@ template FormatString(const(char)[] F, A...)
 
 unittest
 {
-    auto s = Format!("hel%slo", "world", -138, 'c', true);
+    auto s = Format!("hel%slo", "word", -138, 'c', true);
     assert(s == "helworldlo-138ctrue", "[" ~ s ~ "]");
 }
 

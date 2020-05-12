@@ -131,224 +131,224 @@
 </template>
 
 <script>
-  import PeopleDialogVisible from "../Dialog/peopleDialogVisible";
-  import UserDialogVisible from "../Dialog/userDialogVisible";
+import PeopleDialogVisible from "../Dialog/peopleDialogVisible"
+import UserDialogVisible from "../Dialog/userDialogVisible"
 
-  export default {
-    name: "departmentTable",
-    components: {UserDialogVisible, PeopleDialogVisible},
-    data() {
-      return {
-        peopleDialogVisible: false,
-        userDialogVisible: false,
-        peopleRowData: '',
-        searchform: {
-          name: '',
-          phone: ''
-        },
-        tableData: [
-          {
-            name: '张三',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '前端开发',
-            degre: '硕士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '党员',
-            remark: '无',
-            department: '财务部',
-            unit: '浪花易借',
-            username: '13913131313',
-            phone: '18813912345',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '李四',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '安卓开发',
-            degre: '博士',
-            chushengdate: '1984年09月14日',
-            workdate: '2018年10月1日',
-            political: '党员',
-            remark: '态度认真,工作负责,行为端正,优秀员工',
-            department: '信息科',
-            unit: '浪花易借',
-            username: '13922222222',
-            phone: '18888888888',
-            workphone: '18813912345',
-            jobNumber: '10002'
-          }, {
-            name: '王小虎',
-            sex: '女',
-            ID: '320382100000006543',
-            position: '前端开发',
-            degre: '硕士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '党员',
-            remark: '无',
-            department: '催收员',
-            unit: '浪花易借',
-            username: '13933333333',
-            phone: '18899999999',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '张三',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '前端开发',
-            degre: '硕士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '党员',
-            remark: '无',
-            department: '财务部',
-            unit: '浪花易借',
-            username: '13913131313',
-            phone: '18813912345',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '李四',
-            sex: '女',
-            ID: '320382100000006543',
-            position: 'ios开发',
-            degre: '博士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '党员',
-            remark: '态度认真,工作负责,行为端正,优秀员工',
-            department: '信息科',
-            unit: '浪花易借',
-            username: '13922222222',
-            phone: '18888888888',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '王小虎',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '安卓开发',
-            degre: '硕士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '群众',
-            remark: '态度认真,工作负责,行为端正,优秀员工',
-            department: '催收员',
-            unit: '浪花易借',
-            username: '13933333333',
-            phone: '18899999999',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '张三',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '前端开发',
-            degre: '硕士',
-            chushengdate: '1994年04月14日',
-            workdate: '2018年12月1日',
-            political: '党员',
-            remark: '态度认真,工作负责,行为端正,优秀员工',
-            department: '财务部',
-            unit: '浪花易借',
-            username: '13913131313',
-            phone: '18813912345',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '李四',
-            sex: '女',
-            ID: '320382100000006543',
-            position: 'java开发',
-            degre: '博士',
-            chushengdate: '1974年04月14日',
-            workdate: '2016年12月1日',
-            political: '党员',
-            remark: '态度认真,工作负责,行为端正,优秀员工',
-            department: '信息科',
-            unit: '浪花易借',
-            username: '13922222222',
-            phone: '18888888888',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '王小虎',
-            sex: '女',
-            ID: '320382100000006543',
-            position: 'java开发',
-            degre: '大专',
-            chushengdate: '1984年04月14日',
-            workdate: '2017年12月1日',
-            political: '团员',
-            remark: '无',
-            department: '催收员',
-            unit: '浪花易借',
-            username: '13933333333',
-            phone: '18899999999',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }, {
-            name: '张三',
-            sex: '男',
-            ID: '320382100000006543',
-            position: '前端开发',
-            degre: '本科',
-            chushengdate: '1984年04月14日',
-            workdate: '2017年12月1日',
-            political: '团员',
-            remark: '无',
-            department: '财务部',
-            unit: '浪花易借',
-            username: '13913131313',
-            phone: '18813912345',
-            workphone: '18813912345',
-            jobNumber: '10001'
-          }],
-        currentRow: null,
-        search: ''
-      }
+export default {
+  name: "departmentTable",
+  components: {UserDialogVisible, PeopleDialogVisible},
+  data () {
+    return {
+      peopleDialogVisible: false,
+      userDialogVisible: false,
+      peopleRowData: "",
+      searchform: {
+        name: "",
+        phone: ""
+      },
+      tableData: [
+        {
+          name: "张三",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "前端开发",
+          degre: "硕士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "党员",
+          remark: "无",
+          department: "财务部",
+          unit: "浪花易借",
+          username: "13913131313",
+          phone: "18813912345",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "李四",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "安卓开发",
+          degre: "博士",
+          chushengdate: "1984年09月14日",
+          workdate: "2018年10月1日",
+          political: "党员",
+          remark: "态度认真,工作负责,行为端正,优秀员工",
+          department: "信息科",
+          unit: "浪花易借",
+          username: "13922222222",
+          phone: "18888888888",
+          workphone: "18813912345",
+          jobNumber: "10002"
+        }, {
+          name: "王小虎",
+          sex: "女",
+          ID: "320382100000006543",
+          position: "前端开发",
+          degre: "硕士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "党员",
+          remark: "无",
+          department: "催收员",
+          unit: "浪花易借",
+          username: "13933333333",
+          phone: "18899999999",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "张三",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "前端开发",
+          degre: "硕士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "党员",
+          remark: "无",
+          department: "财务部",
+          unit: "浪花易借",
+          username: "13913131313",
+          phone: "18813912345",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "李四",
+          sex: "女",
+          ID: "320382100000006543",
+          position: "ios开发",
+          degre: "博士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "党员",
+          remark: "态度认真,工作负责,行为端正,优秀员工",
+          department: "信息科",
+          unit: "浪花易借",
+          username: "13922222222",
+          phone: "18888888888",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "王小虎",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "安卓开发",
+          degre: "硕士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "群众",
+          remark: "态度认真,工作负责,行为端正,优秀员工",
+          department: "催收员",
+          unit: "浪花易借",
+          username: "13933333333",
+          phone: "18899999999",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "张三",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "前端开发",
+          degre: "硕士",
+          chushengdate: "1994年04月14日",
+          workdate: "2018年12月1日",
+          political: "党员",
+          remark: "态度认真,工作负责,行为端正,优秀员工",
+          department: "财务部",
+          unit: "浪花易借",
+          username: "13913131313",
+          phone: "18813912345",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "李四",
+          sex: "女",
+          ID: "320382100000006543",
+          position: "java开发",
+          degre: "博士",
+          chushengdate: "1974年04月14日",
+          workdate: "2016年12月1日",
+          political: "党员",
+          remark: "态度认真,工作负责,行为端正,优秀员工",
+          department: "信息科",
+          unit: "浪花易借",
+          username: "13922222222",
+          phone: "18888888888",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "王小虎",
+          sex: "女",
+          ID: "320382100000006543",
+          position: "java开发",
+          degre: "大专",
+          chushengdate: "1984年04月14日",
+          workdate: "2017年12月1日",
+          political: "团员",
+          remark: "无",
+          department: "催收员",
+          unit: "浪花易借",
+          username: "13933333333",
+          phone: "18899999999",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }, {
+          name: "张三",
+          sex: "男",
+          ID: "320382100000006543",
+          position: "前端开发",
+          degre: "本科",
+          chushengdate: "1984年04月14日",
+          workdate: "2017年12月1日",
+          political: "团员",
+          remark: "无",
+          department: "财务部",
+          unit: "浪花易借",
+          username: "13913131313",
+          phone: "18813912345",
+          workphone: "18813912345",
+          jobNumber: "10001"
+        }],
+      currentRow: null,
+      search: ""
+    }
+  },
+  // watch: {
+  //   peopleDialogVisible(newVal) {
+  //     this.peopleDialogVisible = newVal
+  //   }
+  // },
+  methods: {
+    handleCurrentChange (val) {
+      this.currentRow = val
     },
-    // watch: {
-    //   peopleDialogVisible(newVal) {
-    //     this.peopleDialogVisible = newVal
-    //   }
-    // },
-    methods: {
-      handleCurrentChange(val) {
-        this.currentRow = val;
-      },
-      handlePeopleEdit(index, row) {
-        console.log(index, row);
-        this.peopleDialogVisible = true
-        this.peopleRowData = row
-      },
-      handleUserEdit(index, row) {
-        console.log(index, row);
-        this.userDialogVisible = true
-        this.peopleRowData = row
-      },
-      handleDelete(index, row) {
-        console.log(index, row);
-      },
-      filterTag(value, row) {
-        return row.sex === value;
-      },
-      onSubmit() {
-        console.log('submit!');
-      },
-      newPeopleData(data) {
-        console.log(data);
-        this.peopleDialogVisible = false
-      },
-      newUserData() {
-        this.userDialogVisible = false
-      }
+    handlePeopleEdit (index, row) {
+      console.log(index, row)
+      this.peopleDialogVisible = true
+      this.peopleRowData = row
+    },
+    handleUserEdit (index, row) {
+      console.log(index, row)
+      this.userDialogVisible = true
+      this.peopleRowData = row
+    },
+    handleDelete (index, row) {
+      console.log(index, row)
+    },
+    filterTag (value, row) {
+      return row.sex === value
+    },
+    onSubmit () {
+      console.log("submit!")
+    },
+    newPeopleData (data) {
+      console.log(data)
+      this.peopleDialogVisible = false
+    },
+    newUserData () {
+      this.userDialogVisible = false
     }
   }
+}
 </script>
 
 <style>

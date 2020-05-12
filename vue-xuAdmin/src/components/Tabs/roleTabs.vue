@@ -171,88 +171,88 @@
 </template>
 
 <script>
-    export default {
-        name: "roleTabs",
-        data() {
-          const generateData2 = _ => {
-            const data = [];
-            const cities = ['信息管理权限(信息)', '财务管理权限(财务)', '催收专员权限(财务)', '催收主管权限(管理)', '催收员权限(管理)'];
-            cities.forEach((city, index) => {
-              data.push({
-                label: city,
-                key: index
-              });
-            });
-            return data;
-          };
-          return {
-            data2: generateData2(),
-            value2: [],
-            filterMethod(query, item) {
-              return item.label.indexOf(query) > -1;
-            },
-            editform: {
-              describe: '催收员',
-              type: '临时'
-            },
-            activeName: 'first',
-            searchform: {
-              number: '',
-              name: '',
-              type: ''
-            },
-            tableData3: [{
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }, {
-              number: '11000000010',
-              name: '催收员',
-              dwname: '理小花',
-              bmname: '催收部',
-              status: '正常'
-            }],
-            multipleSelection: []
-          };
-        },
-        methods: {
-          handleClick(tab, event) {
-             console.log(tab, event);
-          }
-        }
+export default {
+  name: "roleTabs",
+  data () {
+    const generateData2 = _ => {
+      const data = []
+      const cities = ["信息管理权限(信息)", "财务管理权限(财务)", "催收专员权限(财务)", "催收主管权限(管理)", "催收员权限(管理)"]
+      cities.forEach((city, index) => {
+        data.push({
+          label: city,
+          key: index
+        })
+      })
+      return data
     }
+    return {
+      data2: generateData2(),
+      value2: [],
+      filterMethod (query, item) {
+        return item.label.indexOf(query) > -1
+      },
+      editform: {
+        describe: "催收员",
+        type: "临时"
+      },
+      activeName: "first",
+      searchform: {
+        number: "",
+        name: "",
+        type: ""
+      },
+      tableData3: [{
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }, {
+        number: "11000000010",
+        name: "催收员",
+        dwname: "理小花",
+        bmname: "催收部",
+        status: "正常"
+      }],
+      multipleSelection: []
+    }
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    }
+  }
+}
 </script>
 
 <style scoped>

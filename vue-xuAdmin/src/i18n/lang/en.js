@@ -5,52 +5,50 @@
  * Description: 文件描述
  */
 
-import enLocale from 'element-ui/lib/locale/lang/en'
+import enLocale from "element-ui/lib/locale/lang/en"
 const en = {
-  routeNmae: {
-    home: 'home',
-    article: 'article',
-    publishArticle: 'publishArticle',
-    publishArticleEditor: 'publishArticle',
-    articleList: 'articleList',
-    addUser: 'addUser',
-    editUser: 'editUser',
-    userList: 'userList',
-    commentList: 'commentList',
-    userManage: 'userManage',
-    editPassworld: 'editPassworld',
+  routeName: {
+    home: "home",
+    article: "article",
+    publishArticle: "publishArticle",
+    publishArticleEditor: "publishArticle",
+    articleList: "articleList",
+    userList: "userList",
+    commentList: "commentList",
+    userManage: "userManage",
+    editPassword: "editPassword",
+    demo: "demo",
 
+    editor: "editor",
+    markdown: "markdown",
+    wangeditor: "wangeditor",
 
-    editor: 'editor',
-    markdown: 'markdown',
-    wangeditor: 'wangeditor',
-
-    systemSettings: 'systemSettings',
-    navMenu : 'navMenu',
+    systemSettings: "systemSettings",
+    navMenu: "navMenu",
     systemManage: "systemManage",
     organizeManage: "organizeManage",
     unitManage: "unitManage",
     personnelManage: "personnelManage",
     roleManage: "roleManage",
-    systemSetting: "systemSetting",
+    systemSetting: "systemSetting"
   },
   rightMenu: {
-    close: 'close',
-    closeOther: 'closeOther',
-    closeAll: 'closeAll'
+    close: "close",
+    closeOther: "closeOther",
+    closeAll: "closeAll"
   },
   role: {
-    superAdmin: 'superAdmin',
-    admin: 'admin',
-    ordinary: 'ordinary'
+    superAdmin: "superAdmin",
+    admin: "admin",
+    ordinary: "ordinary"
   },
   userDropdownMenu: {
-    basicInfor: 'basicInfor',
-    changePassword: 'changePassword',
-    logout: 'logout'
+    basicInfo: "basicInfo",
+    changePassword: "changePassword",
+    logout: "logout"
   },
 
-  ...enLocale   //  合并element-ui内置翻译
+  ...enLocale //  合并element-ui内置翻译
 }
 
 export default en

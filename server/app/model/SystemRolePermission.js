@@ -4,17 +4,17 @@
  * Date: 2019-01-25
  * Description: 文件描述
  */
-const db = require("../database/db");
+const db = require("../database/db")
 
 module.exports = app => {
-    const { STRING } = app.Sequelize;
+  const { UUID, TEXT } = app.Sequelize
 
-    const RolePermission = db.defineModel(app, "system_role_permission", {
-        role_id: STRING, // 角色id
-        permission_id: STRING, // 权限id
-    });
+  const RolePermission = db.defineModel(app, "system_role_permission", {
+    role_id: UUID, // 角色id
+    permission_page: TEXT("long"), // 页面权限
+    permission_button: TEXT("long"), // 按钮权限
+  })
 
-    // User.hasMany(Article, {as: 'articlesss'})
-    return RolePermission;
-};
+  return RolePermission
+}
 
