@@ -1,11 +1,12 @@
 //  获取角色信息，根据用户权限动态加载路由
+import NProgress from "nprogress"
 import router from "./index"
 import store from "../vuex"
 import fetchUser from "@/api/apis/user"
 
 router.beforeEach((to, from, next) => {
+  NProgress.start()
   if (store.getters.token && store.getters.token !== "undefined") {
-    // store.dispatch('setToken', store.getters.token)
     if (to.path === "/login") {
       next({path: "/"})
     } else {
@@ -41,4 +42,8 @@ router.beforeEach((to, from, next) => {
     }
     next({path: "/login"})
   }
+})
+
+router.afterEach(() => {
+  NProgress.done()
 })

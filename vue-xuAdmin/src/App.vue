@@ -47,4 +47,8 @@ a{
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.2);
 }
+#nprogress .bar {
+  height: 3px !important;
+  background: #56a9ff !important; //自定义颜色
+}
 </style>
