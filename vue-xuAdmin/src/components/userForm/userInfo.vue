@@ -1,7 +1,7 @@
 <template>
-  <el-dialog :title="title" width="800px" :visible.sync="visible" destroy-on-close @close="closeCallback">
-    <div class="card">
-    <p class="title"><i class="fa fa-th-large fa-lg"></i>个人资料</p>
+  <el-dialog :title="title" width="600px" :visible.sync="visible" destroy-on-close @close="closeCallback">
+<!--    <div class="card">-->
+<!--    <p class="title"><i class="fa fa-th-large fa-lg"></i>个人资料</p>-->
     <el-form :model="ruleForm2" status-icon :rules="rules" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
       <el-form-item label="用户名" prop="username">
         <el-input v-model="ruleForm2.username" autocomplete="off"></el-input>
@@ -65,7 +65,7 @@
         <el-button @click="resetForm('ruleForm2')">重 置</el-button>
       </el-form-item>
     </el-form>
-    </div>
+<!--    </div>-->
   </el-dialog>
 </template>
 

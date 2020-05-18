@@ -24,11 +24,8 @@ const en = {
     wangeditor: "wangeditor",
 
     systemSettings: "systemSettings",
-    navMenu: "navMenu",
     systemManage: "systemManage",
-    organizeManage: "organizeManage",
     unitManage: "unitManage",
-    personnelManage: "personnelManage",
     roleManage: "roleManage",
     systemSetting: "systemSetting"
   },

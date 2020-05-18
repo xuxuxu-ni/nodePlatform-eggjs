@@ -97,6 +97,8 @@ export default {
         // this.$router.push({path: "/editPassword"})
       } else if (command === "logout") {
         Cookies.remove("access_token")
+        sessionStorage.removeItem("addTab")
+        localStorage.removeItem("info")
         location.reload()
       }
     }

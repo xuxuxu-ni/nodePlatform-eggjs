@@ -133,47 +133,19 @@ let addRouter = [
     component: () => import("@/views/layout/layout"),
     children: [
       {
-        r_id: 100001,
-        r_name: roleName.organizeManage,
-        path: "/",
-        iconCls: "fa fa-server",
-        name: "organizeManage",
-        component: () => import("@/views/commerViews"), // 无限极菜单的容器
+        r_id: 100005,
+        r_name: roleName.roleManage,
+        path: "/roleManage",
+        iconCls: "el-icon-edit-outline", // 图标样式class
+        name: "roleManage",
+        component: () => import("@/views/systemManage/roleManage"),
         children: [
           {
-            r_id: 100002,
-            r_name: roleName.unitManage,
-            path: "/organizeManage",
-            iconCls: "el-icon-edit-outline", // 图标样式class
-            name: "unitManage",
-            component: () => import("@/views/systemManage/organizeManage"),
+            r_id: "btn_100002",
+            r_name: "btn:增加",
+            path: "",
+            type: "button",
             children: []
-          },
-          {
-            r_id: 100003,
-            r_name: roleName.personnelManage,
-            path: "/personnelManage",
-            iconCls: "el-icon-edit-outline", // 图标样式class
-            name: "personnelManage",
-            component: () => import("@/views/systemManage/personnelManage"),
-            children: []
-          },
-          {
-            r_id: 100005,
-            r_name: roleName.roleManage,
-            path: "/roleManage",
-            iconCls: "el-icon-edit-outline", // 图标样式class
-            name: "roleManage",
-            component: () => import("@/views/systemManage/roleManage"),
-            children: [
-              {
-                r_id: "btn_100002",
-                r_name: "btn:增加",
-                path: "",
-                type: "button",
-                children: []
-              }
-            ]
           }
         ]
       },
@@ -195,15 +167,6 @@ let addRouter = [
             children: []
           }
         ]
-      },
-      {
-        r_id: 100063,
-        r_name: roleName.navMenu,
-        path: "/navClassifies",
-        iconCls: "el-icon-menu", // 图标样式class
-        name: "navMenu",
-        component: () => import("@/views/systemManage/navClassify"),
-        children: []
       }
     ]
   },

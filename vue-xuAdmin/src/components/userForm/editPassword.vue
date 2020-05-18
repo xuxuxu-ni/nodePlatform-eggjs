@@ -1,7 +1,7 @@
 <template>
-  <el-dialog title="修改密码" width="700px" :visible.sync="visible" destroy-on-close @close="closeCallback">
-    <div class="card">
-      <p class="title"><i class="fa fa-th-large fa-lg"></i>修改密码</p>
+  <el-dialog title="修改密码" width="580px" :visible.sync="visible" destroy-on-close @close="closeCallback">
+<!--    <div class="card">-->
+<!--      <p class="title"><i class="fa fa-th-large fa-lg"></i>修改密码</p>-->
       <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
         <el-form-item label="原密码" prop="oldPassword">
           <el-input type="password" v-model="ruleForm2.oldPassword" autocomplete="off"></el-input>
@@ -17,7 +17,7 @@
           <el-button @click="resetForm('ruleForm2')">重置</el-button>
         </el-form-item>
       </el-form>
-    </div>
+<!--    </div>-->
   </el-dialog>
 </template>
 

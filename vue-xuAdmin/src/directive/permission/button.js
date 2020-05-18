@@ -9,9 +9,8 @@ export default {
     Vue.directive("roleBtn", {
       inserted: function (el, binding) {
         let btnId = binding.value
-        let userBtnPer = JSON.parse(localStorage.getItem("info")).permissionButton
-        if (btnId && userBtnPer.indexOf(btnId) !== -1) {
-          debugger
+        let userInfo = JSON.parse(localStorage.getItem("info"))
+        if ((btnId && userInfo.permissionButton.indexOf(btnId) !== -1) || userInfo.role === "超级管理员") {
           return false
         } else {
           el.parentNode.removeChild(el)

@@ -21,11 +21,8 @@ const cn = {
     markdown: "markdown",
     wangeditor: "wangeditor",
     systemSettings: "系统设置",
-    navMenu: "导航菜单",
     systemManage: "系统管理",
-    organizeManage: "组织权限管理",
     unitManage: "单位管理",
-    personnelManage: "部门人员管理",
     roleManage: "角色管理",
     systemSetting: "系统配置项"
   },
