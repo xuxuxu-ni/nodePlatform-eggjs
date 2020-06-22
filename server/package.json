@@ -1,13 +1,15 @@
 {
   "name": "nodePlatform",
   "version": "1.0.0",
-  "author": "NiRongxu",
-  "description": "基于egg.js的node框架",
+  "author": "NiRongxu <595485548@qq.com>",
+  "description": "基于egg.js+mysql+vue+elementUI写的一套RBAC框架",
   "private": true,
   "dependencies": {
     "await-stream-ready": "^1.0.1",
     "dayjs": "^1.8.10",
     "egg": "^2.22.2",
+    "egg-alinode": "^2.0.1",
+    "egg-cors": "^2.2.3",
     "egg-jwt": "^3.1.5",
     "egg-scripts": "^2.5.0",
     "egg-sequelize": "^4.3.1",

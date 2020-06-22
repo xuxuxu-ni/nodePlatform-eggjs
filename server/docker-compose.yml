@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    links:
+      - nodeplatform
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/logs:/var/log/nginx
+      - ./nginx/html:/usr/share/nginx/html
+  nodeplatform:
+    image: nodeplatform:v1.0.0
+    volumes:
+      - ./nodeplatform:/usr/src/node-egg/nodeplatform
+    expose:
+      - "10010"

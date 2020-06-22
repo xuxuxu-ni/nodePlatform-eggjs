@@ -10,8 +10,8 @@ class RoleService extends Service {
   // 获取角色列表
   async getRoleList () {
     const { ctx } = this
-    let result
-    await this.ctx.model.SystemRole.findAndCountAll().then(async res => {
+    let result = {}
+    await ctx.model.SystemRole.findAndCountAll().then(async res => {
       result = res
       for (let i = 0; i < result.rows.length; i++) {
         if (result.rows[i].name === "超级管理员") {
@@ -29,7 +29,7 @@ class RoleService extends Service {
   async addRole (options) {
     const { ctx } = this
     const { id = null, name, describe, status } = options
-    let results = ""
+    let results = {}
 
     if (id) {
       await ctx.model.SystemRole.findById(id).then(async res => {
@@ -48,9 +48,11 @@ class RoleService extends Service {
               id,
             },
           }).then(res => {
-            results = {
-              code: 200,
-              message: "角色修改成功",
+            if (res > 0) {
+              results = {
+                code: 200,
+                message: "角色修改成功",
+              }
             }
           }).catch(err => {
             results = {
@@ -61,14 +63,14 @@ class RoleService extends Service {
         }
       })
     } else {
-      await this.ctx.model.SystemRole.findOne({
+      await ctx.model.SystemRole.findOne({
         where: {
           name, // 查询条件
         },
       }).then(async result => {
         if (!result) {
-          await ctx.model.SystemRole.create(options).then(res => {
-            ctx.model.SystemRolePermission.create({
+          await ctx.model.SystemRole.create(options).then(async res => {
+            await ctx.model.SystemRolePermission.create({
               role_id: res.id
             }).then(() => {
               results = {
@@ -100,10 +102,9 @@ class RoleService extends Service {
 
   // 删除角色
   async delRole (rid) {
-    let results
+    let results = {}
     const { ctx } = this
     await ctx.model.SystemRole.findById(rid).then(async res => {
-      console.log(res)
       if (res.name === "超级管理员") {
         results = {
           code: 10000,
@@ -114,10 +115,9 @@ class RoleService extends Service {
           where: {
             id: rid,
           },
-        }).then(res => {
-          console.log(res)
+        }).then(async res => {
           if (res > 0) {
-            ctx.model.SystemRolePermission.destroy({
+            await ctx.model.SystemRolePermission.destroy({
               where: {
                 role_id: rid,
               }
