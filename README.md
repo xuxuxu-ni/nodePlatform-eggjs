@@ -4,6 +4,8 @@
 ### 后台: egg.js
 ### 数据库: mysql
 
+### 演示地址(乞丐版服务器比较卡):http://49.235.188.111
+
 👤 **NiRongxu**
 
 * Github: [@NiRongxu](https://github.com/NiRongxu)
