@@ -119,7 +119,8 @@ export default {
     .el-menu-vertical:not(.el-menu--collapse) {
       width: 200px;
       @extend %h100;
-      /*overflow-y: scroll;*/
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
     .el-menu {
       flex: 1;
