@@ -12,7 +12,7 @@ WORKDIR /usr/src/node-egg/nodeplatform
 COPY package.json /usr/src/node-egg/nodeplatform/package.json
 
 # npm使用淘宝的镜像源
-RUN npm i --production --registry=https://registry.npm.taobao.org
+RUN npm i --production --registry=https://registry.npmmirror.com
 
 # 拷贝所有源代码到工作目
 COPY . /usr/src/node-egg/nodeplatform
